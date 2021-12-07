@@ -7,7 +7,7 @@ export default defineConfig({
         lib: {
             entry: "./src/utils/PrayerTimes.ts",
             name: "BeautifulSalat",
-            fileName: (format) => `beautiful-salat.${format}.js`,
+            fileName: (format) => `index.${format}.js`,
         },
     },
     plugins: [svelte()],

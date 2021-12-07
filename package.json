@@ -3,6 +3,10 @@
     "version": "1.2.1",
     "license": "MIT",
     "type": "module",
+    "files": [
+        "dist/**"
+    ],
+    "main": "dist/index.js",
     "scripts": {
         "build": "vite build",
         "build:watch": "vite build --watch",
