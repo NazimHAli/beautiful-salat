@@ -1,6 +1,6 @@
 {
     "name": "beautiful-salat",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "license": "MIT",
     "type": "module",
     "scripts": {
@@ -92,5 +92,12 @@
         "hooks": {
             "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
         }
+    },
+    "release": {
+        "branches": [
+            "master",
+            "next",
+            "beta"
+        ]
     }
 }
