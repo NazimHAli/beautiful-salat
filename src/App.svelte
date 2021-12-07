@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { PrayerTimesModule } from "@/utils/OriginalPrayerTimes";
+    import { PrayerTimes } from "@/utils/PrayerTimes";
     import DisplayMonth from "@/components/DisplayMonth.svelte";
 
-    const PT = PrayerTimesModule("ISNA");
-    const times = PT.getTimes(new Date(), [43, -80], -5);
+    const prayerTimes = new PrayerTimes("ISNA");
+    const times = prayerTimes.getPrayerTimes(new Date(), [43, -80], -5);
 </script>
 
 <section>
