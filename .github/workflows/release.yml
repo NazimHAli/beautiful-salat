@@ -29,7 +29,7 @@ jobs:
         run: yarn install
 
       - name: Run Tests
-        run: test
+        run: yarn test
 
       - name: Release
         run: yarn semantic-release
