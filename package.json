@@ -14,7 +14,7 @@
         "test:tsc": "tsc --noEmit",
         "lint": "prettier --check .",
         "lint:fix": "prettier --check -w .",
-        "semantic-release": "semantic-release",
+        "semantic-release": "yarn build && semantic-release",
         "serve": "vite preview --port 8080"
     },
     "devDependencies": {
@@ -124,5 +124,6 @@
             ],
             "@semantic-release/git"
         ]
-    }
+    },
+    "dependencies": {}
 }
