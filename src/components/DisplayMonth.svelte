@@ -1,10 +1,8 @@
 <script lang="ts">
-    // @ts-nocheck
+    import { PrayerTimes } from "@/utils/PrayerTimes";
+    import { afterUpdate } from "svelte";
 
-    import { PrayTimes } from "@/utils/OriginalPrayerTimes";
-    import { afterUpdate, onMount } from "svelte";
-
-    const prayTimes = PrayTimes();
+    const prayTimes = new PrayerTimes();
     let currentDate = new Date();
     let timeFormat = 1;
 
@@ -14,13 +12,18 @@
 
     // display monthly timetable
     function displayMonth(offset) {
+        //@ts-ignore
         let lat = getEle("latitude").value;
+        //@ts-ignore
         let lng = getEle("longitude").value;
+        //@ts-ignore
         let timeZone = getEle("timezone").value;
+        //@ts-ignore
         let dst = getEle("dst").value;
+        //@ts-ignore
         let method = getEle("method").value;
 
-        prayTimes.setMethod(method);
+        prayTimes.setPrayerCalculationMethod(method);
         currentDate.setMonth(currentDate.getMonth() + 1 * offset);
 
         let month = currentDate.getMonth();
@@ -51,7 +54,7 @@
         let format = timeFormat ? "12hNS" : "24h";
 
         while (date < endDate) {
-            let times = prayTimes.getTimes(
+            let times = prayTimes.getPrayerTimes(
                 date,
                 [lat, lng],
                 timeZone,
@@ -93,16 +96,6 @@
         if (node == undefined || node == null) return;
 
         while (node.firstChild) node.removeChild(node.firstChild);
-    }
-
-    // switch time format
-    function switchFormat(offset) {
-        let formats = ["24-hour", "12-hour"];
-        timeFormat = (timeFormat + offset) % 2;
-        getEle("time-format").innerHTML = formats[timeFormat];
-        {
-            update();
-        }
     }
 
     // update table
@@ -166,7 +159,7 @@
 
         DST:
         <select id="dst" size="1" style="font-size: 12px;" on:input="{update}">
-            <option value="auto" selected="selected">Auto</option>
+            <option value="auto">Auto</option>
             <option value="0">0</option>
             <option value="1">1</option>
         </select>
@@ -178,9 +171,7 @@
             style="font-size: 12px;"
             on:input="{update}"
         >
-            <option value="MWL" selected="selected"
-                >Muslim World League (MWL)</option
-            >
+            <option value="MWL">Muslim World League (MWL)</option>
             <option value="ISNA">Islamic Society of North America (ISNA)</option
             >
             <option value="Egypt">Egyptian General Authority of Survey</option>
@@ -196,7 +187,7 @@
     </form>
 </div>
 
-<table align="center">
+<table>
     <tr>
         <td>
             <a href="/#" class="arrow">&lt;&lt;</a>
