@@ -1,5 +1,5 @@
 {
-    "name": "svelte-template",
+    "name": "beautiful-salat",
     "version": "1.0.0",
     "license": "MIT",
     "type": "module",
@@ -13,6 +13,7 @@
         "test:tsc": "tsc --noEmit",
         "lint": "prettier --check .",
         "lint:fix": "prettier --check -w .",
+        "semantic-release": "semantic-release",
         "serve": "vite preview --port 8080"
     },
     "devDependencies": {
@@ -30,6 +31,7 @@
         "animate.css": "^4.1.1",
         "autoprefixer": "^10.4.0",
         "cssnano": "^5.0.12",
+        "cz-conventional-changelog": "3.3.0",
         "jest": "^27.4.3",
         "postcss": "^8.4.4",
         "postcss-import": "^14.0.2",
@@ -38,6 +40,7 @@
         "prettier": "^2.5.1",
         "prettier-plugin-svelte": "^2.5.0",
         "sass": "^1.44.0",
+        "semantic-release": "^18.0.1",
         "svelte": "^3.44.2",
         "svelte-check": "^2.2.10",
         "svelte-preprocess": "^4.7.2",
@@ -78,5 +81,15 @@
         "restoreMocks": true,
         "resetMocks": true,
         "resetModules": true
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+        }
     }
 }
