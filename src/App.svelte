@@ -2,6 +2,7 @@
     import { PrayerTimes } from "@/utils/PrayerTimes";
     import DisplayMonth from "@/components/DisplayMonth.svelte";
 
+    
     const prayerTimes = new PrayerTimes("ISNA");
     const times = prayerTimes.getPrayerTimes(new Date(), [43, -80], -5);
 </script>
