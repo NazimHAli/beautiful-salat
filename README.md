@@ -1,1 +1,1 @@
-# beautiful-salat
+# Beautiful Salat
