@@ -203,11 +203,16 @@ class PrayerTimes {
 
     // convert times to given time format
     formatEachPrayerTime(times) {
+        const formatedTimes = {};
+
         for (let i in times) {
-            times[i] = this.getFormattedTime(times[i], this.timeFormat);
+            formatedTimes[this.timeNames[i]] = this.getFormattedTime(
+                times[i],
+                this.timeFormat
+            );
         }
 
-        return times;
+        return formatedTimes;
     }
 
     // convert float time to the given format (see timeFormats)

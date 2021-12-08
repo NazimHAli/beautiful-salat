@@ -53,7 +53,7 @@
                 format
             );
 
-            times.day = date.getDate();
+            times["day"] = date.getDate();
 
             storedTimes.push(times);
             date.setDate(date.getDate() + 1); // Set next day
@@ -75,14 +75,15 @@
             {/each}
         </tr>
     </thead>
+
     <tbody>
-        {#each calculatedPrayerTimes as item (item.day)}
+        {#each calculatedPrayerTimes as prayers (prayers.day)}
             <tr
                 class="{theme + '_row'}"
-                class:active="{todaysDate.getDate() === item.day}"
+                class:active="{todaysDate.getDate() === prayers.day}"
             >
-                {#each Object.entries(prayerNames) as salat}
-                    <td>{item[salat[0]]}</td>
+                {#each Object.entries(prayerNames) as item}
+                    <td>{prayers[item[1]]}</td>
                 {/each}
             </tr>
         {/each}
