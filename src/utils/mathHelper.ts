@@ -14,7 +14,6 @@ export const mathHelpers = {
     tan(d: number) {
         return Math.tan(this.dtr(d));
     },
-
     arcsin(d: number) {
         return this.rtd(Math.asin(d));
     },
@@ -24,21 +23,18 @@ export const mathHelpers = {
     arctan(d: number) {
         return this.rtd(Math.atan(d));
     },
-
     arccot(x: number) {
         return this.rtd(Math.atan(1 / x));
     },
     arctan2(y: number, x: number) {
         return this.rtd(Math.atan2(y, x));
     },
-
     fixAngle(a: number) {
         return this.fix(a, 360);
     },
     fixHour(a: number) {
         return this.fix(a, 24);
     },
-
     fix(a: number, b: number) {
         a = a - b * Math.floor(a / b);
         return a < 0 ? a + b : a;

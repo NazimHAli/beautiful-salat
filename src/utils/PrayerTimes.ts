@@ -169,6 +169,47 @@ class PrayerTimes {
         return this.computeTimes();
     }
 
+    // compute prayer times
+    computeTimes() {
+        let times = {
+            imsak: 5,
+            fajr: 5,
+            sunrise: 6,
+            dhuhr: 12,
+            asr: 13,
+            sunset: 18,
+            maghrib: 18,
+            isha: 18,
+        };
+
+        // main iterations
+        for (let i = 1; i <= this.numIterations; i++) {
+            times = this.computePrayerTimes(times);
+        }
+
+        times = this.adjustTimes(times);
+
+        // add midnight time
+        //@ts-ignore
+        times.midnight =
+            this.setting.midnight === "Jafari"
+                ? times.sunset + this.timeDiff(times.sunset, times.fajr) / 2
+                : times.sunset + this.timeDiff(times.sunset, times.sunrise) / 2;
+
+        times = this.applyOffsetsToPrayerTimes(times);
+
+        return this.formatEachPrayerTime(times);
+    }
+
+    // convert times to given time format
+    formatEachPrayerTime(times) {
+        for (let i in times) {
+            times[i] = this.getFormattedTime(times[i], this.timeFormat);
+        }
+
+        return times;
+    }
+
     // convert float time to the given format (see timeFormats)
     getFormattedTime(time, format, suffixes = null) {
         if (isNaN(time)) {
@@ -315,40 +356,6 @@ class PrayerTimes {
         };
     }
 
-    // compute prayer times
-    computeTimes() {
-        // default times
-        let times = {
-            imsak: 5,
-            fajr: 5,
-            sunrise: 6,
-            dhuhr: 12,
-            asr: 13,
-            sunset: 18,
-            maghrib: 18,
-            isha: 18,
-        };
-
-        // main iterations
-        for (let i = 1; i <= this.numIterations; i++) {
-            times = this.computePrayerTimes(times);
-        }
-
-        times = this.adjustTimes(times);
-
-        // add midnight time
-        //@ts-ignore
-        times.midnight =
-            this.setting.midnight == "Jafari"
-                ? times.sunset + this.timeDiff(times.sunset, times.fajr) / 2
-                : times.sunset + this.timeDiff(times.sunset, times.sunrise) / 2;
-
-        times = this.tuneTimes(times);
-
-        return this.modifyFormats(times);
-    }
-
-    // adjust times
     adjustTimes(times) {
         let params = this.setting;
 
@@ -389,19 +396,9 @@ class PrayerTimes {
         return 0.833 + angle;
     }
 
-    // apply offsets to the times
-    tuneTimes(times) {
+    applyOffsetsToPrayerTimes(times) {
         for (let i in times) {
             times[i] += this.offset[i] / 60;
-        }
-
-        return times;
-    }
-
-    // convert times to given time format
-    modifyFormats(times) {
-        for (let i in times) {
-            times[i] = this.getFormattedTime(times[i], this.timeFormat);
         }
 
         return times;

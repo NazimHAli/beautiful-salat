@@ -1,0 +1,61 @@
+@mixin base {
+    &_table {
+        @apply table w-full;
+    }
+
+    &_title {
+        @apply text-left border-b;
+
+        &_cell {
+            @apply text-lg py-4;
+        }
+    }
+
+    &_row {
+        @apply border-b border-gray-200;
+    }
+}
+
+.classic {
+    @include base;
+
+    &_table {
+        @apply bg-gray-200;
+    }
+
+    &_title {
+        @apply border-gray-300;
+
+        &_cell {
+            @apply py-4;
+        }
+    }
+
+    &_row {
+        @apply bg-gray-100;
+
+        &.active {
+            @apply bg-white;
+        }
+    }
+}
+
+.dark {
+    @include base;
+
+    &_table {
+        @apply bg-gray-800 text-gray-200;
+    }
+
+    &_title {
+        @apply border-gray-400;
+    }
+
+    &_row {
+        @apply bg-gray-700;
+
+        &.active {
+            @apply bg-gray-400;
+        }
+    }
+}
