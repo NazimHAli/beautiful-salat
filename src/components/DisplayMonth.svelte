@@ -7,15 +7,15 @@
     let todaysDate = new Date();
     let calculatedPrayerTimes = [];
 
-    let prayerNames = {
-        day: "Day",
-        fajr: "Fajr",
-        sunrise: "Sunrise",
-        dhuhr: "Dhuhr",
-        asr: "Asr",
-        maghrib: "Maghrib",
-        isha: "Isha",
-    };
+    let displayColumns = [
+        "Day",
+        "Fajr",
+        "Sunrise",
+        "Dhuhr",
+        "Asr",
+        "Maghrib",
+        "Isha",
+    ];
 
     const options = {
         latitude: 40,
@@ -52,7 +52,6 @@
                 options.dst,
                 format
             );
-
             times["day"] = date.getDate();
 
             storedTimes.push(times);
@@ -70,8 +69,8 @@
 <table class="{theme + '_table'}">
     <thead>
         <tr class="{theme + '_title'}">
-            {#each Object.entries(prayerNames) as item}
-                <td class="{theme + '_title_cell'}">{item[1]}</td>
+            {#each displayColumns as name}
+                <td class="{theme + '_title_cell'}">{name}</td>
             {/each}
         </tr>
     </thead>
@@ -82,8 +81,8 @@
                 class="{theme + '_row'}"
                 class:active="{todaysDate.getDate() === prayers.day}"
             >
-                {#each Object.entries(prayerNames) as item}
-                    <td>{prayers[item[1]]}</td>
+                {#each displayColumns as name}
+                    <td>{prayers[name] || prayers["day"]}</td>
                 {/each}
             </tr>
         {/each}
