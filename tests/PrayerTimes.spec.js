@@ -16,15 +16,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "05:53",
-                fajr: "06:03",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "16:47",
-                isha: "18:24",
-                midnight: "00:16",
+                Imsak: "05:53",
+                Fajr: "06:03",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "16:47",
+                Isha: "18:24",
+                Midnight: "00:16",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
@@ -44,15 +44,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "06:10",
-                fajr: "06:20",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "16:47",
-                isha: "18:12",
-                midnight: "00:16",
+                Imsak: "06:10",
+                Fajr: "06:20",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "16:47",
+                Isha: "18:12",
+                Midnight: "00:16",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
@@ -72,15 +72,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "05:44",
-                fajr: "05:54",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "16:47",
-                isha: "18:26",
-                midnight: "00:16",
+                Imsak: "05:44",
+                Fajr: "05:54",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "16:47",
+                Isha: "18:26",
+                Midnight: "00:16",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
@@ -100,15 +100,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "05:50",
-                fajr: "06:00",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "16:47",
-                isha: "18:17",
-                midnight: "00:16",
+                Imsak: "05:50",
+                Fajr: "06:00",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "16:47",
+                Isha: "18:17",
+                Midnight: "00:16",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
@@ -128,15 +128,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "05:53",
-                fajr: "06:03",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "16:47",
-                isha: "18:29",
-                midnight: "00:16",
+                Imsak: "05:53",
+                Fajr: "06:03",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "16:47",
+                Isha: "18:29",
+                Midnight: "00:16",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
@@ -156,15 +156,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "05:54",
-                fajr: "06:04",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "17:10",
-                isha: "18:06",
-                midnight: "23:25",
+                Imsak: "05:54",
+                Fajr: "06:04",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "17:10",
+                Isha: "18:06",
+                Midnight: "23:25",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
@@ -184,15 +184,15 @@ describe("Prayer times calculation methods", () => {
             );
 
             expectedTimes = {
-                imsak: "06:04",
-                fajr: "06:14",
-                sunrise: "07:45",
-                dhuhr: "12:16",
-                asr: "14:29",
-                sunset: "16:47",
-                maghrib: "17:07",
-                isha: "18:06",
-                midnight: "23:30",
+                Imsak: "06:04",
+                Fajr: "06:14",
+                Sunrise: "07:45",
+                Dhuhr: "12:16",
+                Asr: "14:29",
+                Sunset: "16:47",
+                Maghrib: "17:07",
+                Isha: "18:06",
+                Midnight: "23:30",
             };
 
             expect(calculatedTimes).toEqual(expectedTimes);
