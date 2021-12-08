@@ -66,25 +66,27 @@
     });
 </script>
 
-<table class="{theme + '_table'}">
-    <thead>
-        <tr class="{theme + '_title'}">
-            {#each displayColumns as name}
-                <td class="{theme + '_title_cell'}">{name}</td>
-            {/each}
-        </tr>
-    </thead>
-
-    <tbody>
-        {#each calculatedPrayerTimes as prayers (prayers.day)}
-            <tr
-                class="{theme + '_row'}"
-                class:active="{todaysDate.getDate() === prayers.day}"
-            >
+<div class="table-container">
+    <table class="{theme + '_table'}">
+        <thead>
+            <tr class="{theme + '_title'}">
                 {#each displayColumns as name}
-                    <td>{prayers[name] || prayers["day"]}</td>
+                    <th class="{theme + '_title_cell'}">{name}</th>
                 {/each}
             </tr>
-        {/each}
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            {#each calculatedPrayerTimes as prayers (prayers.day)}
+                <tr
+                    class="{theme + '_row'}"
+                    class:active="{todaysDate.getDate() === prayers.day}"
+                >
+                    {#each displayColumns as name}
+                        <td>{prayers[name] || prayers["day"]}</td>
+                    {/each}
+                </tr>
+            {/each}
+        </tbody>
+    </table>
+</div>
