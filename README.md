@@ -3,6 +3,7 @@
 
 [![Build](https://github.com/NazimHAli/beautiful-salat/actions/workflows/build.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/build.yml)
 [![Unit Tests](https://github.com/NazimHAli/beautiful-salat/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/unit-tests.yml)
+[![Lint](https://github.com/NazimHAli/beautiful-salat/actions/workflows/lint.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/lint.yml)
 
 Salam Alaykoum :D,
 
