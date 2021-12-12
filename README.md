@@ -20,7 +20,6 @@ Prayer times library providing integration support for multiple environments: va
 
 ![image](https://user-images.githubusercontent.com/26750288/145725761-cd675172-2e51-4b29-8619-b7ecff02b268.png)
 
-
 ## Dev Quick start
 
 ```
@@ -28,14 +27,15 @@ yarn install
 yarn dev
 ```
 
-
 ## Contributions welcome!
 
 Open a PR or issue
 
 ## Credits
-[praytimes.org](http://praytimes.org/)  
-  -    Detailed [mathemathical calculation explanations](http://praytimes.org/calculation)  
-  -    Code references + [multiple libraries](http://praytimes.org/code/)  
-      -    Their latest Javascript version is 10+ years old
-      -    I rewrote it with Typescript, added testing, fixed detected type bugs
+
+[praytimes.org](http://praytimes.org/)
+
+-   Detailed [mathemathical calculation explanations](http://praytimes.org/calculation)
+-   Code references + [multiple libraries](http://praytimes.org/code/)
+-   Their latest Javascript version is 10+ years old
+-   I rewrote it with Typescript, added testing, fixed detected type bugs
