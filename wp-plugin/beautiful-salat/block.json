@@ -1,0 +1,37 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "create-block/beautiful-salat",
+	"version": "0.1.0",
+	"title": "Beautiful Salat",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Prayer times with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.",
+	"supports": {
+		"html": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Prayer Times"
+		},
+		"maxWidth": {
+			"type": "number"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"titleTextColor": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"attributes": {
+			"title": "Prayer Times"
+		}
+	},
+	"textdomain": "beautiful-salat",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/style-index.css",
+	"style": "file:./build/style-index.css"
+}
