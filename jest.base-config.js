@@ -11,4 +11,7 @@ module.exports = {
   transform: {
     "^.+\\.(ts|js)$": "ts-jest"
   },
+  restoreMocks: true,
+  resetMocks: true,
+  resetModules: true,
 };

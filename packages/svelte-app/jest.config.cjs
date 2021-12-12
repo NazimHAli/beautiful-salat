@@ -19,7 +19,4 @@ module.exports = {
             statements: 10,
         },
     },
-    restoreMocks: true,
-    resetMocks: true,
-    resetModules: true,
 };
