@@ -1,0 +1,8 @@
+/* TailwindCSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    @apply overflow-x-hidden;
+}

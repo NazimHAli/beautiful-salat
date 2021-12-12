@@ -1,0 +1,8 @@
+runtime: nodejs14
+
+handlers:
+    - url: /static
+      static_dir: dist
+
+    - url: /.*
+      script: auto
