@@ -55,7 +55,7 @@ it uses WordPress built-in storage for settings.
 
 == Changelog ==
 
-= 1.1.0 =
+= 2.0.0 =
 * Migrate from classic WordPress widgets to Gutenberg blocks
 
 = 1.0.0 =

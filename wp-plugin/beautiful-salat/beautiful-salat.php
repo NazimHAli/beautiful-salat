@@ -4,7 +4,7 @@
  * Description:       Prayer times with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.
  * Requires at least: 5.8
  * Requires PHP:      7.0
- * Version:           1.1.0
+ * Version:           2.0.0
  * Author:            Nazim Ali
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
