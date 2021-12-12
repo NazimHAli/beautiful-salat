@@ -1,32 +1,17 @@
 import "./style.scss";
 
-import {
-	ColorPalette,
-	InspectorControls,
-	RichText,
-} from "@wordpress/block-editor";
+import { ColorPalette, InspectorControls, RichText } from "@wordpress/block-editor";
 import { registerBlockType } from "@wordpress/blocks";
-import {
-	CheckboxControl,
-	RadioControl,
-	SelectControl,
-	TextControl,
-	ToggleControl,
-} from "@wordpress/components";
+import { CheckboxControl, RadioControl, SelectControl, TextControl, ToggleControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 function prayerTable(props) {
 	return (
-		<div
-			style={{ maxWidth: props?.maxWidth ? props.maxWidth : null }}
-			className="table-container"
-		>
+		<div style={{ maxWidth: props?.maxWidth ? props.maxWidth : null }} className="table-container">
 			<table className="table">
 				<thead
 					style={{
-						backgroundColor: props?.backgroundColor
-							? props.backgroundColor
-							: null,
+						backgroundColor: props?.backgroundColor ? props.backgroundColor : null,
 						color: props?.titleTextColor ? props.titleTextColor : null,
 					}}
 					className="table-header"
@@ -69,13 +54,7 @@ function prayerTable(props) {
 
 registerBlockType("create-block/beautiful-salat", {
 	edit: (props) => {
-		const {
-			checkboxField,
-			radioField,
-			selectField,
-			setAttributes,
-			toggleField,
-		} = props;
+		const { checkboxField, radioField, selectField, setAttributes, toggleField } = props;
 
 		function onChangeCheckboxField(newValue) {
 			setAttributes({ checkboxField: newValue });
@@ -96,24 +75,13 @@ registerBlockType("create-block/beautiful-salat", {
 		return (
 			<>
 				<InspectorControls>
-					<TextControl
-						label="Title"
-						onChange={(newValue) => setAttributes({ title: newValue })}
-						value={props.attributes.title}
-					/>
+					<TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
 
 					<p>Title Text Color</p>
-					<ColorPalette
-						value={props.attributes.titleTextColor}
-						onChange={(newValue) => setAttributes({ titleTextColor: newValue })}
-					/>
+					<ColorPalette value={props.attributes.titleTextColor} onChange={(newValue) => setAttributes({ titleTextColor: newValue })} />
 
 					<p>Title Background Color</p>
-					<ColorPalette
-						onChange={(newValue) =>
-							setAttributes({ backgroundColor: newValue })
-						}
-					/>
+					<ColorPalette onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
 
 					<CheckboxControl
 						heading="Checkbox Field"
@@ -133,11 +101,7 @@ registerBlockType("create-block/beautiful-salat", {
 						onChange={onChangeRadioField}
 					/>
 
-					<ToggleControl
-						label="Toggle Field"
-						checked={toggleField}
-						onChange={onChangeToggleField}
-					/>
+					<ToggleControl label="Toggle Field" checked={toggleField} onChange={onChangeToggleField} />
 
 					<SelectControl
 						label="Select Control"
