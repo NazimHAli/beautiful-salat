@@ -2,7 +2,7 @@
 ## Still in BETA
 
 [![Build](https://github.com/NazimHAli/beautiful-salat/actions/workflows/build.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/build.yml)
-[![Tests](https://github.com/NazimHAli/beautiful-salat/actions/workflows/tests.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/tests.yml)
+[![Unit Tests](https://github.com/NazimHAli/beautiful-salat/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/unit-tests.yml)
 
 Salam Alaykoum :D,
 
