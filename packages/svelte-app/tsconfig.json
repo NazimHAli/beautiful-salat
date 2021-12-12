@@ -13,7 +13,7 @@
         "resolveJsonModule": true,
         "moduleResolution": "node",
         "target": "esnext",
-        "useDefineForClassFields": true,
+        "useDefineForClassFields": true
     },
     "include": [
         "src/**/*.d.ts",
