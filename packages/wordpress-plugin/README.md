@@ -1,4 +1,4 @@
-# Beautiful Salat - WordPress Plugin
+# WordPress Plugin
 
 ## Still in BETA
 
