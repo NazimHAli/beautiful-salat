@@ -1,130 +1,103 @@
 {
-    "name": "beautiful-salat",
-    "version": "0.1.0",
-    "license": "MIT",
-    "type": "module",
-    "files": [
-        "dist/**"
-    ],
-    "main": "dist/index.js",
-    "scripts": {
-        "build": "vite build",
-        "build:watch": "vite build --watch",
-        "commit": "cz",
-        "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
-        "dev": "vite --host 10.0.0.211 --port 3001",
-        "test": "yarn test:jest && yarn test:tsc",
-        "test:jest": "jest",
-        "test:tsc": "tsc --noEmit",
-        "lint": "prettier --check .",
-        "lint:fix": "prettier --check -w .",
-        "semantic-release": "yarn build && semantic-release",
-        "serve": "vite preview --port 8080"
-    },
-    "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^4.1.3",
-        "@semantic-release/commit-analyzer": "^9.0.2",
-        "@semantic-release/git": "^10.0.1",
-        "@semantic-release/github": "^8.0.2",
-        "@semantic-release/npm": "^8.0.3",
-        "@semantic-release/release-notes-generator": "^10.0.3",
-        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
-        "@testing-library/dom": "^8.11.1",
-        "@tsconfig/svelte": "^2.0.1",
-        "@types/cssnano": "^4.0.1",
-        "@types/jest": "^27.0.3",
-        "@types/node": "^16.11.11",
-        "@types/postcss-import": "^14.0.0",
-        "@types/tailwindcss": "^2.2.4",
-        "animate.css": "^4.1.1",
-        "autoprefixer": "^10.4.0",
-        "cssnano": "^5.0.12",
-        "cz-conventional-changelog": "3.3.0",
-        "husky": "^7.0.4",
-        "jest": "^27.4.3",
-        "postcss": "^8.4.4",
-        "postcss-import": "^14.0.2",
-        "postcss-nested": "^5.0.6",
-        "postcss-sass": "^0.5.0",
-        "prettier": "^2.5.1",
-        "prettier-plugin-svelte": "^2.5.0",
-        "sass": "^1.44.0",
-        "semantic-release": "^18.0.1",
-        "svelte": "^3.44.2",
-        "svelte-check": "^2.2.10",
-        "svelte-preprocess": "^4.7.2",
-        "tailwindcss": "^2.2.19",
-        "ts-jest": "^27.1.0",
-        "ts-node": "^10.4.0",
-        "tslib": "^2.3.1",
-        "typescript": "^4.5.2",
-        "vite": "^2.6.14"
-    },
-    "jest": {
-        "collectCoverage": true,
-        "collectCoverageFrom": [
-            "<rootDir>/src/utils/*.ts",
-            "!<rootDir>/src/*.d.ts"
-        ],
-        "coverageReporters": [
-            "text",
-            "text-summary"
-        ],
-        "coverageThreshold": {
-            "global": {
-                "branches": 10,
-                "functions": 10,
-                "lines": 10,
-                "statements": 10
-            }
-        },
-        "moduleDirectories": [
-            "node_modules",
-            "src"
-        ],
-        "modulePaths": [
-            "<rootDir>/src"
-        ],
-        "moduleNameMapper": {
-            "^@/(.*)$": "<rootDir>/src/$1"
-        },
-        "transform": {
-            "^.+\\.(ts|js)$": "ts-jest"
-        },
-        "restoreMocks": true,
-        "resetMocks": true,
-        "resetModules": true
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-        }
-    },
-    "release": {
-        "branches": [
-            "master",
-            "next",
-            "beta"
-        ],
-        "plugins": [
-            "@semantic-release/commit-analyzer",
-            "@semantic-release/release-notes-generator",
-            [
-                "@semantic-release/github",
-                {
-                    "assets": [
-                        "dist/**"
-                    ]
-                }
-            ],
-            "@semantic-release/npm",
-            "@semantic-release/git"
-        ]
-    },
-    "dependencies": {}
+  "name": "beautiful-salat",
+  "version": "1.0.0",
+  "description": "Monorepo template configured with Yarn 2, Typescript, automated Gihub releases and npm publishing.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "cm": "cz",
+    "buildall": "yarn workspaces foreach run build",
+    "testall": "yarn workspaces foreach run test",
+    "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
+    "lintall": "prettier --check ./packages -w",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintIgnore": [
+    ".pnp.js",
+    ".yarn",
+    "**/dist"
+  ],
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^12.20.11",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-functional": "^3.7.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0",
+    "semantic-release": "^18.0.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.2"
+  },
+  "packageManager": "yarn@3.1.1",
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazimHAli/frontend-monorepo-template.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nazim Ali",
+    "url": "https://github.com/NazimHAli"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "keywords": [
+    "monorepo",
+    "template",
+    "typescript",
+    "workspaces",
+    "yarn"
+  ],
+  "bugs": {
+    "url": "https://github.com/NazimHAli/frontend-monorepo-template/issues"
+  },
+  "homepage": "https://github.com/NazimHAli/frontend-monorepo-template#readme",
+  "lint-staged": {
+    "*": "yarn lintall"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

@@ -1,17 +1,13 @@
 {
-	"name": "wp-beautiful-salat",
-	"version": "2.0.0",
+	"name": "@beautiful-salat/wordpress-plugin",
+	"version": "0.1.0",
 	"description": "Prayer times WordPress plugin with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.",
 	"author": "Nazim Ali",
 	"license": "GPL-2.0-or-later",
-	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
-		"lint": "npm run lint:js && npm run lint:css",
-		"lint:css": "wp-scripts lint-style",
-		"lint:fix": "prettier --check -w .",
-		"lint:js": "wp-scripts lint-js",
+		"lint": "prettier --check .",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
@@ -23,6 +19,7 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^19.2.2",
+		"eslint-plugin-prettier": "^4.0.0",
 		"prettier": "^2.5.1"
 	}
 }
