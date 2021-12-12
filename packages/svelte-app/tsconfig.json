@@ -1,24 +1,19 @@
 {
-    "extends": "@tsconfig/svelte/tsconfig.json",
-    "compilerOptions": {
-        "allowJs": true,
-        "baseUrl": ".",
-        "checkJs": true,
-        "isolatedModules": true,
-        "module": "esnext",
-        "noImplicitAny": false,
-        "paths": {
-            "@/*": ["./src/*"]
-        },
-        "resolveJsonModule": true,
-        "moduleResolution": "node",
-        "target": "esnext",
-        "useDefineForClassFields": true
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "noImplicitAny": false,
+    "paths": {
+      "@/*": ["./src/*"]
     },
-    "include": [
-        "src/**/*.d.ts",
-        "src/**/*.js",
-        "src/**/*.svelte",
-        "src/**/*.ts"
-    ]
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "target": "esnext",
+    "useDefineForClassFields": true
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "src/**/*.ts"]
 }
