@@ -7,7 +7,7 @@
 
 Salam Alaykoum :D,
 
-Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components. Released the [WordPress plugin](https://wordpress.org/plugins/beautiful-salat/) 5+ years ago and this will not only replace it, but upgraded to use the latest Gutenberg blocks.
+Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components. Released the [WordPress plugin](https://wordpress.org/plugins/beautiful-salat/) 5+ years ago and upgrading it to use latest Gutenberg blocks.
 
 ## Features
 
