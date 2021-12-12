@@ -1,0 +1,14 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "./card.scss";
+
+.wp-block-create-block-beautiful-salat {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+}
