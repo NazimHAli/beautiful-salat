@@ -13,6 +13,12 @@
 	display: block;
 	padding: 1rem;
 	width: 100%;
+	border: unset;
+
+	table, th, td {
+		border: unset;
+		box-sizing: unset;
+	}
 }
 
 .table-header {

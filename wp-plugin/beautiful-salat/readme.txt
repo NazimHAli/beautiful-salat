@@ -2,9 +2,9 @@
 Contributors:      nazimali21
 Donate link:       https://www.freeislamictemplates.com/
 Tags:              islam, muslim, salah, salat, prayer times, block
-Tested up to:      5.8.0
-Requires at least: 5.0.0
-Stable tag:        1.1.0
+Tested up to:      5.8.2
+Requires at least: 5.8.0
+Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
