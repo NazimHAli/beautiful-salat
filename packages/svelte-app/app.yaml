@@ -1,8 +1,8 @@
 runtime: nodejs14
 
 handlers:
-    - url: /static
-      static_dir: build
+  - url: /static
+    static_dir: build
 
-    - url: /.*
-      script: auto
+  - url: /.*
+    script: auto

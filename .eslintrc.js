@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "node", "prettier"],
+  plugins: ["@typescript-eslint", "node", "prettier", "simple-import-sort"],
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
@@ -27,5 +27,10 @@ module.exports = {
     "node/no-unsupported-features/es-syntax": "off",
     "node/shebang": "off",
     "quotes": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
   },
 };

@@ -1,20 +1,20 @@
 .table-container {
-    @apply bg-white shadow-md m-4 overflow-hidden;
+  @apply bg-white shadow-md m-4 overflow-hidden;
 }
 
 .table {
-    @apply w-full block p-4;
+  @apply w-full block p-4;
 
-    &-header {
-        @apply text-white bg-blue-400 w-screen inline-block relative -ml-4 py-4;
-        text-indent: 1rem;
+  &-header {
+    @apply text-white bg-blue-400 w-screen inline-block relative -ml-4 py-4;
+    text-indent: 1rem;
+  }
+
+  &-body {
+    @apply text-gray-600;
+
+    th {
+      @apply w-20 text-left;
     }
-
-    &-body {
-        @apply text-gray-600;
-
-        th {
-            @apply w-20 text-left;
-        }
-    }
+  }
 }

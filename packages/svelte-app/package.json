@@ -1,93 +1,88 @@
 {
-    "name": "@beautiful-salat/svelte-app",
-    "version": "0.1.0",
-    "license": "MIT",
-    "type": "module",
-    "files": [
-        "build/**"
-    ],
-    "main": "build/index.js",
-    "scripts": {
-        "build": "vite build",
-        "build:watch": "vite build --watch",
-        "commit": "cz",
-        "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
-        "dev": "vite --host 10.0.0.211 --port 3001",
-        "test": "yarn test:jest && yarn test:tsc",
-        "test:jest": "jest",
-        "test:tsc": "tsc --noEmit",
-        "lint": "prettier --check .",
-        "semantic-release": "yarn build && semantic-release",
-        "serve": "vite preview --port 8080"
-    },
-    "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^4.1.3",
-        "@semantic-release/commit-analyzer": "^9.0.2",
-        "@semantic-release/git": "^10.0.1",
-        "@semantic-release/github": "^8.0.2",
-        "@semantic-release/npm": "^8.0.3",
-        "@semantic-release/release-notes-generator": "^10.0.3",
-        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
-        "@testing-library/dom": "^8.11.1",
-        "@tsconfig/svelte": "^2.0.1",
-        "@types/cssnano": "^4.0.1",
-        "@types/jest": "^27.0.3",
-        "@types/node": "^16.11.11",
-        "@types/postcss-import": "^14.0.0",
-        "@types/tailwindcss": "^2.2.4",
-        "animate.css": "^4.1.1",
-        "autoprefixer": "^10.4.0",
-        "cssnano": "^5.0.12",
-        "cz-conventional-changelog": "3.3.0",
-        "husky": "^7.0.4",
-        "jest": "^27.4.3",
-        "postcss": "^8.4.4",
-        "postcss-import": "^14.0.2",
-        "postcss-nested": "^5.0.6",
-        "postcss-sass": "^0.5.0",
-        "prettier": "^2.5.1",
-        "prettier-plugin-svelte": "^2.5.0",
-        "sass": "^1.44.0",
-        "semantic-release": "^18.0.1",
-        "svelte": "^3.44.2",
-        "svelte-check": "^2.2.10",
-        "svelte-preprocess": "^4.7.2",
-        "tailwindcss": "^2.2.19",
-        "ts-jest": "^27.1.0",
-        "ts-node": "^10.4.0",
-        "tslib": "^2.3.1",
-        "typescript": "^4.5.2",
-        "vite": "^2.6.14"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-        }
-    },
-    "release": {
-        "branches": [
-            "master",
-            "next",
-            "beta"
-        ],
-        "plugins": [
-            "@semantic-release/commit-analyzer",
-            "@semantic-release/release-notes-generator",
-            [
-                "@semantic-release/github",
-                {
-                    "assets": [
-                        "build/**"
-                    ]
-                }
-            ],
-            "@semantic-release/npm",
-            "@semantic-release/git"
-        ]
+  "name": "@beautiful-salat/svelte-app",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "build/**"
+  ],
+  "main": "build/index.js",
+  "scripts": {
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "commit": "cz",
+    "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
+    "dev": "vite --host 10.0.0.211 --port 3001",
+    "test": "yarn test:jest && yarn test:tsc",
+    "test:jest": "jest",
+    "test:tsc": "tsc --noEmit",
+    "semantic-release": "yarn build && semantic-release",
+    "serve": "vite preview --port 8080"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.2",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
+    "@testing-library/dom": "^8.11.1",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/cssnano": "^4.0.1",
+    "@types/postcss-import": "^14.0.0",
+    "@types/tailwindcss": "^2.2.4",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.12",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^7.0.4",
+    "postcss": "^8.4.4",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-sass": "^0.5.0",
+    "prettier-plugin-svelte": "^2.5.0",
+    "sass": "^1.44.0",
+    "semantic-release": "^18.0.1",
+    "svelte": "^3.44.2",
+    "svelte-check": "^2.2.10",
+    "svelte-preprocess": "^4.7.2",
+    "tailwindcss": "^2.2.19",
+    "tslib": "^2.3.1",
+    "vite": "^2.6.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "release": {
+    "branches": [
+      "master",
+      "next",
+      "beta"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "build/**"
+          ]
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
+  "peerDependencies": {
+    "jest": "*"
+  }
 }

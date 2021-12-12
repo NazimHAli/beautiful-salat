@@ -5,11 +5,11 @@ let app;
 // Dynamically import component
 // @ts-ignore
 import("./App.svelte").then((module) => {
-    const svelteComponent = module.default;
+  const svelteComponent = module.default;
 
-    app = new svelteComponent({
-        target: document.body,
-    });
+  app = new svelteComponent({
+    target: document.body,
+  });
 });
 
 export default app;

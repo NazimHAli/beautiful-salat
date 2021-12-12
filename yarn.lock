@@ -1433,8 +1433,6 @@ __metadata:
     "@testing-library/dom": ^8.11.1
     "@tsconfig/svelte": ^2.0.1
     "@types/cssnano": ^4.0.1
-    "@types/jest": ^27.0.3
-    "@types/node": ^16.11.11
     "@types/postcss-import": ^14.0.0
     "@types/tailwindcss": ^2.2.4
     animate.css: ^4.1.1
@@ -1442,12 +1440,10 @@ __metadata:
     cssnano: ^5.0.12
     cz-conventional-changelog: 3.3.0
     husky: ^7.0.4
-    jest: ^27.4.3
     postcss: ^8.4.4
     postcss-import: ^14.0.2
     postcss-nested: ^5.0.6
     postcss-sass: ^0.5.0
-    prettier: ^2.5.1
     prettier-plugin-svelte: ^2.5.0
     sass: ^1.44.0
     semantic-release: ^18.0.1
@@ -1455,11 +1451,10 @@ __metadata:
     svelte-check: ^2.2.10
     svelte-preprocess: ^4.7.2
     tailwindcss: ^2.2.19
-    ts-jest: ^27.1.0
-    ts-node: ^10.4.0
     tslib: ^2.3.1
-    typescript: ^4.5.2
     vite: ^2.6.14
+  peerDependencies:
+    jest: "*"
   languageName: unknown
   linkType: soft
 
@@ -1472,8 +1467,6 @@ __metadata:
     "@wordpress/components": ^19.1.3
     "@wordpress/i18n": ^4.2.4
     "@wordpress/scripts": ^19.2.2
-    eslint-plugin-prettier: ^4.0.0
-    prettier: ^2.5.1
   languageName: unknown
   linkType: soft
 
@@ -1686,9 +1679,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.0.0, @emotion/babel-plugin@npm:^11.3.0":
-  version: 11.3.0
-  resolution: "@emotion/babel-plugin@npm:11.3.0"
+"@emotion/babel-plugin@npm:^11.3.0, @emotion/babel-plugin@npm:^11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/babel-plugin@npm:11.7.1"
   dependencies:
     "@babel/helper-module-imports": ^7.12.13
     "@babel/plugin-syntax-jsx": ^7.12.13
@@ -1701,32 +1694,32 @@ __metadata:
     escape-string-regexp: ^4.0.0
     find-root: ^1.1.0
     source-map: ^0.5.7
-    stylis: ^4.0.3
+    stylis: 4.0.13
   peerDependencies:
     "@babel/core": ^7.0.0
-  checksum: 8ff91de4a26c32f8342b28b96630527d347879b6669a9bf6f78945ef6588af34be800e0feca0434e8900f082350c351a4b6941e48127aad916a581821620c919
+  checksum: 0c04de6a0a17bc52b76cdd0a2f5c272b56c7e1045316f49116b710840b4f7431852ecefd3ca0878136290c4d05d202567a6e6c0c877a5e714fa68d98fb8ee14d
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.5.0, @emotion/cache@npm:^11.6.0":
-  version: 11.6.0
-  resolution: "@emotion/cache@npm:11.6.0"
+"@emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/cache@npm:11.7.1"
   dependencies:
     "@emotion/memoize": ^0.7.4
     "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.0.0
     "@emotion/weak-memoize": ^0.2.5
-    stylis: ^4.0.10
-  checksum: 3c72c50bfe06fd7ec2728988181173664183d2320305a01bb757caa6a9d485de25fccde1b173d810423d2ff88a178d5a72cc21db76b9e458311a8ce3044dd2a1
+    stylis: 4.0.13
+  checksum: cf7aa8fe3bacfdedcda94b53e76a7635e122043439715fcfbf7f1a81340cfe6099a59134481a03ec3e0437466566d18528577d1e6ea92f5b98c372b8b38a8f35
   languageName: node
   linkType: hard
 
 "@emotion/css@npm:^11.1.3":
-  version: 11.5.0
-  resolution: "@emotion/css@npm:11.5.0"
+  version: 11.7.1
+  resolution: "@emotion/css@npm:11.7.1"
   dependencies:
-    "@emotion/babel-plugin": ^11.0.0
-    "@emotion/cache": ^11.5.0
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.7.1
     "@emotion/serialize": ^1.0.0
     "@emotion/sheet": ^1.0.3
     "@emotion/utils": ^1.0.0
@@ -1735,7 +1728,7 @@ __metadata:
   peerDependenciesMeta:
     "@babel/core":
       optional: true
-  checksum: 45d01333c36a6449fcc4415470088ef2ee515d48a76d054bce9cf5c45fba17e5eec661aed34b4ea38f7003fd6a7e15ddf781e921977b4428875674621ef037f0
+  checksum: ac1f56656f33bdb6539cb4ca941532d8a155167296acdc7d0f820e1a4c679cee59f4b3456e79e1c1f6a493a1f7c6c62fb6ae29a56a51a0bf531374f9b2838967
   languageName: node
   linkType: hard
 
@@ -1779,11 +1772,11 @@ __metadata:
   linkType: hard
 
 "@emotion/react@npm:^11.4.1":
-  version: 11.7.0
-  resolution: "@emotion/react@npm:11.7.0"
+  version: 11.7.1
+  resolution: "@emotion/react@npm:11.7.1"
   dependencies:
     "@babel/runtime": ^7.13.10
-    "@emotion/cache": ^11.6.0
+    "@emotion/cache": ^11.7.1
     "@emotion/serialize": ^1.0.2
     "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.0.0
@@ -1797,7 +1790,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 8b50d61caabe04ae413ae23b98c170da643754ec89f25eb001464095685686585d0f88988bc36432f231e6de6abdbee73308c42ba427de9eaaf5a54d7f2f6ae5
+  checksum: 3392aa71f9c68c16022947959f7f842174e6b075b3baf58e185462411cd9b5a87557109a9225b1abaa2d7200a08b7cb9d7f21aa035f0d36b2c89e19b2a124e02
   languageName: node
   linkType: hard
 
@@ -3490,17 +3483,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^16.11.11":
+"@types/node@npm:*, @types/node@npm:^16.11.12":
   version: 16.11.12
   resolution: "@types/node@npm:16.11.12"
   checksum: a3feb346d61a56f5a137c29bb8c63cfa3cc02e184b9dffdc18ef1528dcce55596e570575215a2e39e6ce69343eeb2a5ba71c271938f1dc8db4cc393902855412
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^12.20.11":
-  version: 12.20.37
-  resolution: "@types/node@npm:12.20.37"
-  checksum: 8c8b12f802678b3b87c5344b6c84082be08561dda81dc161d42be8cd327330d1a5227cef039c45a5e63a6d4a01ef5ef215dccc42d06100f59f6a8814b4f91cdd
   languageName: node
   linkType: hard
 
@@ -3745,7 +3731,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/experimental-utils@npm:4.33.0, @typescript-eslint/experimental-utils@npm:^4.0.1, @typescript-eslint/experimental-utils@npm:^4.9.1":
+"@typescript-eslint/experimental-utils@npm:4.33.0, @typescript-eslint/experimental-utils@npm:^4.0.1":
   version: 4.33.0
   resolution: "@typescript-eslint/experimental-utils@npm:4.33.0"
   dependencies:
@@ -5375,7 +5361,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.flatmap@npm:^1.2.4, array.prototype.flatmap@npm:^1.2.5":
+"array.prototype.flatmap@npm:^1.2.5":
   version: 1.2.5
   resolution: "array.prototype.flatmap@npm:1.2.5"
   dependencies:
@@ -5794,7 +5780,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "beautiful-salat@workspace:."
   dependencies:
-    "@babel/core": ^7.16.0
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
     "@semantic-release/changelog": ^6.0.1
@@ -5803,28 +5788,27 @@ __metadata:
     "@semantic-release/npm": ^8.0.3
     "@semantic-release/release-notes-generator": ^10.0.3
     "@types/jest": ^27.0.3
-    "@types/node": ^12.20.11
+    "@types/node": ^16.11.12
     "@typescript-eslint/eslint-plugin": ^5.4.0
     "@typescript-eslint/parser": ^5.4.0
     commitizen: ^4.2.4
     cz-conventional-changelog: 3.3.0
     eslint: ^7.32.0
     eslint-config-prettier: ^8.3.0
-    eslint-plugin-functional: ^3.7.2
     eslint-plugin-import: ^2.25.3
     eslint-plugin-jest: ^25.2.4
     eslint-plugin-node: ^11.1.0
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-simple-import-sort: ^7.0.0
     husky: ^7.0.4
-    jest: ^27.3.1
+    jest: ^27.4.4
     lint-staged: ^12.1.2
-    prettier: ^2.5.0
+    prettier: ^2.5.1
     semantic-release: ^18.0.1
-    ts-jest: ^27.0.7
-    ts-node: ^10.2.1
+    ts-jest: ^27.1.1
+    ts-node: ^10.4.0
     tsconfig-paths: ^3.12.0
-    typescript: ^4.5.2
+    typescript: ^4.5.3
   languageName: unknown
   linkType: soft
 
@@ -8474,28 +8458,6 @@ __metadata:
   peerDependencies:
     eslint: ">=4.19.1"
   checksum: e57592c52301ee8ddc296ae44216df007f3a870bcb3be8d1fbdb909a1d3a3efe3fa3785de02066f9eba1d6466b722d3eb3cc3f8b75b3cf6a1cbded31ac6298e4
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-functional@npm:^3.7.2":
-  version: 3.7.2
-  resolution: "eslint-plugin-functional@npm:3.7.2"
-  dependencies:
-    "@typescript-eslint/experimental-utils": ^4.9.1
-    array.prototype.flatmap: ^1.2.4
-    deepmerge: ^4.2.2
-    escape-string-regexp: ^4.0.0
-    object.fromentries: ^2.0.3
-  peerDependencies:
-    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
-    tsutils: ^3.0.0
-    typescript: ^3.4.1 || ^4.0.0
-  peerDependenciesMeta:
-    tsutils:
-      optional: true
-    typescript:
-      optional: true
-  checksum: 7aa0f4306627bf2a8f7ef486e8eb956b2fe161fc9ce5ffc011ec22a714c5a621316ae08c85f81061aa31c6ec94a234c2fdc1c97c99653b591a2778d161d5f90f
   languageName: node
   linkType: hard
 
@@ -12329,7 +12291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.3.1, jest@npm:^27.4.3":
+"jest@npm:^27.4.4":
   version: 27.4.4
   resolution: "jest@npm:27.4.4"
   dependencies:
@@ -14624,7 +14586,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.fromentries@npm:^2.0.0, object.fromentries@npm:^2.0.3, object.fromentries@npm:^2.0.5":
+"object.fromentries@npm:^2.0.0, object.fromentries@npm:^2.0.5":
   version: 2.0.5
   resolution: "object.fromentries@npm:2.0.5"
   dependencies:
@@ -15849,7 +15811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.0, prettier@npm:^2.5.1":
+"prettier@npm:^2.5.1":
   version: 2.5.1
   resolution: "prettier@npm:2.5.1"
   bin:
@@ -18413,7 +18375,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylis@npm:^4.0.10, stylis@npm:^4.0.3":
+"stylis@npm:4.0.13":
   version: 4.0.13
   resolution: "stylis@npm:4.0.13"
   checksum: 8ea7a87028b6383c6a982231c4b5b6150031ce028e0fdaf7b2ace82253d28a8af50cc5a9da8a421d3c7c4441592f393086e332795add672aa4a825f0fe3713a3
@@ -19066,7 +19028,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^27.0.7, ts-jest@npm:^27.1.0":
+"ts-jest@npm:^27.1.1":
   version: 27.1.1
   resolution: "ts-jest@npm:27.1.1"
   dependencies:
@@ -19100,7 +19062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.2.1, ts-node@npm:^10.4.0":
+"ts-node@npm:^10.4.0":
   version: 10.4.0
   resolution: "ts-node@npm:10.4.0"
   dependencies:
@@ -19314,7 +19276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:*, typescript@npm:^4.4.3, typescript@npm:^4.4.4, typescript@npm:^4.5.2":
+"typescript@npm:*, typescript@npm:^4.4.3, typescript@npm:^4.4.4, typescript@npm:^4.5.3":
   version: 4.5.3
   resolution: "typescript@npm:4.5.3"
   bin:
@@ -19324,7 +19286,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.3#~builtin<compat/typescript>":
   version: 4.5.3
   resolution: "typescript@patch:typescript@npm%3A4.5.3#~builtin<compat/typescript>::version=4.5.3&hash=493e53"
   bin:

@@ -1,69 +1,69 @@
 @mixin base {
-    &_table {
-        @apply table w-full;
+  &_table {
+    @apply table w-full;
+  }
+
+  &_title {
+    @apply text-left border-b;
+
+    &_cell {
+      @apply text-lg p-4;
+    }
+  }
+
+  &_row {
+    @apply border-b;
+
+    td {
+      @apply px-4;
     }
 
-    &_title {
-        @apply text-left border-b;
-
-        &_cell {
-            @apply text-lg p-4;
-        }
+    &.active {
+      @apply font-bold;
     }
-
-    &_row {
-        @apply border-b;
-
-        td {
-            @apply px-4;
-        }
-
-        &.active {
-            @apply font-bold;
-        }
-    }
+  }
 }
 
 .classic {
-    @include base;
+  @include base;
 
-    &_table {
-        @apply bg-gray-200;
+  &_table {
+    @apply bg-gray-200;
+  }
+
+  &_title {
+    @apply border-gray-300;
+
+    &_cell {
+      @apply py-4;
     }
+  }
 
-    &_title {
-        @apply border-gray-300;
+  &_row {
+    @apply bg-gray-100;
 
-        &_cell {
-            @apply py-4;
-        }
+    &.active {
+      @apply bg-white;
     }
-
-    &_row {
-        @apply bg-gray-100;
-
-        &.active {
-            @apply bg-white;
-        }
-    }
+  }
 }
 
 .dark {
-    @include base;
+  @include base;
 
-    &_table {
-        @apply bg-gray-800 text-gray-200;
+  &_table {
+    @apply bg-gray-800 text-gray-200;
+  }
+
+  &_title {
+    @apply border-gray-500;
+  }
+
+  &_row {
+    @apply bg-gray-700 border-gray-500;
+
+    &.active {
+      @apply bg-gray-500;
     }
-
-    &_title {
-        @apply border-gray-500;
-    }
-
-    &_row {
-        @apply bg-gray-700 border-gray-500;
-
-        &.active {
-            @apply bg-gray-500;
-        }
-    }
+  }
 }
