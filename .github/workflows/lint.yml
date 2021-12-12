@@ -1,4 +1,4 @@
-name: Unit Tests
+name: Lint
 
 on:
   push:
@@ -29,5 +29,5 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: Run Tests
-        run: yarn lintall
+      - name: Lint
+        run: yarn lintall:check
