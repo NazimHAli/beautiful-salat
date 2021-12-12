@@ -1,6 +1,7 @@
 {
   "name": "beautiful-salat",
   "version": "1.0.0",
+  "private": true,
   "description": "Monorepo template configured with Yarn 2, Typescript, automated Gihub releases and npm publishing.",
   "workspaces": [
     "packages/*"

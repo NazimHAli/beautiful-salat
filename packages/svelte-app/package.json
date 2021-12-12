@@ -81,5 +81,8 @@
       "@semantic-release/npm",
       "@semantic-release/git"
     ]
+  },
+  "peerDependencies": {
+    "jest": "*"
   }
 }
