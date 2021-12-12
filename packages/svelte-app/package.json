@@ -16,7 +16,6 @@
         "test": "yarn test:jest && yarn test:tsc",
         "test:jest": "jest",
         "test:tsc": "tsc --noEmit",
-        "lint": "prettier --check .",
         "semantic-release": "yarn build && semantic-release",
         "serve": "vite preview --port 8080"
     },
