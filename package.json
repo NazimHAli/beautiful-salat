@@ -1,5 +1,5 @@
 {
-  "name": "beautiful-salat",
+  "name": "beautiful-salat-monorepo",
   "version": "1.0.0",
   "description": "Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components.",
   "workspaces": [
