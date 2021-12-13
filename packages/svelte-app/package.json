@@ -17,7 +17,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && yarn build:minify",
+    "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
     "build:watch": "vite build --watch",
     "commit": "cz",
     "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
@@ -45,6 +46,7 @@
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.0.12",
     "cz-conventional-changelog": "3.3.0",
+    "esbuild": "^0.14.3",
     "husky": "^7.0.4",
     "postcss": "^8.4.4",
     "postcss-import": "^14.0.2",
