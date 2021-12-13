@@ -22,7 +22,7 @@
   "eslintIgnore": [
     ".pnp.js",
     ".yarn",
-    "**/build"
+    "**/**/build"
   ],
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
