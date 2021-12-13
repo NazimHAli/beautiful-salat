@@ -9,6 +9,7 @@ export default defineConfig({
       name: "BeautifulSalat",
       fileName: (format) => `index.${format}.js`,
     },
+    outDir: "build"
   },
   plugins: [svelte()],
   resolve: {
