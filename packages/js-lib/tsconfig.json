@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "noImplicitAny": false,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts"]
+}

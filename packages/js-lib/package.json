@@ -1,0 +1,23 @@
+{
+  "name": "beautiful-salat",
+  "version": "1.0.0",
+  "description": "Prayer times",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test:jest",
+    "test:jest": "jest",
+    "test:tsc": "tsc --noEmit",
+    "build": "esbuild ./src/prayerTimes.ts --bundle --format=esm --minify --entry-names='index' --chunk-names='[name]-[hash]' --outdir=./build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "esbuild": "^0.14.3",
+    "jest": "^27.4.4",
+    "ts-jest": "^27.1.1",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.3"
+  }
+}
