@@ -5,7 +5,7 @@
 [![Unit Tests](https://github.com/NazimHAli/beautiful-salat/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/unit-tests.yml)
 [![Lint](https://github.com/NazimHAli/beautiful-salat/actions/workflows/lint.yml/badge.svg)](https://github.com/NazimHAli/beautiful-salat/actions/workflows/lint.yml)
 
-Salam Alaykoum :D,
+Salam Alaykoum :D
 
 Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components. Released the [WordPress plugin](https://wordpress.org/plugins/beautiful-salat/) 5+ years ago and upgrading it to use latest Gutenberg blocks.
 

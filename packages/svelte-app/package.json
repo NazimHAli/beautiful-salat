@@ -101,5 +101,20 @@
     "wordpress plugin",
     "component",
     "package"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazimHAli/beautiful-salat.git"
+  },
+  "author": {
+    "name": "Nazim Ali",
+    "url": "https://github.com/NazimHAli"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "bugs": {
+    "url": "https://github.com/NazimHAli/beautiful-salat/issues"
+  },
+  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme"
 }
