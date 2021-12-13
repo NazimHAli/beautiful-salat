@@ -5,10 +5,11 @@ import { resolve } from "path";
 export default defineConfig({
   build: {
     lib: {
-      entry: "./src/utils/PrayerTimes.ts",
+      entry: "./src/index.ts",
       name: "BeautifulSalat",
       fileName: (format) => `index.${format}.js`,
     },
+    outDir: "build",
   },
   plugins: [svelte()],
   resolve: {

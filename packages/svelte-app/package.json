@@ -4,9 +4,18 @@
   "license": "MIT",
   "type": "module",
   "files": [
-    "build/**"
+    "build"
   ],
-  "main": "build/index.js",
+  "main": "./build/index.umd.js",
+  "module": "./build/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./build/index.es.js",
+      "require": "./build/index.umd.js"
+    },
+    "./style.css": "./build/style.css",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "vite build",
     "build:watch": "vite build --watch",
@@ -65,7 +74,8 @@
     "branches": [
       "master",
       "next",
-      "beta"
+      "beta",
+      "update-npm-package"
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",

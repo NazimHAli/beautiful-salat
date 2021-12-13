@@ -2,7 +2,7 @@
   "name": "beautiful-salat",
   "version": "1.0.0",
   "private": true,
-  "description": "Monorepo template configured with Yarn 2, Typescript, automated Gihub releases and npm publishing.",
+  "description": "Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components.",
   "workspaces": [
     "packages/*"
   ],
@@ -13,8 +13,7 @@
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
     "lintall": "prettier --check ./packages -w",
     "lintall:check": "prettier --check ./packages",
-    "prepare": "husky install",
-    "semantic-release": "semantic-release"
+    "prepare": "husky install"
   },
   "commitlint": {
     "extends": [
@@ -68,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NazimHAli/frontend-monorepo-template.git"
+    "url": "git+https://github.com/NazimHAli/beautiful-salat.git"
   },
   "license": "MIT",
   "author": {
@@ -79,16 +78,17 @@
     "node": ">=14.0"
   },
   "keywords": [
-    "monorepo",
-    "template",
-    "typescript",
-    "workspaces",
-    "yarn"
+    "salat",
+    "prayer times",
+    "islam",
+    "wordpress plugin",
+    "component",
+    "package"
   ],
   "bugs": {
-    "url": "https://github.com/NazimHAli/frontend-monorepo-template/issues"
+    "url": "https://github.com/NazimHAli/beautiful-salat/issues"
   },
-  "homepage": "https://github.com/NazimHAli/frontend-monorepo-template#readme",
+  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme",
   "lint-staged": {
     "*": "yarn lintall"
   },
