@@ -29,11 +29,10 @@ jobs:
         run: yarn install
 
       - name: Run Tests
-        run: yarn test
+        run: yarn testall
 
       - name: Release
-        run: yarn workspace @beautiful-salat/svelte-app semantic-release
+        run: yarn workspace beautiful-salat semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-

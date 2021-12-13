@@ -1419,45 +1419,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@beautiful-salat/svelte-app@workspace:packages/svelte-app":
-  version: 0.0.0-use.local
-  resolution: "@beautiful-salat/svelte-app@workspace:packages/svelte-app"
-  dependencies:
-    "@fullhuman/postcss-purgecss": ^4.1.3
-    "@semantic-release/commit-analyzer": ^9.0.2
-    "@semantic-release/git": ^10.0.1
-    "@semantic-release/github": ^8.0.2
-    "@semantic-release/npm": ^8.0.3
-    "@semantic-release/release-notes-generator": ^10.0.3
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.31
-    "@testing-library/dom": ^8.11.1
-    "@tsconfig/svelte": ^2.0.1
-    "@types/cssnano": ^4.0.1
-    "@types/postcss-import": ^14.0.0
-    "@types/tailwindcss": ^2.2.4
-    animate.css: ^4.1.1
-    autoprefixer: ^10.4.0
-    cssnano: ^5.0.12
-    cz-conventional-changelog: 3.3.0
-    husky: ^7.0.4
-    postcss: ^8.4.4
-    postcss-import: ^14.0.2
-    postcss-nested: ^5.0.6
-    postcss-sass: ^0.5.0
-    prettier-plugin-svelte: ^2.5.0
-    sass: ^1.44.0
-    semantic-release: ^18.0.1
-    svelte: ^3.44.2
-    svelte-check: ^2.2.10
-    svelte-preprocess: ^4.7.2
-    tailwindcss: ^2.2.19
-    tslib: ^2.3.1
-    vite: ^2.6.14
-  peerDependencies:
-    jest: "*"
-  languageName: unknown
-  linkType: soft
-
 "@beautiful-salat/wordpress-plugin@workspace:packages/wordpress-plugin":
   version: 0.0.0-use.local
   resolution: "@beautiful-salat/wordpress-plugin@workspace:packages/wordpress-plugin"
@@ -5776,9 +5737,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"beautiful-salat@workspace:.":
+"beautiful-salat-monorepo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "beautiful-salat@workspace:."
+  resolution: "beautiful-salat-monorepo@workspace:."
   dependencies:
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
@@ -5809,6 +5770,45 @@ __metadata:
     ts-node: ^10.4.0
     tsconfig-paths: ^3.12.0
     typescript: ^4.5.3
+  languageName: unknown
+  linkType: soft
+
+"beautiful-salat@workspace:packages/svelte-app":
+  version: 0.0.0-use.local
+  resolution: "beautiful-salat@workspace:packages/svelte-app"
+  dependencies:
+    "@fullhuman/postcss-purgecss": ^4.1.3
+    "@semantic-release/commit-analyzer": ^9.0.2
+    "@semantic-release/git": ^10.0.1
+    "@semantic-release/github": ^8.0.2
+    "@semantic-release/npm": ^8.0.3
+    "@semantic-release/release-notes-generator": ^10.0.3
+    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.31
+    "@testing-library/dom": ^8.11.1
+    "@tsconfig/svelte": ^2.0.1
+    "@types/cssnano": ^4.0.1
+    "@types/postcss-import": ^14.0.0
+    "@types/tailwindcss": ^2.2.4
+    animate.css: ^4.1.1
+    autoprefixer: ^10.4.0
+    cssnano: ^5.0.12
+    cz-conventional-changelog: 3.3.0
+    husky: ^7.0.4
+    postcss: ^8.4.4
+    postcss-import: ^14.0.2
+    postcss-nested: ^5.0.6
+    postcss-sass: ^0.5.0
+    prettier-plugin-svelte: ^2.5.0
+    sass: ^1.44.0
+    semantic-release: ^18.0.1
+    svelte: ^3.44.2
+    svelte-check: ^2.2.10
+    svelte-preprocess: ^4.7.2
+    tailwindcss: ^2.2.19
+    tslib: ^2.3.1
+    vite: ^2.6.14
+  peerDependencies:
+    jest: "*"
   languageName: unknown
   linkType: soft
 
