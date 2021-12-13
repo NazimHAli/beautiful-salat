@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PrayerTimes } from "beautiful-salat"
+  import { PrayerTimes } from "beautiful-salat";
   import { afterUpdate } from "svelte";
   import "@/styles/themes.scss";
 

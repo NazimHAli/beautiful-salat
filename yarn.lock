@@ -5737,9 +5737,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"beautiful-salat-components@workspace:packages/svelte-app":
+"beautiful-salat-components@workspace:packages/components":
   version: 0.0.0-use.local
-  resolution: "beautiful-salat-components@workspace:packages/svelte-app"
+  resolution: "beautiful-salat-components@workspace:packages/components"
   dependencies:
     "@fullhuman/postcss-purgecss": ^4.1.3
     "@semantic-release/commit-analyzer": ^9.0.2
