@@ -2,12 +2,22 @@
   "name": "beautiful-salat",
   "version": "1.0.0",
   "description": "Prayer times",
-  "main": "index.js",
+  "main": "./build/lib-index.cjs.js",
+  "module": "./build/lib-index.es.js",
+  "exports": {
+    ".": {
+      "import": "./build/lib-index.es.js",
+      "require": "./build/lib-index.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "test": "yarn test:jest",
     "test:jest": "jest",
     "test:tsc": "tsc --noEmit",
-    "build": "esbuild ./src/prayerTimes.ts --bundle --format=esm --minify --entry-names='index' --chunk-names='[name]-[hash]' --outdir=./build"
+    "build": "yarn build:es && yarn build:cjs",
+    "build:es": "esbuild ./src/prayerTimes.ts --bundle --format=esm --minify --entry-names='lib-index.es' --outdir=./build",
+    "build:cjs": "esbuild ./src/prayerTimes.ts --bundle --format=cjs --minify --entry-names='lib-index.cjs' --outdir=./build"
   },
   "license": "MIT",
   "devDependencies": {
