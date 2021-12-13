@@ -48,19 +48,19 @@
     "cz-conventional-changelog": "3.3.0",
     "esbuild": "^0.14.3",
     "husky": "^7.0.4",
-    "postcss": "^8.4.4",
+    "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "postcss-sass": "^0.5.0",
-    "prettier-plugin-svelte": "^2.5.0",
-    "sass": "^1.44.0",
+    "prettier-plugin-svelte": "^2.5.1",
+    "sass": "^1.45.0",
     "semantic-release": "^18.0.1",
     "svelte": "^3.44.2",
     "svelte-check": "^2.2.10",
-    "svelte-preprocess": "^4.7.2",
-    "tailwindcss": "^2.2.19",
+    "svelte-preprocess": "^4.10.0",
+    "tailwindcss": "^3.0.2",
     "tslib": "^2.3.1",
-    "vite": "^2.6.14"
+    "vite": "^2.7.2"
   },
   "config": {
     "commitizen": {
