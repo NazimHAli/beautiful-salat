@@ -1,7 +1,6 @@
 {
   "name": "beautiful-salat",
   "version": "1.0.0",
-  "private": true,
   "description": "Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components.",
   "workspaces": [
     "packages/*"
