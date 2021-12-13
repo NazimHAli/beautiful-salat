@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "cm": "cz",
-    "buildall": "yarn workspaces foreach run build",
+    "buildall": "yarn workspaces foreach -pt run build",
     "testall": "yarn workspaces foreach run test",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "lintall": "prettier --check ./packages -w",
