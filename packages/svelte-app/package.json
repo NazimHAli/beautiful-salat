@@ -93,5 +93,13 @@
   },
   "peerDependencies": {
     "jest": "*"
-  }
+  },
+  "keywords": [
+    "salat",
+    "prayer times",
+    "islam",
+    "wordpress plugin",
+    "component",
+    "package"
+  ]
 }
