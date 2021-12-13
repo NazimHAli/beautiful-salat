@@ -29,7 +29,7 @@ jobs:
         run: yarn install
 
       - name: Run Tests
-        run: yarn test
+        run: yarn testall
 
       - name: Release
         run: yarn workspace @beautiful-salat/svelte-app semantic-release
