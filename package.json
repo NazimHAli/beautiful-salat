@@ -9,7 +9,7 @@
     "cm": "cz",
     "buildall": "yarn workspaces foreach run build",
     "testall": "yarn workspaces foreach run test",
-    "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
+    "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "lintall": "prettier --check ./packages -w",
     "lintall:check": "prettier --check ./packages",
     "prepare": "husky install"

@@ -5755,6 +5755,7 @@ __metadata:
     "@types/tailwindcss": ^2.2.4
     animate.css: ^4.1.1
     autoprefixer: ^10.4.0
+    beautiful-salat: "workspace:^"
     cssnano: ^5.0.12
     cz-conventional-changelog: 3.3.0
     esbuild: ^0.14.3
@@ -5813,7 +5814,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"beautiful-salat@workspace:packages/js-lib":
+"beautiful-salat@workspace:^, beautiful-salat@workspace:packages/js-lib":
   version: 0.0.0-use.local
   resolution: "beautiful-salat@workspace:packages/js-lib"
   dependencies:

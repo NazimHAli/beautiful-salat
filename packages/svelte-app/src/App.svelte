@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PrayerTimes } from "@/utils/PrayerTimes";
+  import { PrayerTimes } from "beautiful-salat"
   import PrayerTimesMonthly from "@/components/PrayerTimesMonthly.svelte";
   import PrayerTimesTableDaily from "@/components/PrayerTimesTableDaily.svelte";
 

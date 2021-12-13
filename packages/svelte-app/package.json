@@ -23,7 +23,7 @@
     "commit": "cz",
     "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "vite --host 10.0.0.211 --port 3001",
-    "test": "yarn test:jest && yarn test:tsc",
+    "test": "yarn test:tsc",
     "test:jest": "jest",
     "test:tsc": "tsc --noEmit",
     "semantic-release": "yarn build && semantic-release",
@@ -118,5 +118,8 @@
   "bugs": {
     "url": "https://github.com/NazimHAli/beautiful-salat/issues"
   },
-  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme"
+  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme",
+  "dependencies": {
+    "beautiful-salat": "workspace:^"
+  }
 }

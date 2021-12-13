@@ -1,4 +1,4 @@
-import { PrayerTimes } from "@/utils/PrayerTimes";
+import { PrayerTimes } from "beautiful-salat"
 import PrayerTimesMonthly from "@/components/PrayerTimesMonthly.svelte";
 import PrayerTimesDaily from "@/components/PrayerTimesDaily.svelte";
 
