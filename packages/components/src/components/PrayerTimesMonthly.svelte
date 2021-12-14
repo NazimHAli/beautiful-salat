@@ -5,7 +5,7 @@
 
   // const prayTimes = new PrayerTimes();
   let todaysDate = new Date();
-  let calculatedPrayerTimes = [];
+  export let calculatedPrayerTimes = [];
 
   let displayColumns = ["Day", "Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
