@@ -206,14 +206,14 @@ class PrayerTimes {
     return formatedTimes;
   }
 
-  getMonthData(year: number, month: number, dst: string) {
+  getMonthData(coords, year: number, month: number, dst: string) {
     let date = new Date(year, month, 1);
     let endDate = new Date(year, month + 1, 1);
     let format = "12hNS";
     const storedTimes: any = [];
 
     while (date < endDate) {
-      let times = this.getPrayerTimes(date, [this.latitude, this.longitude], this.timeZone, dst, format);
+      let times = this.getPrayerTimes(date, coords, this.timeZone, dst, format);
       times["day"] = date.getDate();
 
       storedTimes.push(times);
