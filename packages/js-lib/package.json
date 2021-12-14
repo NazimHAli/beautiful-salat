@@ -17,8 +17,53 @@
     "test:tsc": "tsc --noEmit",
     "build": "yarn build:es && yarn build:cjs",
     "build:es": "esbuild ./src/prayerTimes.ts --bundle --format=esm --minify --entry-names='lib-index.es' --outdir=./build",
-    "build:cjs": "esbuild ./src/prayerTimes.ts --bundle --format=cjs --minify --entry-names='lib-index.cjs' --outdir=./build"
+    "build:cjs": "esbuild ./src/prayerTimes.ts --bundle --format=cjs --minify --entry-names='lib-index.cjs' --outdir=./build",
+    "semantic-release": "semantic-release"
   },
+  "release": {
+    "branches": [
+      "master",
+      "next",
+      "beta"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "build/**"
+          ]
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
+  "keywords": [
+    "salat",
+    "prayer times",
+    "islam",
+    "wordpress plugin",
+    "component",
+    "package"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazimHAli/beautiful-salat.git"
+  },
+  "author": {
+    "name": "Nazim Ali",
+    "url": "https://github.com/NazimHAli"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "bugs": {
+    "url": "https://github.com/NazimHAli/beautiful-salat/issues"
+  },
+  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^27.0.3",
