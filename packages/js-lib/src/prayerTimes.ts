@@ -135,7 +135,7 @@ class PrayerTimes {
   }
 
   // return prayer times for a given date
-  getPrayerTimes(date, coords, timezone = null, dst = "auto", format = null) {
+  getPrayerTimes(date, coords, timezone: any = null, dst = "auto", format: any = null) {
     this.latitude = 1 * coords[0];
     this.longitude = 1 * coords[1];
     this.elevation = coords[2] ? 1 * coords[2] : 0;
@@ -206,8 +206,25 @@ class PrayerTimes {
     return formatedTimes;
   }
 
+  getMonthData(year: number, month: number, dst: string) {
+    let date = new Date(year, month, 1);
+    let endDate = new Date(year, month + 1, 1);
+    let format = "12hNS";
+    const storedTimes: any = [];
+
+    while (date < endDate) {
+      let times = this.getPrayerTimes(date, [this.latitude, this.longitude], this.timeZone, dst, format);
+      times["day"] = date.getDate();
+
+      storedTimes.push(times);
+      date.setDate(date.getDate() + 1); // Set next day
+    }
+
+    return storedTimes;
+  }
+
   // convert float time to the given format (see timeFormats)
-  getFormattedTime(time, format, suffixes = null) {
+  getFormattedTime(time, format, suffixes = []) {
     if (isNaN(time)) {
       return this.invalidTime;
     }
@@ -373,18 +390,15 @@ class PrayerTimes {
     let nightTime = this.timeDiff(times.sunset, times.sunrise);
 
     times.imsak = this.adjustHLTime(times.imsak, times.sunrise, this.eval(params.imsak), nightTime, "ccw");
-
     times.fajr = this.adjustHLTime(times.fajr, times.sunrise, this.eval(params.fajr), nightTime, "ccw");
-
     times.isha = this.adjustHLTime(times.isha, times.sunset, this.eval(params.isha), nightTime);
-
     times.maghrib = this.adjustHLTime(times.maghrib, times.sunset, this.eval(params.maghrib), nightTime);
 
     return times;
   }
 
   // adjust a time for higher latitudes
-  adjustHLTime(time, base, angle, night, direction = null) {
+  adjustHLTime(time, base, angle, night, direction = "") {
     let portion = this.nightPortion(angle, night);
     let timeDiff = direction == "ccw" ? this.timeDiff(time, base) : this.timeDiff(base, time);
 
@@ -403,6 +417,7 @@ class PrayerTimes {
     if (method == "AngleBased") {
       portion = (1 / 60) * angle;
     }
+
     if (method == "OneSeventh") {
       portion = 1 / 7;
     }

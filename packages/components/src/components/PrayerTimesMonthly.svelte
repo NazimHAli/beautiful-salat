@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { PrayerTimes } from "beautiful-salat";
-  import { afterUpdate } from "svelte";
+  // import { PrayerTimes } from "beautiful-salat";
+  // import { afterUpdate } from "svelte";
   import "@/styles/themes.scss";
 
-  const prayTimes = new PrayerTimes();
+  // const prayTimes = new PrayerTimes();
   let todaysDate = new Date();
   let calculatedPrayerTimes = [];
 
@@ -19,37 +19,38 @@
 
   export let theme = "dark";
 
-  // display monthly timetable
-  function displayMonth(offset: number) {
-    prayTimes.setPrayerCalculationMethod(options.method);
-    todaysDate.setMonth(todaysDate.getMonth() + 1 * offset);
+  // // display monthly timetable
+  // function displayMonth(offset: number) {
+  //   prayTimes.setPrayerCalculationMethod(options.method);
+  //   todaysDate.setMonth(todaysDate.getMonth() + 1 * offset);
 
-    let month = todaysDate.getMonth();
-    let year = todaysDate.getFullYear();
+  //   let month = todaysDate.getMonth();
+  //   let year = todaysDate.getFullYear();
 
-    getMonthData(year, month);
-  }
+  //   getMonthData(year, month);
+  //   calculatedPrayerTimes = prayTimes
+  // }
 
-  function getMonthData(year: number, month: number) {
-    let date = new Date(year, month, 1);
-    let endDate = new Date(year, month + 1, 1);
-    let format = "12hNS";
-    const storedTimes = [];
+  // function getMonthData(year: number, month: number) {
+  //   let date = new Date(year, month, 1);
+  //   let endDate = new Date(year, month + 1, 1);
+  //   let format = "12hNS";
+  //   const storedTimes = [];
 
-    while (date < endDate) {
-      let times = prayTimes.getPrayerTimes(date, [options.latitude, options.longitude], options.timezone, options.dst, format);
-      times["day"] = date.getDate();
+  //   while (date < endDate) {
+  //     let times = prayTimes.getPrayerTimes(date, [options.latitude, options.longitude], options.timezone, options.dst, format);
+  //     times["day"] = date.getDate();
 
-      storedTimes.push(times);
-      date.setDate(date.getDate() + 1); // Set next day
-    }
+  //     storedTimes.push(times);
+  //     date.setDate(date.getDate() + 1); // Set next day
+  //   }
 
-    calculatedPrayerTimes = storedTimes;
-  }
+  //   calculatedPrayerTimes = storedTimes;
+  // }
 
-  afterUpdate(() => {
-    displayMonth(0);
-  });
+  // afterUpdate(() => {
+  //   displayMonth(0);
+  // });
 </script>
 
 <div class="table-container">

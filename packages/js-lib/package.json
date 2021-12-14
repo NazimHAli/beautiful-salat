@@ -16,8 +16,8 @@
     "test:jest": "jest",
     "test:tsc": "tsc --noEmit",
     "build": "yarn build:es && yarn build:cjs",
-    "build:es": "esbuild ./src/prayerTimes.ts --bundle --format=esm --minify --entry-names='lib-index.es' --outdir=./build",
-    "build:cjs": "esbuild ./src/prayerTimes.ts --bundle --format=cjs --minify --entry-names='lib-index.cjs' --outdir=./build",
+    "build:es": "esbuild ./src/index.ts --bundle --format=esm --minify --entry-names='lib-index.es' --outdir=./build",
+    "build:cjs": "esbuild ./src/index.ts --bundle --format=cjs --minify --entry-names='lib-index.cjs' --outdir=./build",
     "semantic-release": "semantic-release"
   },
   "release": {

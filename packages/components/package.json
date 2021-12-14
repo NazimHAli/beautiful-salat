@@ -1,5 +1,5 @@
 {
-  "name": "beautiful-salat-components",
+  "name": "components",
   "version": "1.3.5",
   "license": "MIT",
   "type": "module",
@@ -118,8 +118,5 @@
   "bugs": {
     "url": "https://github.com/NazimHAli/beautiful-salat/issues"
   },
-  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme",
-  "dependencies": {
-    "beautiful-salat": "workspace:^"
-  }
+  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme"
 }
