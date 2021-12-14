@@ -9,7 +9,8 @@
       "import": "./build/lib-index.es.js",
       "require": "./build/lib-index.cjs.js"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./style.css": "./build/lib-index.es.css"
   },
   "scripts": {
     "test": "yarn test:jest",
@@ -80,5 +81,8 @@
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "components": "workspace:^"
   }
 }

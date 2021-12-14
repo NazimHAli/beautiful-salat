@@ -1,6 +1,5 @@
+import "components/style.css";
+import { PrayerTimesDaily, PrayerTimesMonthly } from "components";
 import { PrayerTimes } from "./prayerTimes";
-// import PrayerTimesMonthly from "@/components/PrayerTimesMonthly.svelte";
-// import PrayerTimesDaily from "@/components/PrayerTimesDaily.svelte";
 
-// export { PrayerTimes, PrayerTimesDaily, PrayerTimesMonthly };
-export { PrayerTimes };
+export { PrayerTimes, PrayerTimesDaily, PrayerTimesMonthly };

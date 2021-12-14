@@ -5777,6 +5777,7 @@ __metadata:
     "@semantic-release/release-notes-generator": ^10.0.3
     "@types/jest": ^27.0.3
     "@types/node": ^16.11.12
+    components: "workspace:^"
     esbuild: ^0.14.3
     jest: ^27.4.4
     semantic-release: ^18.0.1
@@ -6757,7 +6758,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"components@workspace:packages/components":
+"components@workspace:^, components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "components@workspace:packages/components"
   dependencies:

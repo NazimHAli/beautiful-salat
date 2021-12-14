@@ -4,21 +4,21 @@ import type { typeDefaultParams, typeMethods, typeSetting, typeTimeNames } from 
 import { TimeZoneHelpers } from "./TimeZoneHelpers";
 
 class PrayerTimes {
-  timeNames: typeTimeNames;
-  methods: typeMethods;
-  defaultParams: typeDefaultParams;
-  setting: typeSetting;
-  offset: {};
   calcMethod: string;
-  timeFormat: string;
-  timeSuffixes: string[];
+  defaultParams: typeDefaultParams;
+  elevation: number;
   invalidTime: string;
-  numIterations: number;
+  julianDate: number;
   latitude: number;
   longitude: number;
-  elevation: number;
+  methods: typeMethods;
+  numIterations: number;
+  offset: {};
+  setting: typeSetting;
+  timeFormat: string;
+  timeNames: typeTimeNames;
+  timeSuffixes: string[];
   timeZone: number;
-  julianDate: number;
   tzHelpers: TimeZoneHelpers;
 
   constructor(method = "MWL") {
