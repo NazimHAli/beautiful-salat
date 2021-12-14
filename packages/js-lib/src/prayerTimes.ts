@@ -206,7 +206,7 @@ class PrayerTimes {
     return formatedTimes;
   }
 
-  getMonthData(coords, year: number, month: number, dst: string) {
+  calculateMonthData(coords, year: number, month: number, dst: string) {
     let date = new Date(year, month, 1);
     let endDate = new Date(year, month + 1, 1);
     let format = "12hNS";
@@ -221,6 +221,19 @@ class PrayerTimes {
     }
 
     return storedTimes;
+  }
+
+  public getMonthTable(coords, offset, method) {
+    let todaysDate = new Date();
+
+    this.setPrayerCalculationMethod(method);
+    todaysDate.setMonth(todaysDate.getMonth() + 1 * offset);
+
+    let month = todaysDate.getMonth();
+    let year = todaysDate.getFullYear();
+
+    const calculatedPrayerTimes = this.calculateMonthData(coords, year, month, "auto");
+    return calculatedPrayerTimes;
   }
 
   // convert float time to the given format (see timeFormats)

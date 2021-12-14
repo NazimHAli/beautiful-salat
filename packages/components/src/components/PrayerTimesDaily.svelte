@@ -1,6 +1,4 @@
 <script lang="ts">
-  import "@/styles/card.scss";
-
   export let prayerTimes = [];
 </script>
 
@@ -19,3 +17,7 @@
     </tbody>
   </table>
 </div>
+
+<style lang="scss">
+  @import "../styles/card.scss";
+</style>
