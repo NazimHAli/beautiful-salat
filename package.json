@@ -6,13 +6,14 @@
     "packages/*"
   ],
   "scripts": {
-    "cm": "cz",
     "buildall": "yarn workspaces foreach -pt run build",
-    "testall": "yarn workspaces foreach run test",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
+    "cm": "cz",
     "lintall": "prettier --check ./packages -w",
     "lintall:check": "prettier --check ./packages",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "yalcp": "yalc publish ./packages/js-lib",
+    "testall": "yarn workspaces foreach run test"
   },
   "commitlint": {
     "extends": [

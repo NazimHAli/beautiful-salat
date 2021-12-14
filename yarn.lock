@@ -5766,6 +5766,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"beautiful-salat-components@workspace:^, beautiful-salat-components@workspace:packages/components":
+  version: 0.0.0-use.local
+  resolution: "beautiful-salat-components@workspace:packages/components"
+  dependencies:
+    "@fullhuman/postcss-purgecss": ^4.1.3
+    "@semantic-release/commit-analyzer": ^9.0.2
+    "@semantic-release/git": ^10.0.1
+    "@semantic-release/github": ^8.0.2
+    "@semantic-release/npm": ^8.0.3
+    "@semantic-release/release-notes-generator": ^10.0.3
+    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.31
+    "@testing-library/dom": ^8.11.1
+    "@tsconfig/svelte": ^2.0.1
+    "@types/cssnano": ^4.0.1
+    "@types/postcss-import": ^14.0.0
+    "@types/tailwindcss": ^2.2.4
+    animate.css: ^4.1.1
+    autoprefixer: ^10.4.0
+    cssnano: ^5.0.12
+    cz-conventional-changelog: 3.3.0
+    esbuild: ^0.14.3
+    husky: ^7.0.4
+    postcss: ^8.4.5
+    postcss-import: ^14.0.2
+    postcss-nested: ^5.0.6
+    postcss-sass: ^0.5.0
+    prettier-plugin-svelte: ^2.5.1
+    sass: ^1.45.0
+    semantic-release: ^18.0.1
+    stylelint: ^14.1.0
+    svelte: ^3.44.2
+    svelte-check: ^2.2.10
+    svelte-preprocess: ^4.10.0
+    tailwindcss: ^3.0.2
+    tslib: ^2.3.1
+    vite: ^2.7.2
+  peerDependencies:
+    jest: "*"
+  languageName: unknown
+  linkType: soft
+
+"beautiful-salat-wordpress-plugin@workspace:packages/wordpress-plugin":
+  version: 0.0.0-use.local
+  resolution: "beautiful-salat-wordpress-plugin@workspace:packages/wordpress-plugin"
+  dependencies:
+    "@wordpress/block-editor": ^8.0.10
+    "@wordpress/blocks": ^11.1.4
+    "@wordpress/components": ^19.1.4
+    "@wordpress/i18n": ^4.2.4
+    "@wordpress/scripts": ^19.2.2
+  languageName: unknown
+  linkType: soft
+
 "beautiful-salat@workspace:packages/js-lib":
   version: 0.0.0-use.local
   resolution: "beautiful-salat@workspace:packages/js-lib"
@@ -5777,7 +5830,7 @@ __metadata:
     "@semantic-release/release-notes-generator": ^10.0.3
     "@types/jest": ^27.0.3
     "@types/node": ^16.11.12
-    components: "workspace:^"
+    beautiful-salat-components: "workspace:^"
     esbuild: ^0.14.3
     jest: ^27.4.4
     semantic-release: ^18.0.1
@@ -5919,8 +5972,8 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.0.0, browserslist@npm:^4.12.0, browserslist@npm:^4.14.5, browserslist@npm:^4.16.0, browserslist@npm:^4.16.6, browserslist@npm:^4.17.5, browserslist@npm:^4.17.6, browserslist@npm:^4.18.1":
-  version: 4.19.0
-  resolution: "browserslist@npm:4.19.0"
+  version: 4.19.1
+  resolution: "browserslist@npm:4.19.1"
   dependencies:
     caniuse-lite: ^1.0.30001286
     electron-to-chromium: ^1.4.17
@@ -5929,7 +5982,7 @@ __metadata:
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: 17f23eca9c56c726532f199797fa11a48c41b271d36f7ab565c10c952c83d83368487ae415d435419da7443f660d4bb8b024c303f3c49d0aa7f3e1dadb4fe3b1
+  checksum: c0777fd483691638fd6801e16c9d809e1d65f6d2b06db2e806654be51045cbab1452a89841a2c5caea2cbe19d621b4f1d391cffbb24512aa33280039ab345875
   languageName: node
   linkType: hard
 
@@ -6758,46 +6811,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"components@workspace:^, components@workspace:packages/components":
-  version: 0.0.0-use.local
-  resolution: "components@workspace:packages/components"
-  dependencies:
-    "@fullhuman/postcss-purgecss": ^4.1.3
-    "@semantic-release/commit-analyzer": ^9.0.2
-    "@semantic-release/git": ^10.0.1
-    "@semantic-release/github": ^8.0.2
-    "@semantic-release/npm": ^8.0.3
-    "@semantic-release/release-notes-generator": ^10.0.3
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.31
-    "@testing-library/dom": ^8.11.1
-    "@tsconfig/svelte": ^2.0.1
-    "@types/cssnano": ^4.0.1
-    "@types/postcss-import": ^14.0.0
-    "@types/tailwindcss": ^2.2.4
-    animate.css: ^4.1.1
-    autoprefixer: ^10.4.0
-    cssnano: ^5.0.12
-    cz-conventional-changelog: 3.3.0
-    esbuild: ^0.14.3
-    husky: ^7.0.4
-    postcss: ^8.4.5
-    postcss-import: ^14.0.2
-    postcss-nested: ^5.0.6
-    postcss-sass: ^0.5.0
-    prettier-plugin-svelte: ^2.5.1
-    sass: ^1.45.0
-    semantic-release: ^18.0.1
-    svelte: ^3.44.2
-    svelte-check: ^2.2.10
-    svelte-preprocess: ^4.10.0
-    tailwindcss: ^3.0.2
-    tslib: ^2.3.1
-    vite: ^2.7.2
-  peerDependencies:
-    jest: "*"
-  languageName: unknown
-  linkType: soft
-
 "compute-scroll-into-view@npm:^1.0.17":
   version: 1.0.17
   resolution: "compute-scroll-into-view@npm:1.0.17"
@@ -7098,15 +7111,15 @@ __metadata:
   linkType: hard
 
 "css-select@npm:^4.1.3":
-  version: 4.1.3
-  resolution: "css-select@npm:4.1.3"
+  version: 4.2.0
+  resolution: "css-select@npm:4.2.0"
   dependencies:
     boolbase: ^1.0.0
-    css-what: ^5.0.0
-    domhandler: ^4.2.0
-    domutils: ^2.6.0
-    nth-check: ^2.0.0
-  checksum: 40928f1aa6c71faf36430e7f26bcbb8ab51d07b98b754caacb71906400a195df5e6c7020a94f2982f02e52027b9bd57c99419220cf7020968c3415f14e4be5f8
+    css-what: ^5.1.0
+    domhandler: ^4.3.0
+    domutils: ^2.8.0
+    nth-check: ^2.0.1
+  checksum: 3847b251ca9f2722dd90c0b464b899a5a3b78b0324936a493d7b837a42120764871ad7c01e5bde6280f97710283b0b01e573e43e3076e61cc3e3a2437e0db415
   languageName: node
   linkType: hard
 
@@ -7137,7 +7150,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-what@npm:^5.0.0, css-what@npm:^5.0.1":
+"css-what@npm:^5.0.1, css-what@npm:^5.1.0":
   version: 5.1.0
   resolution: "css-what@npm:5.1.0"
   checksum: 0b75d1bac95c885c168573c85744a6c6843d8c33345f54f717218b37ea6296b0e99bb12105930ea170fd4a921990392a7c790c16c585c1d8960c49e2b7ec39f7
@@ -7794,7 +7807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domhandler@npm:^4.0.0, domhandler@npm:^4.2.0":
+"domhandler@npm:^4.0.0, domhandler@npm:^4.2.0, domhandler@npm:^4.3.0":
   version: 4.3.0
   resolution: "domhandler@npm:4.3.0"
   dependencies:
@@ -7813,7 +7826,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domutils@npm:^2.5.2, domutils@npm:^2.6.0, domutils@npm:^2.7.0":
+"domutils@npm:^2.5.2, domutils@npm:^2.7.0, domutils@npm:^2.8.0":
   version: 2.8.0
   resolution: "domutils@npm:2.8.0"
   dependencies:
@@ -8160,9 +8173,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-android-arm64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-android-arm64@npm:0.14.3"
+"esbuild-android-arm64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-android-arm64@npm:0.14.4"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
@@ -8174,9 +8187,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-darwin-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-darwin-64@npm:0.14.3"
+"esbuild-darwin-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-darwin-64@npm:0.14.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -8188,9 +8201,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-darwin-arm64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-darwin-arm64@npm:0.14.3"
+"esbuild-darwin-arm64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-darwin-arm64@npm:0.14.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -8202,9 +8215,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-freebsd-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-freebsd-64@npm:0.14.3"
+"esbuild-freebsd-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-freebsd-64@npm:0.14.4"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
@@ -8216,9 +8229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-freebsd-arm64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-freebsd-arm64@npm:0.14.3"
+"esbuild-freebsd-arm64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-freebsd-arm64@npm:0.14.4"
   conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
@@ -8230,9 +8243,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-linux-32@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-linux-32@npm:0.14.3"
+"esbuild-linux-32@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-linux-32@npm:0.14.4"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
@@ -8244,9 +8257,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-linux-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-linux-64@npm:0.14.3"
+"esbuild-linux-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-linux-64@npm:0.14.4"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -8258,9 +8271,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-linux-arm64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-linux-arm64@npm:0.14.3"
+"esbuild-linux-arm64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-linux-arm64@npm:0.14.4"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -8272,9 +8285,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-linux-arm@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-linux-arm@npm:0.14.3"
+"esbuild-linux-arm@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-linux-arm@npm:0.14.4"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
@@ -8286,9 +8299,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-linux-mips64le@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-linux-mips64le@npm:0.14.3"
+"esbuild-linux-mips64le@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-linux-mips64le@npm:0.14.4"
   conditions: os=linux & cpu=mips64el
   languageName: node
   linkType: hard
@@ -8300,9 +8313,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-linux-ppc64le@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-linux-ppc64le@npm:0.14.3"
+"esbuild-linux-ppc64le@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-linux-ppc64le@npm:0.14.4"
   conditions: os=linux & cpu=ppc64
   languageName: node
   linkType: hard
@@ -8314,9 +8327,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-netbsd-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-netbsd-64@npm:0.14.3"
+"esbuild-netbsd-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-netbsd-64@npm:0.14.4"
   conditions: os=netbsd & cpu=x64
   languageName: node
   linkType: hard
@@ -8328,9 +8341,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-openbsd-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-openbsd-64@npm:0.14.3"
+"esbuild-openbsd-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-openbsd-64@npm:0.14.4"
   conditions: os=openbsd & cpu=x64
   languageName: node
   linkType: hard
@@ -8342,9 +8355,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-sunos-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-sunos-64@npm:0.14.3"
+"esbuild-sunos-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-sunos-64@npm:0.14.4"
   conditions: os=sunos & cpu=x64
   languageName: node
   linkType: hard
@@ -8356,9 +8369,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-windows-32@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-windows-32@npm:0.14.3"
+"esbuild-windows-32@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-windows-32@npm:0.14.4"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
@@ -8370,9 +8383,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-windows-64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-windows-64@npm:0.14.3"
+"esbuild-windows-64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-windows-64@npm:0.14.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -8384,9 +8397,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-windows-arm64@npm:0.14.3":
-  version: 0.14.3
-  resolution: "esbuild-windows-arm64@npm:0.14.3"
+"esbuild-windows-arm64@npm:0.14.4":
+  version: 0.14.4
+  resolution: "esbuild-windows-arm64@npm:0.14.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -8454,26 +8467,26 @@ __metadata:
   linkType: hard
 
 "esbuild@npm:^0.14.3":
-  version: 0.14.3
-  resolution: "esbuild@npm:0.14.3"
+  version: 0.14.4
+  resolution: "esbuild@npm:0.14.4"
   dependencies:
-    esbuild-android-arm64: 0.14.3
-    esbuild-darwin-64: 0.14.3
-    esbuild-darwin-arm64: 0.14.3
-    esbuild-freebsd-64: 0.14.3
-    esbuild-freebsd-arm64: 0.14.3
-    esbuild-linux-32: 0.14.3
-    esbuild-linux-64: 0.14.3
-    esbuild-linux-arm: 0.14.3
-    esbuild-linux-arm64: 0.14.3
-    esbuild-linux-mips64le: 0.14.3
-    esbuild-linux-ppc64le: 0.14.3
-    esbuild-netbsd-64: 0.14.3
-    esbuild-openbsd-64: 0.14.3
-    esbuild-sunos-64: 0.14.3
-    esbuild-windows-32: 0.14.3
-    esbuild-windows-64: 0.14.3
-    esbuild-windows-arm64: 0.14.3
+    esbuild-android-arm64: 0.14.4
+    esbuild-darwin-64: 0.14.4
+    esbuild-darwin-arm64: 0.14.4
+    esbuild-freebsd-64: 0.14.4
+    esbuild-freebsd-arm64: 0.14.4
+    esbuild-linux-32: 0.14.4
+    esbuild-linux-64: 0.14.4
+    esbuild-linux-arm: 0.14.4
+    esbuild-linux-arm64: 0.14.4
+    esbuild-linux-mips64le: 0.14.4
+    esbuild-linux-ppc64le: 0.14.4
+    esbuild-netbsd-64: 0.14.4
+    esbuild-openbsd-64: 0.14.4
+    esbuild-sunos-64: 0.14.4
+    esbuild-windows-32: 0.14.4
+    esbuild-windows-64: 0.14.4
+    esbuild-windows-arm64: 0.14.4
   dependenciesMeta:
     esbuild-android-arm64:
       optional: true
@@ -8511,7 +8524,7 @@ __metadata:
       optional: true
   bin:
     esbuild: bin/esbuild
-  checksum: 6872d895ed051b912b67cb024295de5c045b6f9f258f00c90bc9b9970e70f3f64e4f1d636d8fa2bba6aa8b04e358139082da6fe222bcc096c6606b054ffd44ea
+  checksum: f0d20307b75967b4a76b3e7c60074873fc51b8e7896339f49bf649bd29f0c48683d655950d12561bb83e1f5e126e9a8b4de8889343e34f7b4bc63ce21e742a7e
   languageName: node
   linkType: hard
 
@@ -12843,6 +12856,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"known-css-properties@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "known-css-properties@npm:0.23.0"
+  checksum: 10d6400f6b411b731b9766be730ede298c7b28e94e2aaa882a014e5975da8028f3c7bab599358d4f53e1118ab33fc7e085c2b851167c698072bac917c372236f
+  languageName: node
+  linkType: hard
+
 "language-subtag-registry@npm:~0.3.2":
   version: 0.3.21
   resolution: "language-subtag-registry@npm:0.3.21"
@@ -14666,7 +14686,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nth-check@npm:^2.0.0":
+"nth-check@npm:^2.0.1":
   version: 2.0.1
   resolution: "nth-check@npm:2.0.1"
   dependencies:
@@ -15873,6 +15893,15 @@ __metadata:
   dependencies:
     postcss: ^7.0.26
   checksum: b812832c06f9fc17b74b714f9c07de80fa770a1535a103b06b679f33b8e09caf60dff1e1eca489613f4ce2bb6439cd949b7d026c843aa9b45bb50f0168b75023
+  languageName: node
+  linkType: hard
+
+"postcss-safe-parser@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "postcss-safe-parser@npm:6.0.0"
+  peerDependencies:
+    postcss: ^8.3.3
+  checksum: 06c733eaad83a3954367e7ee02ddfe3796e7a44d4299ccf9239f40964a4daac153c7d77613f32964b5a86c0c6c2f6167738f31d578b73b17cb69d0c4446f0ebe
   languageName: node
   linkType: hard
 
@@ -18533,6 +18562,54 @@ __metadata:
   languageName: node
   linkType: hard
 
+"stylelint@npm:^14.1.0":
+  version: 14.1.0
+  resolution: "stylelint@npm:14.1.0"
+  dependencies:
+    balanced-match: ^2.0.0
+    cosmiconfig: ^7.0.1
+    debug: ^4.3.2
+    execall: ^2.0.0
+    fast-glob: ^3.2.7
+    fastest-levenshtein: ^1.0.12
+    file-entry-cache: ^6.0.1
+    get-stdin: ^8.0.0
+    global-modules: ^2.0.0
+    globby: ^11.0.4
+    globjoin: ^0.1.4
+    html-tags: ^3.1.0
+    ignore: ^5.1.9
+    import-lazy: ^4.0.0
+    imurmurhash: ^0.1.4
+    is-plain-object: ^5.0.0
+    known-css-properties: ^0.23.0
+    mathml-tag-names: ^2.1.3
+    meow: ^9.0.0
+    micromatch: ^4.0.4
+    normalize-path: ^3.0.0
+    normalize-selector: ^0.2.0
+    picocolors: ^1.0.0
+    postcss: ^8.3.11
+    postcss-media-query-parser: ^0.2.3
+    postcss-resolve-nested-selector: ^0.1.1
+    postcss-safe-parser: ^6.0.0
+    postcss-selector-parser: ^6.0.6
+    postcss-value-parser: ^4.1.0
+    resolve-from: ^5.0.0
+    specificity: ^0.4.1
+    string-width: ^4.2.3
+    strip-ansi: ^6.0.1
+    style-search: ^0.1.0
+    svg-tags: ^1.0.0
+    table: ^6.7.3
+    v8-compile-cache: ^2.3.0
+    write-file-atomic: ^3.0.3
+  bin:
+    stylelint: bin/stylelint.js
+  checksum: c7a016ce0c0737cc5fa9ab8ab025cba2e534eae4ba936fc41d90de7e13e0947b6a78d68d2644572c0f743822444a4cdc25bb2f0bf3e3f9a8993a08b209b13e1a
+  languageName: node
+  linkType: hard
+
 "stylis@npm:4.0.13":
   version: 4.0.13
   resolution: "stylis@npm:4.0.13"
@@ -18740,7 +18817,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"table@npm:^6.0.9, table@npm:^6.6.0":
+"table@npm:^6.0.9, table@npm:^6.6.0, table@npm:^6.7.3":
   version: 6.7.5
   resolution: "table@npm:6.7.5"
   dependencies:
@@ -20182,18 +20259,6 @@ __metadata:
   checksum: 30b48f91fcf12106ed3186ae4fa86a6a1842416df425be7b60485de14bec665a54a68e4b5156647dec3a70f25e84d270ca8bc8cd23182ed095f5c7206a938c1f
   languageName: node
   linkType: hard
-
-"wordpress-plugin@workspace:packages/wordpress-plugin":
-  version: 0.0.0-use.local
-  resolution: "wordpress-plugin@workspace:packages/wordpress-plugin"
-  dependencies:
-    "@wordpress/block-editor": ^8.0.10
-    "@wordpress/blocks": ^11.1.4
-    "@wordpress/components": ^19.1.4
-    "@wordpress/i18n": ^4.2.4
-    "@wordpress/scripts": ^19.2.2
-  languageName: unknown
-  linkType: soft
 
 "wordwrap@npm:^1.0.0":
   version: 1.0.0
