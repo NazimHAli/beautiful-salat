@@ -1,6 +1,6 @@
 <script lang="ts">
   let todaysDate = new Date();
-  export let calculatedPrayerTimes = [];
+  export let prayerTimes = [];
   export let theme = "dark";
 
   let displayColumns = ["Day", "Fajr", "Sunrise", "Dhuhr", "Asr", "Maghrib", "Isha"];
@@ -17,7 +17,7 @@
     </thead>
 
     <tbody>
-      {#each calculatedPrayerTimes as prayers (prayers.day)}
+      {#each prayerTimes as prayers (prayers.day)}
         <tr class={theme + "_row"} class:active={todaysDate.getDate() === prayers.day}>
           {#each displayColumns as name}
             <td>{prayers[name] || prayers["day"]}</td>
