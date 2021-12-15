@@ -13,11 +13,11 @@
     "./style.css": "./build/index.es.css"
   },
   "scripts": {
+    "build:package": "yarn build:clean && node esbuild.config.js",
+    "build:clean": "rm -rf ./build",
     "test": "yarn test:jest",
     "test:jest": "jest",
-    "test:tsc": "tsc --noEmit",
-    "build": "yarn build:clean && node esbuild.config.js",
-    "build:clean": "rm -rf ./build"
+    "test:tsc": "tsc --noEmit"
   },
   "engines": {
     "node": ">=14.0"

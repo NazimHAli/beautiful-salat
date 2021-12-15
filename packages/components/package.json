@@ -17,7 +17,7 @@
     "./style.css": "./build/style.css"
   },
   "scripts": {
-    "build": "vite build --emptyOutDir",
+    "build:package": "vite build --emptyOutDir",
     "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
     "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "vite --host 10.0.0.211 --port 3001",

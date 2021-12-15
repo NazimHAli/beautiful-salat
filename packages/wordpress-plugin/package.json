@@ -5,7 +5,7 @@
 	"author": "Nazim Ali",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
-		"build": "wp-scripts build",
+		"build:package": "wp-scripts build",
 		"format": "wp-scripts format",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update"

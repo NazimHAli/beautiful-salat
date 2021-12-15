@@ -6,9 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn build:packages && build:index",
-    "build:index": "esbuild ./index.ts --bundle --format=esm --minify --outdir=./build",
-    "build:packages": "yarn workspaces foreach -pt run build",
+    "build": "yarn build:packages && node esbuild.config.js",
+    "build:packages": "yarn workspaces foreach -pt run build:package",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "cm": "cz",
     "lintall": "prettier --check ./packages -w",
