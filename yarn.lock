@@ -1432,7 +1432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@beautiful-salat/components@workspace:^, @beautiful-salat/components@workspace:packages/components":
+"@beautiful-salat/components@workspace:packages/components":
   version: 0.0.0-use.local
   resolution: "@beautiful-salat/components@workspace:packages/components"
   dependencies:
@@ -1460,12 +1460,13 @@ __metadata:
     tailwindcss: ^3.0.2
     tslib: ^2.3.1
     vite: ^2.7.2
+    vite-plugin-dts: ^0.9.6
   peerDependencies:
     jest: "*"
   languageName: unknown
   linkType: soft
 
-"@beautiful-salat/js-lib@workspace:^, @beautiful-salat/js-lib@workspace:packages/js-lib":
+"@beautiful-salat/js-lib@workspace:packages/js-lib":
   version: 0.0.0-use.local
   resolution: "@beautiful-salat/js-lib@workspace:packages/js-lib"
   dependencies:
@@ -3297,6 +3298,18 @@ __metadata:
   version: 0.2.0
   resolution: "@trysound/sax@npm:0.2.0"
   checksum: 11226c39b52b391719a2a92e10183e4260d9651f86edced166da1d95f39a0a1eaa470e44d14ac685ccd6d3df7e2002433782872c0feeb260d61e80f21250e65c
+  languageName: node
+  linkType: hard
+
+"@ts-morph/common@npm:~0.12.2":
+  version: 0.12.2
+  resolution: "@ts-morph/common@npm:0.12.2"
+  dependencies:
+    fast-glob: ^3.2.7
+    minimatch: ^3.0.4
+    mkdirp: ^1.0.4
+    path-browserify: ^1.0.1
+  checksum: 3095b7159523a65296305113c6d85c8c7d873b821df28a7bd95b9a0a344fcb386b3356940f0833a7275cc43869669c8a8aed012cc2c25892a066d31db7440a85
   languageName: node
   linkType: hard
 
@@ -5830,8 +5843,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "beautiful-salat@workspace:."
   dependencies:
-    "@beautiful-salat/components": "workspace:^"
-    "@beautiful-salat/js-lib": "workspace:^"
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
     "@semantic-release/changelog": ^6.0.1
@@ -5845,7 +5856,6 @@ __metadata:
     "@typescript-eslint/parser": ^5.7.0
     commitizen: ^4.2.4
     cz-conventional-changelog: 3.3.0
-    esbuild: ^0.14.5
     eslint: ^8.4.1
     eslint-config-prettier: ^8.3.0
     eslint-plugin-import: ^2.25.3
@@ -5862,6 +5872,8 @@ __metadata:
     ts-node: ^10.4.0
     tsconfig-paths: ^3.12.0
     typescript: ^4.5.4
+    vite: ^2.7.2
+    vite-plugin-dts: ^0.9.6
   languageName: unknown
   linkType: soft
 
@@ -6621,6 +6633,15 @@ __metadata:
     chalk: ^2.4.1
     q: ^1.1.2
   checksum: 44736914aac2160d3d840ed64432a90a3bb72285a0cd6a688eb5cabdf15d15a85eee0915b3f6f2a4659d5075817b1cb577340d3c9cbb47d636d59ab69f819552
+  languageName: node
+  linkType: hard
+
+"code-block-writer@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "code-block-writer@npm:11.0.0"
+  dependencies:
+    tslib: 2.3.1
+  checksum: d3d92a06f762d5926ecdb2033e4f30eb4c51aca365ea69ef424afbce7cc2b1518a50deff2645cc17b6fa53f234d664631f2268a4caf91af6a1fd696aa0b2fefb
   languageName: node
   linkType: hard
 
@@ -15222,6 +15243,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-browserify@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "path-browserify@npm:1.0.1"
+  checksum: c6d7fa376423fe35b95b2d67990060c3ee304fc815ff0a2dc1c6c3cfaff2bd0d572ee67e18f19d0ea3bbe32e8add2a05021132ac40509416459fffee35200699
+  languageName: node
+  linkType: hard
+
 "path-exists@npm:^2.0.0":
   version: 2.1.0
   resolution: "path-exists@npm:2.1.0"
@@ -19274,6 +19302,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-morph@npm:^13.0.0":
+  version: 13.0.2
+  resolution: "ts-morph@npm:13.0.2"
+  dependencies:
+    "@ts-morph/common": ~0.12.2
+    code-block-writer: ^11.0.0
+  checksum: 325e850b99f96a71b57ced55e2bf687bdc6dc477070a946a47ca925633c62f201d2a706c6972e7bb6a37d7d9e0414b040fd46800d2fd86423185818fefe284a6
+  languageName: node
+  linkType: hard
+
 "ts-node@npm:^10.4.0":
   version: 10.4.0
   resolution: "ts-node@npm:10.4.0"
@@ -19350,17 +19388,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.3.1, tslib@npm:^2, tslib@npm:^2.1.0, tslib@npm:^2.2.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2, tslib@npm:^2.1.0, tslib@npm:^2.2.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
@@ -19864,6 +19902,19 @@ __metadata:
     unist-util-stringify-position: ^2.0.0
     vfile-message: ^2.0.0
   checksum: ee5726e10d170472cde778fc22e0f7499caa096eb85babea5d0ce0941455b721037ee1c9e6ae506ca2803250acd313d0f464328ead0b55cfe7cb6315f1b462d6
+  languageName: node
+  linkType: hard
+
+"vite-plugin-dts@npm:^0.9.6":
+  version: 0.9.6
+  resolution: "vite-plugin-dts@npm:0.9.6"
+  dependencies:
+    fast-glob: ^3.2.7
+    fs-extra: ^10.0.0
+    ts-morph: ^13.0.0
+  peerDependencies:
+    vite: ">=2.4.4"
+  checksum: 81442bcb6d2e3294fb6ae2c765582fbf84c2c67899665e0b2e7b1beda13816aec3899d48faac55f33f1d224ac41baa421b2f1e171882a494a362ff2ab0e5cf12
   languageName: node
   linkType: hard
 

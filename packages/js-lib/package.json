@@ -2,7 +2,7 @@
   "name": "@beautiful-salat/js-lib",
   "version": "1.0.0",
   "description": "Prayer times",
-  "main": "./build/index.cjs.js",
+  "main": "./build/index.es.js",
   "module": "./build/index.es.js",
   "exports": {
     ".": {

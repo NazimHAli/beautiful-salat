@@ -9,15 +9,6 @@ require("esbuild").buildSync({
 
 require("esbuild").buildSync({
   entryPoints: ["./src/prayerTimes.ts"],
-  format: "cjs",
-  bundle: true,
-  minify: true,
-  entryNames: "index.cjs",
-  outdir: "./build",
-});
-
-require("esbuild").buildSync({
-  entryPoints: ["./src/prayerTimes.ts"],
   format: "iife",
   bundle: true,
   minify: true,
