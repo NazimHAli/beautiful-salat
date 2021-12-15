@@ -6,12 +6,3 @@ require("esbuild").buildSync({
   entryNames: "index.es",
   outdir: "./build",
 });
-
-require("esbuild").buildSync({
-  entryPoints: ["./src/prayerTimes.ts"],
-  format: "iife",
-  bundle: true,
-  minify: true,
-  entryNames: "index.iife",
-  outdir: "./build",
-});

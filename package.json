@@ -19,7 +19,8 @@
     "./style.css": "./build/style.css"
   },
   "scripts": {
-    "build": "yarn build:packages && vite build --emptyOutDir",
+    "build": "yarn build:packages && vite build --emptyOutDir && yarn build:minify",
+    "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
     "build:packages": "yarn workspaces foreach -pt run build:package",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "cm": "cz",
@@ -54,6 +55,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
+    "esbuild": "^0.14.5",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
