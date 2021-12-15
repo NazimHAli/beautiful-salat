@@ -25,12 +25,28 @@ Prayer times library providing integration support for multiple environments: va
 
 ![image](https://user-images.githubusercontent.com/26750288/145725761-cd675172-2e51-4b29-8619-b7ecff02b268.png)
 
-## Dev Quick start
+## Quick Start
+```
+yarn add beautiful-salat
+```
+
+#### Basic Usage
+##### Todays Prayer Times
+
+```javascript
+import { PrayerTimes } from "beautiful-salat";
+
+const ptModule = new PrayerTimes("ISNA");
+const prayerTimes = ptModule.getPrayerTimes(date=new Date(), coords=[43, -80], timezone=-5);
+```
+
+## Dev Quick Start
 
 ```
 yarn install
 yarn dev
 ```
+
 
 ## Contributions welcome!
 

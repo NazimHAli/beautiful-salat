@@ -1,24 +1,24 @@
-import { supportedMethods } from "@/utils/constants";
-import { mathHelpers } from "@/utils/mathHelper";
-import type { typeDefaultParams, typeMethods, typeSetting, typeTimeNames } from "@/utils/types";
-import { TimeZoneHelpers } from "@/utils/TimeZoneHelpers";
+import { supportedMethods } from "./constants";
+import { mathHelpers } from "./mathHelper";
+import type { typeDefaultParams, typeMethods, typeSetting, typeTimeNames } from "./types";
+import { TimeZoneHelpers } from "./TimeZoneHelpers";
 
 class PrayerTimes {
-  timeNames: typeTimeNames;
-  methods: typeMethods;
-  defaultParams: typeDefaultParams;
-  setting: typeSetting;
-  offset: {};
   calcMethod: string;
-  timeFormat: string;
-  timeSuffixes: string[];
+  defaultParams: typeDefaultParams;
+  elevation: number;
   invalidTime: string;
-  numIterations: number;
+  julianDate: number;
   latitude: number;
   longitude: number;
-  elevation: number;
+  methods: typeMethods;
+  numIterations: number;
+  offset: {};
+  setting: typeSetting;
+  timeFormat: string;
+  timeNames: typeTimeNames;
+  timeSuffixes: string[];
   timeZone: number;
-  julianDate: number;
   tzHelpers: TimeZoneHelpers;
 
   constructor(method = "MWL") {
@@ -135,7 +135,7 @@ class PrayerTimes {
   }
 
   // return prayer times for a given date
-  getPrayerTimes(date, coords, timezone = null, dst = "auto", format = null) {
+  getPrayerTimes(date, coords, timezone: any = null, dst = "auto", format: any = null) {
     this.latitude = 1 * coords[0];
     this.longitude = 1 * coords[1];
     this.elevation = coords[2] ? 1 * coords[2] : 0;
@@ -206,8 +206,38 @@ class PrayerTimes {
     return formatedTimes;
   }
 
+  calculateMonthData(coords, year: number, month: number, dst: string) {
+    let date = new Date(year, month, 1);
+    let endDate = new Date(year, month + 1, 1);
+    let format = "12hNS";
+    const storedTimes: any = [];
+
+    while (date < endDate) {
+      let times = this.getPrayerTimes(date, coords, this.timeZone, dst, format);
+      times["day"] = date.getDate();
+
+      storedTimes.push(times);
+      date.setDate(date.getDate() + 1); // Set next day
+    }
+
+    return storedTimes;
+  }
+
+  public getMonthTable(coords, offset, method) {
+    let todaysDate = new Date();
+
+    this.setPrayerCalculationMethod(method);
+    todaysDate.setMonth(todaysDate.getMonth() + 1 * offset);
+
+    let month = todaysDate.getMonth();
+    let year = todaysDate.getFullYear();
+
+    const calculatedPrayerTimes = this.calculateMonthData(coords, year, month, "auto");
+    return calculatedPrayerTimes;
+  }
+
   // convert float time to the given format (see timeFormats)
-  getFormattedTime(time, format, suffixes = null) {
+  getFormattedTime(time, format, suffixes = []) {
     if (isNaN(time)) {
       return this.invalidTime;
     }
@@ -237,7 +267,7 @@ class PrayerTimes {
   }
 
   // compute the time at which sun reaches a specific angle below horizon
-  sunAngleTime(angle, time, direction = null) {
+  sunAngleTime(angle, time, direction = "") {
     let decl = this.sunPosition(this.julianDate + time).declination;
     let noon = this.midDay(time);
     let t =
@@ -373,18 +403,15 @@ class PrayerTimes {
     let nightTime = this.timeDiff(times.sunset, times.sunrise);
 
     times.imsak = this.adjustHLTime(times.imsak, times.sunrise, this.eval(params.imsak), nightTime, "ccw");
-
     times.fajr = this.adjustHLTime(times.fajr, times.sunrise, this.eval(params.fajr), nightTime, "ccw");
-
     times.isha = this.adjustHLTime(times.isha, times.sunset, this.eval(params.isha), nightTime);
-
     times.maghrib = this.adjustHLTime(times.maghrib, times.sunset, this.eval(params.maghrib), nightTime);
 
     return times;
   }
 
   // adjust a time for higher latitudes
-  adjustHLTime(time, base, angle, night, direction = null) {
+  adjustHLTime(time, base, angle, night, direction = "") {
     let portion = this.nightPortion(angle, night);
     let timeDiff = direction == "ccw" ? this.timeDiff(time, base) : this.timeDiff(base, time);
 
@@ -403,6 +430,7 @@ class PrayerTimes {
     if (method == "AngleBased") {
       portion = (1 / 60) * angle;
     }
+
     if (method == "OneSeventh") {
       portion = 1 / 7;
     }

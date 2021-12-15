@@ -29,5 +29,8 @@ jobs:
       - name: Install
         run: yarn install
 
+      - name: Build
+        run: yarn build:packages
+
       - name: Run Tests
         run: yarn testall

@@ -1,4 +1,4 @@
-import { PrayerTimes } from "@/utils/PrayerTimes";
+import { PrayerTimes } from "../src/prayerTimes";
 
 describe("Prayer times calculation methods", () => {
   let prayerTime, calculatedTimes, expectedTimes;

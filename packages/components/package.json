@@ -1,0 +1,62 @@
+{
+  "name": "@beautiful-salat/components",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.es.js",
+  "module": "./build/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./build/index.es.js",
+      "require": "./build/index.umd.js"
+    },
+    "./package.json": "./package.json",
+    "./style.css": "./build/style.css"
+  },
+  "scripts": {
+    "build:package": "vite build --emptyOutDir",
+    "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
+    "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
+    "dev": "vite --host 10.0.0.211 --port 3001",
+    "test": "yarn test:tsc",
+    "test:jest": "jest",
+    "test:tsc": "tsc --noEmit",
+    "serve": "vite preview --port 8080"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
+    "@testing-library/dom": "^8.11.1",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/cssnano": "^4.0.1",
+    "@types/postcss-import": "^14.0.0",
+    "@types/tailwindcss": "^2.2.4",
+    "animate.css": "^4.1.1",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.12",
+    "esbuild": "^0.14.5",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-sass": "^0.5.0",
+    "prettier-plugin-svelte": "^2.5.1",
+    "sass": "^1.45.0",
+    "stylelint": "^14.1.0",
+    "svelte": "^3.44.3",
+    "svelte-check": "^2.2.10",
+    "svelte-preprocess": "^4.10.0",
+    "tailwindcss": "^3.0.2",
+    "tslib": "^2.3.1",
+    "vite": "^2.7.2",
+    "vite-plugin-dts": "^0.9.6"
+  },
+  "peerDependencies": {
+    "jest": "*"
+  },
+  "engines": {
+    "node": ">=14.0"
+  }
+}

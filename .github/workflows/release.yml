@@ -28,11 +28,14 @@ jobs:
       - name: Install
         run: yarn install
 
+      - name: Build
+        run: yarn build
+
       - name: Run Tests
         run: yarn testall
 
       - name: Release
-        run: yarn workspace beautiful-salat semantic-release
+        run: yarn semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

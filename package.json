@@ -1,18 +1,35 @@
 {
-  "name": "beautiful-salat-monorepo",
-  "version": "1.0.0",
+  "name": "beautiful-salat",
+  "version": "1.3.8",
   "description": "Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components.",
   "workspaces": [
     "packages/*"
   ],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.cjs.js",
+  "module": "./build/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./build/index.es.js",
+      "require": "./build/index.cjs.js"
+    },
+    "./package.json": "./package.json",
+    "./style.css": "./build/style.css"
+  },
   "scripts": {
+    "build": "yarn build:packages && vite build --emptyOutDir && yarn build:minify",
+    "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
+    "build:packages": "yarn workspaces foreach -pt run build:package",
+    "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "cm": "cz",
-    "buildall": "yarn workspaces foreach run build",
-    "testall": "yarn workspaces foreach run test",
-    "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
     "lintall": "prettier --check ./packages -w",
     "lintall:check": "prettier --check ./packages",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release",
+    "testall": "yarn workspaces foreach run test",
+    "yalcp": "yalc publish ./packages/js-lib"
   },
   "commitlint": {
     "extends": [
@@ -22,7 +39,7 @@
   "eslintIgnore": [
     ".pnp.js",
     ".yarn",
-    "**/build"
+    "**/**/build"
   ],
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
@@ -33,27 +50,30 @@
     "@semantic-release/npm": "^8.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/jest": "^27.0.3",
-    "@types/node": "^16.11.12",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
+    "@types/node": "^16.11.13",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^7.32.0",
+    "esbuild": "^0.14.5",
+    "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.4",
-    "jest": "^27.4.4",
+    "jest": "^27.4.5",
     "lint-staged": "^12.1.2",
     "prettier": "^2.5.1",
     "semantic-release": "^18.0.1",
     "ts-jest": "^27.1.1",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
-    "typescript": "^4.5.3"
+    "typescript": "^4.5.4",
+    "vite": "^2.7.2",
+    "vite-plugin-dts": "^0.9.6"
   },
   "packageManager": "yarn@3.1.1",
   "repository": {
@@ -67,6 +87,27 @@
   },
   "engines": {
     "node": ">=14.0"
+  },
+  "release": {
+    "branches": [
+      "master",
+      "next",
+      "beta"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "build/**"
+          ]
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
   },
   "keywords": [
     "salat",

@@ -1,11 +1,21 @@
 {
   "compilerOptions": {
+    "allowJs": false,
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "lib": ["ESNext", "dom"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./packages/*"]
+    },
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es6"
-  }
+    "strictPropertyInitialization": false,
+    "target": "ESNext",
+    "useDefineForClassFields": true
+  },
+  "include": ["./index.ts"]
 }
