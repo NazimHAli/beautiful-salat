@@ -30,7 +30,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn buildall
+        run: yarn build:packages
 
       - name: Run Tests
         run: yarn testall

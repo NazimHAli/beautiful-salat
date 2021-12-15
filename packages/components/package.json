@@ -1,5 +1,5 @@
 {
-  "name": "beautiful-salat-components",
+  "name": "@beautiful-salat/components",
   "version": "1.3.5",
   "license": "MIT",
   "type": "module",
@@ -17,25 +17,17 @@
     "./style.css": "./build/style.css"
   },
   "scripts": {
-    "build": "vite build && yarn build:minify",
+    "build": "vite build --emptyOutDir",
     "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
-    "build:watch": "vite build --watch",
-    "commit": "cz",
     "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "vite --host 10.0.0.211 --port 3001",
     "test": "yarn test:tsc",
     "test:jest": "jest",
     "test:tsc": "tsc --noEmit",
-    "semantic-release": "yarn build && semantic-release",
     "serve": "vite preview --port 8080"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.2",
-    "@semantic-release/npm": "^8.0.3",
-    "@semantic-release/release-notes-generator": "^10.0.3",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.31",
     "@testing-library/dom": "^8.11.1",
     "@tsconfig/svelte": "^2.0.1",
@@ -45,16 +37,13 @@
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.0.12",
-    "cz-conventional-changelog": "3.3.0",
     "esbuild": "^0.14.5",
-    "husky": "^7.0.4",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "postcss-sass": "^0.5.0",
     "prettier-plugin-svelte": "^2.5.1",
     "sass": "^1.45.0",
-    "semantic-release": "^18.0.1",
     "stylelint": "^14.1.0",
     "svelte": "^3.44.3",
     "svelte-check": "^2.2.10",
@@ -63,61 +52,10 @@
     "tslib": "^2.3.1",
     "vite": "^2.7.2"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
-  "release": {
-    "branches": [
-      "master",
-      "next",
-      "beta"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            "build/**"
-          ]
-        }
-      ],
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
-  },
   "peerDependencies": {
     "jest": "*"
   },
-  "keywords": [
-    "salat",
-    "prayer times",
-    "islam",
-    "wordpress plugin",
-    "component",
-    "package"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NazimHAli/beautiful-salat.git"
-  },
-  "author": {
-    "name": "Nazim Ali",
-    "url": "https://github.com/NazimHAli"
-  },
   "engines": {
     "node": ">=14.0"
-  },
-  "bugs": {
-    "url": "https://github.com/NazimHAli/beautiful-salat/issues"
-  },
-  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme"
+  }
 }

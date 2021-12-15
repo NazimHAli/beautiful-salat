@@ -1,19 +1,22 @@
 {
-  "name": "monorepo",
+  "name": "beautiful-salat",
   "version": "1.0.0",
   "description": "Prayer times library providing integration support for multiple environments: vanilla JS, WordPress plugin, components.",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "buildall": "yarn workspaces foreach -pt run build",
+    "build": "yarn build:packages && build:index",
+    "build:index": "esbuild ./index.ts --bundle --format=esm --minify --outdir=./build",
+    "build:packages": "yarn workspaces foreach -pt run build",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "cm": "cz",
     "lintall": "prettier --check ./packages -w",
     "lintall:check": "prettier --check ./packages",
     "prepare": "husky install",
-    "yalcp": "yalc publish ./packages/js-lib",
-    "testall": "yarn workspaces foreach run test"
+    "semantic-release": "semantic-release",
+    "testall": "yarn workspaces foreach run test",
+    "yalcp": "yalc publish ./packages/js-lib"
   },
   "commitlint": {
     "extends": [
@@ -39,6 +42,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
+    "esbuild": "^0.14.5",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
@@ -69,6 +73,27 @@
   "engines": {
     "node": ">=14.0"
   },
+  "release": {
+    "branches": [
+      "master",
+      "next",
+      "beta"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "build/**"
+          ]
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
   "keywords": [
     "salat",
     "prayer times",
@@ -88,5 +113,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@beautiful-salat/components": "workspace:^",
+    "@beautiful-salat/js-lib": "workspace:^"
   }
 }

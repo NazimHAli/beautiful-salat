@@ -1,88 +1,36 @@
 {
-  "name": "beautiful-salat",
+  "name": "@beautiful-salat/js-lib",
   "version": "1.0.0",
   "description": "Prayer times",
-  "main": "./build/lib-index.cjs.js",
-  "module": "./build/lib-index.es.js",
+  "main": "./build/index.cjs.js",
+  "module": "./build/index.es.js",
   "exports": {
     ".": {
-      "import": "./build/lib-index.es.js",
-      "require": "./build/lib-index.cjs.js"
+      "import": "./build/index.es.js",
+      "require": "./build/index.cjs.js"
     },
     "./package.json": "./package.json",
-    "./style.css": "./build/lib-index.es.css"
+    "./style.css": "./build/index.es.css"
   },
   "scripts": {
     "test": "yarn test:jest",
     "test:jest": "jest",
     "test:tsc": "tsc --noEmit",
-    "build": "yarn build:es && yarn build:cjs",
-    "build:es": "esbuild ./src/index.ts --bundle --format=esm --minify --entry-names='lib-index.es' --outdir=./build",
-    "build:cjs": "esbuild ./src/index.ts --bundle --format=cjs --minify --entry-names='lib-index.cjs' --outdir=./build",
-    "semantic-release": "semantic-release"
-  },
-  "release": {
-    "branches": [
-      "master",
-      "next",
-      "beta"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            "build/**"
-          ]
-        }
-      ],
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
-  },
-  "keywords": [
-    "salat",
-    "prayer times",
-    "islam",
-    "wordpress plugin",
-    "component",
-    "package"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NazimHAli/beautiful-salat.git"
-  },
-  "author": {
-    "name": "Nazim Ali",
-    "url": "https://github.com/NazimHAli"
+    "build": "yarn build:clean && node esbuild.config.js",
+    "build:clean": "rm -rf ./build"
   },
   "engines": {
     "node": ">=14.0"
   },
-  "bugs": {
-    "url": "https://github.com/NazimHAli/beautiful-salat/issues"
-  },
-  "homepage": "https://github.com/NazimHAli/beautiful-salat#readme",
   "license": "MIT",
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^8.0.3",
-    "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.13",
     "esbuild": "^0.14.5",
     "jest": "^27.4.5",
-    "semantic-release": "^18.0.1",
     "ts-jest": "^27.1.1",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.4"
-  },
-  "dependencies": {
-    "beautiful-salat-components": "workspace:^"
   }
 }

@@ -1,5 +1,5 @@
 {
-	"name": "beautiful-salat-wordpress-plugin",
+	"name": "@beautiful-salat/wordpress-plugin",
 	"version": "0.1.0",
 	"description": "Prayer times WordPress plugin with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.",
 	"author": "Nazim Ali",

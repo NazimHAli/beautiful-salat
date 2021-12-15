@@ -1432,6 +1432,66 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@beautiful-salat/components@workspace:^, @beautiful-salat/components@workspace:packages/components":
+  version: 0.0.0-use.local
+  resolution: "@beautiful-salat/components@workspace:packages/components"
+  dependencies:
+    "@fullhuman/postcss-purgecss": ^4.1.3
+    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.31
+    "@testing-library/dom": ^8.11.1
+    "@tsconfig/svelte": ^2.0.1
+    "@types/cssnano": ^4.0.1
+    "@types/postcss-import": ^14.0.0
+    "@types/tailwindcss": ^2.2.4
+    animate.css: ^4.1.1
+    autoprefixer: ^10.4.0
+    cssnano: ^5.0.12
+    esbuild: ^0.14.5
+    postcss: ^8.4.5
+    postcss-import: ^14.0.2
+    postcss-nested: ^5.0.6
+    postcss-sass: ^0.5.0
+    prettier-plugin-svelte: ^2.5.1
+    sass: ^1.45.0
+    stylelint: ^14.1.0
+    svelte: ^3.44.3
+    svelte-check: ^2.2.10
+    svelte-preprocess: ^4.10.0
+    tailwindcss: ^3.0.2
+    tslib: ^2.3.1
+    vite: ^2.7.2
+  peerDependencies:
+    jest: "*"
+  languageName: unknown
+  linkType: soft
+
+"@beautiful-salat/js-lib@workspace:^, @beautiful-salat/js-lib@workspace:packages/js-lib":
+  version: 0.0.0-use.local
+  resolution: "@beautiful-salat/js-lib@workspace:packages/js-lib"
+  dependencies:
+    "@types/jest": ^27.0.3
+    "@types/node": ^16.11.13
+    esbuild: ^0.14.5
+    jest: ^27.4.5
+    ts-jest: ^27.1.1
+    ts-node: ^10.4.0
+    tsconfig-paths: ^3.12.0
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
+"@beautiful-salat/wordpress-plugin@workspace:packages/wordpress-plugin":
+  version: 0.0.0-use.local
+  resolution: "@beautiful-salat/wordpress-plugin@workspace:packages/wordpress-plugin"
+  dependencies:
+    "@wordpress/block-editor": ^8.0.11
+    "@wordpress/blocks": ^11.1.4
+    "@wordpress/components": ^19.1.5
+    "@wordpress/i18n": ^4.2.4
+    "@wordpress/scripts": ^19.2.2
+  languageName: unknown
+  linkType: soft
+
 "@cnakazawa/watch@npm:^1.0.3":
   version: 1.0.4
   resolution: "@cnakazawa/watch@npm:1.0.4"
@@ -2874,7 +2934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^8.0.0, @semantic-release/github@npm:^8.0.2":
+"@semantic-release/github@npm:^8.0.0":
   version: 8.0.2
   resolution: "@semantic-release/github@npm:8.0.2"
   dependencies:
@@ -5766,63 +5826,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"beautiful-salat-components@workspace:^, beautiful-salat-components@workspace:packages/components":
+"beautiful-salat@workspace:.":
   version: 0.0.0-use.local
-  resolution: "beautiful-salat-components@workspace:packages/components"
+  resolution: "beautiful-salat@workspace:."
   dependencies:
-    "@fullhuman/postcss-purgecss": ^4.1.3
-    "@semantic-release/commit-analyzer": ^9.0.2
-    "@semantic-release/git": ^10.0.1
-    "@semantic-release/github": ^8.0.2
-    "@semantic-release/npm": ^8.0.3
-    "@semantic-release/release-notes-generator": ^10.0.3
-    "@sveltejs/vite-plugin-svelte": ^1.0.0-next.31
-    "@testing-library/dom": ^8.11.1
-    "@tsconfig/svelte": ^2.0.1
-    "@types/cssnano": ^4.0.1
-    "@types/postcss-import": ^14.0.0
-    "@types/tailwindcss": ^2.2.4
-    animate.css: ^4.1.1
-    autoprefixer: ^10.4.0
-    cssnano: ^5.0.12
-    cz-conventional-changelog: 3.3.0
-    esbuild: ^0.14.5
-    husky: ^7.0.4
-    postcss: ^8.4.5
-    postcss-import: ^14.0.2
-    postcss-nested: ^5.0.6
-    postcss-sass: ^0.5.0
-    prettier-plugin-svelte: ^2.5.1
-    sass: ^1.45.0
-    semantic-release: ^18.0.1
-    stylelint: ^14.1.0
-    svelte: ^3.44.3
-    svelte-check: ^2.2.10
-    svelte-preprocess: ^4.10.0
-    tailwindcss: ^3.0.2
-    tslib: ^2.3.1
-    vite: ^2.7.2
-  peerDependencies:
-    jest: "*"
-  languageName: unknown
-  linkType: soft
-
-"beautiful-salat-wordpress-plugin@workspace:packages/wordpress-plugin":
-  version: 0.0.0-use.local
-  resolution: "beautiful-salat-wordpress-plugin@workspace:packages/wordpress-plugin"
-  dependencies:
-    "@wordpress/block-editor": ^8.0.11
-    "@wordpress/blocks": ^11.1.4
-    "@wordpress/components": ^19.1.5
-    "@wordpress/i18n": ^4.2.4
-    "@wordpress/scripts": ^19.2.2
-  languageName: unknown
-  linkType: soft
-
-"beautiful-salat@workspace:packages/js-lib":
-  version: 0.0.0-use.local
-  resolution: "beautiful-salat@workspace:packages/js-lib"
-  dependencies:
+    "@beautiful-salat/components": "workspace:^"
+    "@beautiful-salat/js-lib": "workspace:^"
+    "@commitlint/cli": ^15.0.0
+    "@commitlint/config-conventional": ^15.0.0
     "@semantic-release/changelog": ^6.0.1
     "@semantic-release/commit-analyzer": ^9.0.2
     "@semantic-release/git": ^10.0.1
@@ -5830,9 +5841,22 @@ __metadata:
     "@semantic-release/release-notes-generator": ^10.0.3
     "@types/jest": ^27.0.3
     "@types/node": ^16.11.13
-    beautiful-salat-components: "workspace:^"
+    "@typescript-eslint/eslint-plugin": ^5.7.0
+    "@typescript-eslint/parser": ^5.7.0
+    commitizen: ^4.2.4
+    cz-conventional-changelog: 3.3.0
     esbuild: ^0.14.5
+    eslint: ^8.4.1
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-import: ^2.25.3
+    eslint-plugin-jest: ^25.3.0
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-simple-import-sort: ^7.0.0
+    husky: ^7.0.4
     jest: ^27.4.5
+    lint-staged: ^12.1.2
+    prettier: ^2.5.1
     semantic-release: ^18.0.1
     ts-jest: ^27.1.1
     ts-node: ^10.4.0
@@ -14048,42 +14072,6 @@ __metadata:
   checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
   languageName: node
   linkType: hard
-
-"monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "monorepo@workspace:."
-  dependencies:
-    "@commitlint/cli": ^15.0.0
-    "@commitlint/config-conventional": ^15.0.0
-    "@semantic-release/changelog": ^6.0.1
-    "@semantic-release/commit-analyzer": ^9.0.2
-    "@semantic-release/git": ^10.0.1
-    "@semantic-release/npm": ^8.0.3
-    "@semantic-release/release-notes-generator": ^10.0.3
-    "@types/jest": ^27.0.3
-    "@types/node": ^16.11.13
-    "@typescript-eslint/eslint-plugin": ^5.7.0
-    "@typescript-eslint/parser": ^5.7.0
-    commitizen: ^4.2.4
-    cz-conventional-changelog: 3.3.0
-    eslint: ^8.4.1
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-import: ^2.25.3
-    eslint-plugin-jest: ^25.3.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^4.0.0
-    eslint-plugin-simple-import-sort: ^7.0.0
-    husky: ^7.0.4
-    jest: ^27.4.5
-    lint-staged: ^12.1.2
-    prettier: ^2.5.1
-    semantic-release: ^18.0.1
-    ts-jest: ^27.1.1
-    ts-node: ^10.4.0
-    tsconfig-paths: ^3.12.0
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
 
 "moo@npm:^0.5.0":
   version: 0.5.1
