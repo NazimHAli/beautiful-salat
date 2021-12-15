@@ -1,5 +1,6 @@
 const entryPoints = ["./index.ts"];
 
+
 require("esbuild").buildSync({
   entryPoints: entryPoints,
   format: "esm",
