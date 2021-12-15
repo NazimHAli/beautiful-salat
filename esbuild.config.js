@@ -1,5 +1,7 @@
+const entryPoints = ["./index.ts"];
+
 require("esbuild").buildSync({
-  entryPoints: ["./index.ts"],
+  entryPoints: entryPoints,
   format: "esm",
   bundle: true,
   minify: true,
@@ -8,7 +10,7 @@ require("esbuild").buildSync({
 });
 
 require("esbuild").buildSync({
-  entryPoints: ["./index.ts"],
+  entryPoints: entryPoints,
   format: "cjs",
   bundle: true,
   minify: true,
@@ -17,7 +19,7 @@ require("esbuild").buildSync({
 });
 
 require("esbuild").buildSync({
-  entryPoints: ["./index.ts"],
+  entryPoints: entryPoints,
   format: "iife",
   bundle: true,
   minify: true,
