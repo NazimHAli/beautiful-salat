@@ -18,29 +18,29 @@ npm install beautiful-salat
 
 ## Usage
 
-### Example: Today
+### Example: Times for Today
 
 ```javascript
 import { PrayerTimes } from "beautiful-salat";
 
 const ptModule = new PrayerTimes("ISNA");
-const prayerTimes = ptModule.getPrayerTimes(new Date(), [43, -80], -5);
+const prayerTimes = ptModule.getPrayerTimes((date = new Date()), (coords = [43, -80]), (timezone = -5));
 ```
 
-### Example: Week
+### Example: Times for Week
 
 ```javascript
 import { PrayerTimes } from "beautiful-salat";
 
 const ptModule = new PrayerTimes("ISNA");
-const prayerTimes = ptModule.getPrayerTimes(new Date(), [43, -80], -5);
+const prayerTimes = ptModule.getPrayerTimes((date = new Date()), (coords = [43, -80]), (timezone = -5));
 ```
 
-### Example: Month
+### Example: Times for Month
 
 ```javascript
 import { PrayerTimes } from "beautiful-salat";
 
 const ptModule = new PrayerTimes("ISNA");
-const prayerTimes = ptModule.getPrayerTimes(new Date(), [43, -80], -5);
+const prayerTimes = ptModule.getPrayerTimes((date = new Date()), (coords = [43, -80]), (timezone = -5));
 ```
