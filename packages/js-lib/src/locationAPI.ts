@@ -1,9 +1,3 @@
-const options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
-};
-
 function success(pos: { coords: any }) {
   const positionCoordinates = pos.coords;
 
@@ -18,6 +12,12 @@ function error(err) {
 }
 
 function getCurrentLocation() {
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
+
   navigator.geolocation.getCurrentPosition(success, error, options);
 }
 
