@@ -1,6 +1,6 @@
 @mixin base {
   &_table {
-    @apply table w-full;
+    @apply w-full;
   }
 
   &_title {
@@ -9,6 +9,10 @@
     &_cell {
       @apply text-lg p-4;
     }
+  }
+
+  &_body {
+    @apply text-left;
   }
 
   &_row {
