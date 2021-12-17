@@ -6,7 +6,6 @@ Standalone JavaScript library that calculates prayer times client side based on 
 
 ![image](https://user-images.githubusercontent.com/26750288/146490354-4e961fa9-71ad-46f6-a4fe-b34aea3c4f22.png)
 
-
 ## Install
 
 ```bash
