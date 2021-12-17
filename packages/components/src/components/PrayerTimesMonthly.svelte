@@ -27,7 +27,3 @@
     </tbody>
   </table>
 </div>
-
-<style lang="scss">
-  @import "../styles/themes.scss";
-</style>
