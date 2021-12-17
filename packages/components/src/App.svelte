@@ -8,6 +8,14 @@
   const monthly = ptModule.getMonthTable([43, -80], 0, -5);
 </script>
 
-<PrayerTimesDaily prayerTimes={Object.entries(prayerTimes)} />
-
-<PrayerTimesMonthly theme="dark" calculatedPrayerTimes={monthly} />
+<div class="flex flex-wrap">
+  <PrayerTimesDaily {prayerTimes} />
+  <PrayerTimesDaily theme="theme-blue" {prayerTimes} />
+  <PrayerTimesDaily theme="theme-red" {prayerTimes} />
+  <PrayerTimesDaily theme="theme-gray" {prayerTimes} />
+  <PrayerTimesDaily theme="theme-dark-blue" {prayerTimes} />
+  <PrayerTimesMonthly maxRows={5} prayerTimes={monthly} />
+  <PrayerTimesMonthly maxRows={5} theme="theme-blue" prayerTimes={monthly} />
+  <PrayerTimesMonthly maxRows={5} theme="theme-red" prayerTimes={monthly} />
+  <PrayerTimesMonthly maxRows={5} theme="theme-dark-blue" prayerTimes={monthly} />
+</div>
