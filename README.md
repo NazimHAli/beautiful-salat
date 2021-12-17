@@ -23,7 +23,8 @@ Prayer times library providing integration support for multiple environments: va
 -   Typescript with interfaces
 -   Unit tested
 
-![image](https://user-images.githubusercontent.com/26750288/146487029-2d897ad6-a62d-476e-bc4f-de5b8965ff64.png)
+![image](https://user-images.githubusercontent.com/26750288/146490354-4e961fa9-71ad-46f6-a4fe-b34aea3c4f22.png)
+
 
 ## Quick Start
 ```
