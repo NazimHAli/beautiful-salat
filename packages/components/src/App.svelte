@@ -15,7 +15,5 @@
   <PrayerTimesDaily theme="theme-gray" {prayerTimes} />
   <PrayerTimesDaily theme="theme-dark-blue" {prayerTimes} />
   <PrayerTimesMonthly maxRows={5} prayerTimes={monthly} />
-  <PrayerTimesMonthly maxRows={5} theme="theme-blue" prayerTimes={monthly} />
-  <PrayerTimesMonthly maxRows={5} theme="theme-red" prayerTimes={monthly} />
   <PrayerTimesMonthly maxRows={5} theme="theme-dark-blue" prayerTimes={monthly} />
 </div>
