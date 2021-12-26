@@ -11,12 +11,17 @@
     "packages-update": "wp-scripts packages-update"
   },
   "dependencies": {
-    "@wordpress/block-editor": "^8.0.12",
-    "@wordpress/blocks": "^11.1.5",
-    "@wordpress/components": "^19.1.6",
+    "@wordpress/block-editor": "^8.0.11",
+    "@wordpress/blocks": "^11.1.4",
+    "@wordpress/components": "^19.1.5",
     "@wordpress/i18n": "^4.2.4"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^19.2.2"
+    "@types/eslint": "^8",
+    "@types/prettier": "^2",
+    "@wordpress/scripts": "^19.2.2",
+    "eslint": "^8.5.0",
+    "eslint-prettier-config": "^1.0.1",
+    "prettier": "^2.5.1"
   }
 }
