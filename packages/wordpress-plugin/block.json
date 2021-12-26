@@ -23,6 +23,9 @@
     },
     "titleTextColor": {
       "type": "string"
+    },
+    "toggleField": {
+      "type": "boolean"
     }
   },
   "example": {
