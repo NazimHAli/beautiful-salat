@@ -1,19 +1,15 @@
-import { ColorPalette, InspectorControls, RichText, useBlockProps } from "@wordpress/block-editor";
-import { CheckboxControl, RadioControl, SelectControl, TextControl, ToggleControl } from "@wordpress/components";
+import { ColorPalette, InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import { CheckboxControl, SelectControl, TextControl, ToggleControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 import { prayerTable } from "./prayerTable";
 
 const BackEndEdit = (props) => {
   const blockProps = useBlockProps();
-  const { checkboxField, radioField, selectField, setAttributes, toggleField } = props;
+  const { checkboxField, selectField, setAttributes } = props;
 
   function onChangeCheckboxField(newValue) {
     setAttributes({ checkboxField: newValue });
-  }
-
-  function onChangeRadioField(newValue) {
-    setAttributes({ radioField: newValue });
   }
 
   function onChangeToggleField(newValue) {
@@ -25,7 +21,7 @@ const BackEndEdit = (props) => {
   }
 
   return (
-    <div { ...blockProps }>
+    <div {...blockProps}>
       <InspectorControls>
         <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
 
@@ -33,7 +29,7 @@ const BackEndEdit = (props) => {
         <ColorPalette value={props.attributes.titleTextColor} onChange={(newValue) => setAttributes({ titleTextColor: newValue })} />
 
         <p>Title Background Color</p>
-        <ColorPalette onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
+        <ColorPalette value={props.attributes.backgroundColor} onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
 
         <CheckboxControl
           heading="Checkbox Field"
@@ -43,17 +39,7 @@ const BackEndEdit = (props) => {
           onChange={onChangeCheckboxField}
         />
 
-        <RadioControl
-          label="Radio Field"
-          selected={radioField}
-          options={[
-            { label: "Yes", value: "yes" },
-            { label: "No", value: "no" },
-          ]}
-          onChange={onChangeRadioField}
-        />
-
-        <ToggleControl label="Toggle Field" checked={toggleField} onChange={onChangeToggleField} />
+        <ToggleControl label="Toggle Field" checked={props.attributes.toggleField} onChange={onChangeToggleField} />
 
         <SelectControl
           label="Select Control"
@@ -66,14 +52,6 @@ const BackEndEdit = (props) => {
           onChange={onChangeSelectField}
         />
       </InspectorControls>
-
-      {/* <RichText
-        allowedFormats={[]}
-        placeholder={__("Max container width: none")}
-        tagName="p"
-        onChange={(newValue) => setAttributes({ maxWidth: newValue })}
-        value={props.attributes.maxWidth}
-      /> */}
 
       {prayerTable(props.attributes)}
     </div>
