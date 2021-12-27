@@ -1,23 +1,15 @@
 import { ColorPalette, InspectorControls, useBlockProps } from "@wordpress/block-editor";
-import { CheckboxControl, SelectControl, TextControl, ToggleControl } from "@wordpress/components";
+import { TextControl, ToggleControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 import { prayerTable } from "./prayerTable";
 
 const BackEndEdit = (props) => {
   const blockProps = useBlockProps();
-  const { checkboxField, selectField, setAttributes } = props;
-
-  function onChangeCheckboxField(newValue) {
-    setAttributes({ checkboxField: newValue });
-  }
+  const { setAttributes } = props;
 
   function onChangeToggleField(newValue) {
     setAttributes({ toggleField: newValue });
-  }
-
-  function onChangeSelectField(newValue) {
-    setAttributes({ selectField: newValue });
   }
 
   return (
@@ -31,17 +23,17 @@ const BackEndEdit = (props) => {
         <p>Title Background Color</p>
         <ColorPalette value={props.attributes.backgroundColor} onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
 
-        <CheckboxControl
+        {/* <CheckboxControl
           heading="Checkbox Field"
           label="Tick Me"
           help="Additional help text"
           checked={checkboxField}
           onChange={onChangeCheckboxField}
-        />
+        /> */}
 
         <ToggleControl label="Toggle Field" checked={props.attributes.toggleField} onChange={onChangeToggleField} />
 
-        <SelectControl
+        {/* <SelectControl
           label="Select Control"
           value={selectField}
           options={[
@@ -50,7 +42,7 @@ const BackEndEdit = (props) => {
             { value: "c", label: "Option C" },
           ]}
           onChange={onChangeSelectField}
-        />
+        /> */}
       </InspectorControls>
 
       {prayerTable(props.attributes)}
