@@ -1,48 +1,63 @@
 import { ColorPalette, InspectorControls, useBlockProps } from "@wordpress/block-editor";
-import { TextControl, ToggleControl } from "@wordpress/components";
+import { TextControl, ToggleControl, SelectControl, PanelBody } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 import { prayerTable } from "./prayerTable";
+import { prayerMethods } from "./prayerMethods";
+
+async function getSalatTimes(args) {
+  const API = "https://api.aladhan.com/v1/timingsByCity";
+  const API_EXAMPLE = `${API}?city=${args.city}&country=${args.country}`;
+  const res = await fetch(API_EXAMPLE);
+  const resjson = await res.json();
+  console.log(resjson.data);
+}
 
 const BackEndEdit = (props) => {
   const blockProps = useBlockProps();
   const { setAttributes } = props;
 
-  function onChangeToggleField(newValue) {
+  const onChangeToggleField = (newValue) => {
     setAttributes({ toggleField: newValue });
-  }
+  };
+
+  const onCountryChange = (newValue) => {
+    setAttributes({ salatSettings: { ...props.attributes.salatSettings, country: newValue } });
+    getSalatTimes(props.attributes.salatSettings);
+  };
+
+  const onCityChange = (newValue) => {
+    setAttributes({ salatSettings: { ...props.attributes.salatSettings, city: newValue } });
+  };
 
   return (
     <div {...blockProps}>
       <InspectorControls>
-        <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
+        <PanelBody title={__("Salat Settings")}>
+          <SelectControl
+            label="Method"
+            value={props.attributes.salatSettings.method}
+            options={prayerMethods}
+            onChange={(newValue, oldValue) => setAttributes({ ...oldValue, method: newValue })}
+          />
+          <TextControl label="Country" onChange={onCountryChange} value={props.attributes.salatSettings.country} />
+          <TextControl label="City" onChange={onCityChange} value={props.attributes.salatSettings.city} />
+        </PanelBody>
 
-        <p>Title Text Color</p>
-        <ColorPalette value={props.attributes.titleTextColor} onChange={(newValue) => setAttributes({ titleTextColor: newValue })} />
+        <PanelBody title={__("Header")}>
+          <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
 
-        <p>Title Background Color</p>
-        <ColorPalette value={props.attributes.backgroundColor} onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
+          <p>Title Text Color</p>
+          <ColorPalette value={props.attributes.titleTextColor} onChange={(newValue) => setAttributes({ titleTextColor: newValue })} />
 
-        {/* <CheckboxControl
-          heading="Checkbox Field"
-          label="Tick Me"
-          help="Additional help text"
-          checked={checkboxField}
-          onChange={onChangeCheckboxField}
-        /> */}
+          <p>Title Background Color</p>
+          <ColorPalette value={props.attributes.backgroundColor} onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
+          <ToggleControl label="Toggle Field" checked={props.attributes.toggleField} onChange={onChangeToggleField} />
+        </PanelBody>
 
-        <ToggleControl label="Toggle Field" checked={props.attributes.toggleField} onChange={onChangeToggleField} />
-
-        {/* <SelectControl
-          label="Select Control"
-          value={selectField}
-          options={[
-            { value: "a", label: "Option A" },
-            { value: "b", label: "Option B" },
-            { value: "c", label: "Option C" },
-          ]}
-          onChange={onChangeSelectField}
-        /> */}
+        <PanelBody title={__("Container")}>
+          <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
+        </PanelBody>
       </InspectorControls>
 
       {prayerTable(props.attributes)}
