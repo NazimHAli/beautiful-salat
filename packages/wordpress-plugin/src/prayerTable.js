@@ -21,27 +21,27 @@ export function prayerTable(props) {
         <tbody className="table-body">
           <tr>
             <th>Fajr:</th>
-            <td>{timings["Fajr"]}</td>
+            <td>{timings?.Fajr}</td>
           </tr>
 
           <tr>
             <th>Dhuhr:</th>
-            <td>{timings["Dhuhr"]}</td>
+            <td>{timings?.Dhuhr}</td>
           </tr>
 
           <tr>
             <th>Asr:</th>
-            <td>{timings["Asr"]}</td>
+            <td>{timings?.Asr}</td>
           </tr>
 
           <tr>
             <th>Maghrib:</th>
-            <td>{timings["Maghrib"]}</td>
+            <td>{timings?.Maghrib}</td>
           </tr>
 
           <tr>
             <th>Isha:</th>
-            <td>{timings["Isha"]}</td>
+            <td>{timings?.Isha}</td>
           </tr>
         </tbody>
       </table>
