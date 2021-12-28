@@ -42,7 +42,7 @@ function BackEndEdit(props) {
       <InspectorControls>
         <PanelBody title={__("Salat Settings")} initialOpen={false}>
           <SelectControl
-            label="Selected Method"
+            label="Calculation Method"
             help="Based on country and city"
             value={props.attributes.salatSettings.method}
             options={prayerMethods}
@@ -53,6 +53,8 @@ function BackEndEdit(props) {
         </PanelBody>
 
         <PanelBody title={__("Header")} initialOpen={false}>
+          <ToggleControl label="Toggle Header" checked={props.attributes.showHeader} onChange={onChangeShowHeader} />
+
           <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
 
           <p>Title Text Color</p>
@@ -60,7 +62,6 @@ function BackEndEdit(props) {
 
           <p>Title Background Color</p>
           <ColorPalette value={props.attributes.backgroundColor} onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
-          <ToggleControl label="Toggle Header" checked={props.attributes.showHeader} onChange={onChangeShowHeader} />
         </PanelBody>
 
         <PanelBody title={__("Container")} initialOpen={false}>
