@@ -24,15 +24,19 @@
     "titleTextColor": {
       "type": "string"
     },
-    "toggleField": {
-      "type": "boolean"
+    "showHeader": {
+      "type": "boolean",
+      "default": true
     },
     "salatSettings": {
       "type": "object",
       "default": {
         "method": "MWL",
         "country": "US",
-        "city": "Los Angeles"
+        "city": "Los Angeles",
+        "timings": {
+          "Fajr": 0
+        }
       }
     }
   },
