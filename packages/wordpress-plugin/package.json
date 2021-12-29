@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/eslint": "^8",
     "@types/prettier": "^2",
+    "@wordpress/data": "^6.1.5",
     "@wordpress/scripts": "^19.2.2",
     "eslint": "^8.5.0",
     "eslint-prettier-config": "^1.0.1",

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       Beautiful Salat
  * Description:       Prayer times with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.
@@ -10,17 +11,43 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       beautiful-salat
  *
- * @package           create-block
+ * @package           fit
  */
 
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/
- */
-function beautiful_salat_block_init() {
-	register_block_type( __DIR__ );
+function gutenberg_examples_dynamic_render_callback($block_attributes, $content)
+{
+	$recent_posts = wp_get_recent_posts(array(
+		'numberposts' => 1,
+		'post_status' => 'publish',
+	));
+	if (count($recent_posts) === 0) {
+		return 'No posts';
+	}
+	$post = $recent_posts[0];
+	$post_id = $post['ID'];
+	return sprintf(
+		'<a class="wp-block-my-plugin-latest-post" href="%1$s">%2$s</a>',
+		esc_url(get_permalink($post_id)),
+		esc_html(get_the_title($post_id))
+	);
 }
-add_action( 'init', 'beautiful_salat_block_init' );
+
+function gutenberg_examples_dynamic()
+{
+	// automatically load dependencies and version
+	$asset_file = include(plugin_dir_path(__FILE__) . 'build/index.asset.php');
+
+	wp_register_script(
+		'gutenberg-examples-dynamic',
+		plugins_url('build/index.js', __FILE__),
+		$asset_file['dependencies'],
+		$asset_file['version']
+	);
+
+	register_block_type('fit/beautiful-salat', array(
+		'api_version' => 2,
+		'editor_script' => 'gutenberg-examples-dynamic',
+		'render_callback' => 'gutenberg_examples_dynamic_render_callback'
+	));
+}
+add_action('init', 'gutenberg_examples_dynamic');

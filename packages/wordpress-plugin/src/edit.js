@@ -1,6 +1,7 @@
 import { ColorPalette, InspectorControls, useBlockProps } from "@wordpress/block-editor";
 import { TextControl, ToggleControl, SelectControl, PanelBody } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
+import { useSelect } from "@wordpress/data";
 
 import { prayerTable } from "./prayerTable";
 import { prayerMethods } from "./prayerMethods";
@@ -9,6 +10,9 @@ import { getSalatTimes } from "./service";
 function BackEndEdit(props) {
   const blockProps = useBlockProps();
   const { setAttributes } = props;
+  const posts = useSelect((select) => {
+    return select("core").getEntityRecords("postType", "post");
+  }, []);
 
   const onChangeShowHeader = (newValue) => {
     setAttributes({ showHeader: newValue });
@@ -70,6 +74,10 @@ function BackEndEdit(props) {
       </InspectorControls>
 
       {prayerTable(props.attributes)}
+
+      {!posts && "Loading"}
+      {posts && posts.length === 0 && "No Posts"}
+      {posts && posts.length > 0 && <a href={posts[0].link}>{posts[0].title.rendered}</a>}
     </div>
   );
 }

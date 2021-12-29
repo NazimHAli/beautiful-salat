@@ -1491,6 +1491,7 @@ __metadata:
     "@wordpress/block-editor": ^8.0.11
     "@wordpress/blocks": ^11.1.4
     "@wordpress/components": ^19.1.5
+    "@wordpress/data": ^6.1.5
     "@wordpress/i18n": ^4.2.4
     "@wordpress/scripts": ^19.2.2
     eslint: ^8.5.0
@@ -4411,6 +4412,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wordpress/compose@npm:^5.0.7":
+  version: 5.0.7
+  resolution: "@wordpress/compose@npm:5.0.7"
+  dependencies:
+    "@babel/runtime": ^7.16.0
+    "@types/lodash": ^4.14.172
+    "@types/mousetrap": ^1.6.8
+    "@wordpress/deprecated": ^3.2.3
+    "@wordpress/dom": ^3.2.7
+    "@wordpress/element": ^4.0.4
+    "@wordpress/is-shallow-equal": ^4.2.1
+    "@wordpress/keycodes": ^3.2.4
+    "@wordpress/priority-queue": ^2.2.3
+    clipboard: ^2.0.8
+    lodash: ^4.17.21
+    mousetrap: ^1.6.5
+    react-resize-aware: ^3.1.0
+    use-memo-one: ^1.1.1
+  checksum: 41265cc1beebd749015d7cf4186cf55e210b068c724a832b27033417f45d6de7e97dc34932ac08777d7e4996817653a61f6206fba0371a823b9654c36945f8f1
+  languageName: node
+  linkType: hard
+
 "@wordpress/data@npm:^6.1.4":
   version: 6.1.4
   resolution: "@wordpress/data@npm:6.1.4"
@@ -4431,6 +4454,29 @@ __metadata:
   peerDependencies:
     redux: ^4.1.0
   checksum: 6e892b7cbc13e06014c2d342e453408931848040301c3ab59046dfaff7eed269abb52089f573df35bc8c1e486b4c20baf7fbb816c07a6b5b98fc98527a2db9de
+  languageName: node
+  linkType: hard
+
+"@wordpress/data@npm:^6.1.5":
+  version: 6.1.5
+  resolution: "@wordpress/data@npm:6.1.5"
+  dependencies:
+    "@babel/runtime": ^7.16.0
+    "@wordpress/compose": ^5.0.7
+    "@wordpress/deprecated": ^3.2.3
+    "@wordpress/element": ^4.0.4
+    "@wordpress/is-shallow-equal": ^4.2.1
+    "@wordpress/priority-queue": ^2.2.3
+    "@wordpress/redux-routine": ^4.2.2
+    equivalent-key-map: ^0.2.2
+    is-promise: ^4.0.0
+    lodash: ^4.17.21
+    memize: ^1.1.0
+    turbo-combine-reducers: ^1.0.2
+    use-memo-one: ^1.1.1
+  peerDependencies:
+    redux: ^4.1.0
+  checksum: 2630f0a43ade5303683a2aceaf76ffb10d930a636f36010b32ff8f3cafad46abf2886fd8b914969a3ab7fcd6ddf6c7d79da723931c9b11b60b20da6ad4e37e30
   languageName: node
   linkType: hard
 
