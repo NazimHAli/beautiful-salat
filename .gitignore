@@ -13,7 +13,9 @@
 .sublime_project
 .vscode
 .yarn-integrity
-/.pnp.*
+.pnp.*
+.yalc
+yalc.lock
 
 build
 coverage
