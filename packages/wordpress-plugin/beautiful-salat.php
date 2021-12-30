@@ -10,7 +10,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       beautiful-salat
  *
- * @package           create-block
+ * @package create-block
  */
 
 /**
@@ -23,4 +23,5 @@
 function beautiful_salat_block_init() {
 	register_block_type( __DIR__ );
 }
+
 add_action( 'init', 'beautiful_salat_block_init' );
