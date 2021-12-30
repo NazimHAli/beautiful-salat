@@ -1,46 +1,46 @@
 .table-container {
-	--tw-bg-opacity: 1;
-	--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-	margin: 1rem;
-	overflow: hidden;
+  --tw-bg-opacity: 1;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  margin: 1rem;
+  overflow: hidden;
 }
 
 .table {
-	display: block;
-	padding: 1rem;
-	width: 100%;
-	border: unset;
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  border: unset;
 
-	table,
-	th,
-	td {
-		border: unset;
-		box-sizing: unset;
-	}
+  table,
+  th,
+  td {
+    border: unset;
+    box-sizing: unset;
+  }
 }
 
 .table-header {
-	--tw-bg-opacity: 1;
-	--tw-text-opacity: 1;
-	background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
-	color: rgba(255, 255, 255, var(--tw-text-opacity));
-	display: inline-block;
-	margin-left: -1rem;
-	padding-bottom: 1rem;
-	padding-top: 1rem;
-	position: relative;
-	text-indent: 1rem;
-	width: 100vw;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  display: inline-block;
+  margin-left: -1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: relative;
+  text-indent: 1rem;
+  width: 100vw;
 }
 
 .table-body {
-	--tw-text-opacity: 1;
-	color: rgba(75, 85, 99, var(--tw-text-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
 .table-body th {
-	text-align: left;
-	width: 5rem;
+  text-align: left;
+  width: 5rem;
 }

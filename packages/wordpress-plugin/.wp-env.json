@@ -1,11 +1,11 @@
 {
-	"plugins": ["."],
-	"mappings": {
-		"wp-content/plugins/fakerpress": "~/source/shared-wp-resources/plugins/fakerpress"
-	},
-	"port": 1000,
-	"testsPort": 1001,
-	"config": {
-		"WP_DEBUG_DISPLAY": true
-	}
+  "plugins": ["."],
+  "mappings": {
+    "wp-content/plugins/fakerpress": "~/source/shared-wp-resources/plugins/fakerpress"
+  },
+  "port": 1000,
+  "testsPort": 1001,
+  "config": {
+    "WP_DEBUG_DISPLAY": true
+  }
 }
