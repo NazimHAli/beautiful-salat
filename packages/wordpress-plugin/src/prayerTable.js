@@ -2,12 +2,17 @@ export function prayerTable(props) {
   const timings = props.salatSettings.timings;
 
   return (
-    <div style={{ maxWidth: props?.maxWidth ? props.maxWidth : null }} className="table-container">
+    <div
+      style={{ maxWidth: props?.maxWidth ? props.maxWidth : null }}
+      className="table-container"
+    >
       <table className="table">
         {props.showHeader && (
           <thead
             style={{
-              backgroundColor: props?.backgroundColor ? props.backgroundColor : null,
+              backgroundColor: props?.backgroundColor
+                ? props.backgroundColor
+                : null,
               color: props?.titleTextColor ? props.titleTextColor : null,
             }}
             className="table-header"

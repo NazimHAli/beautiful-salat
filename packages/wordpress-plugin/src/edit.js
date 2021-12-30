@@ -1,5 +1,14 @@
-import { ColorPalette, InspectorControls, useBlockProps } from "@wordpress/block-editor";
-import { TextControl, ToggleControl, SelectControl, PanelBody } from "@wordpress/components";
+import {
+  ColorPalette,
+  InspectorControls,
+  useBlockProps,
+} from "@wordpress/block-editor";
+import {
+  TextControl,
+  ToggleControl,
+  SelectControl,
+  PanelBody,
+} from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 import { prayerTable } from "./prayerTable";
@@ -15,7 +24,10 @@ function BackEndEdit(props) {
   };
 
   const onCountryChange = (newValue) => {
-    getSalatTimes({ ...props.attributes.salatSettings, country: newValue }).then((response) => {
+    getSalatTimes({
+      ...props.attributes.salatSettings,
+      country: newValue,
+    }).then((response) => {
       if (response) {
         setAttributes({
           salatSettings: {
@@ -30,11 +42,15 @@ function BackEndEdit(props) {
   };
 
   const onCityChange = (newValue) => {
-    setAttributes({ salatSettings: { ...props.attributes.salatSettings, city: newValue } });
+    setAttributes({
+      salatSettings: { ...props.attributes.salatSettings, city: newValue },
+    });
   };
 
   const onMethodChange = (newValue) => {
-    setAttributes({ salatSettings: { ...props.attributes.salatSettings, method: newValue } });
+    setAttributes({
+      salatSettings: { ...props.attributes.salatSettings, method: newValue },
+    });
   };
 
   return (
@@ -48,24 +64,52 @@ function BackEndEdit(props) {
             options={prayerMethods}
             onChange={onMethodChange}
           />
-          <TextControl label="Country" onChange={onCountryChange} value={props.attributes.salatSettings.country} />
-          <TextControl label="City" onChange={onCityChange} value={props.attributes.salatSettings.city} />
+          <TextControl
+            label="Country"
+            onChange={onCountryChange}
+            value={props.attributes.salatSettings.country}
+          />
+          <TextControl
+            label="City"
+            onChange={onCityChange}
+            value={props.attributes.salatSettings.city}
+          />
         </PanelBody>
 
         <PanelBody title={__("Header")} initialOpen={false}>
-          <ToggleControl label="Toggle Header" checked={props.attributes.showHeader} onChange={onChangeShowHeader} />
+          <ToggleControl
+            label="Toggle Header"
+            checked={props.attributes.showHeader}
+            onChange={onChangeShowHeader}
+          />
 
-          <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
+          <TextControl
+            label="Title"
+            onChange={(newValue) => setAttributes({ title: newValue })}
+            value={props.attributes.title}
+          />
 
           <p>Title Text Color</p>
-          <ColorPalette value={props.attributes.titleTextColor} onChange={(newValue) => setAttributes({ titleTextColor: newValue })} />
+          <ColorPalette
+            value={props.attributes.titleTextColor}
+            onChange={(newValue) => setAttributes({ titleTextColor: newValue })}
+          />
 
           <p>Title Background Color</p>
-          <ColorPalette value={props.attributes.backgroundColor} onChange={(newValue) => setAttributes({ backgroundColor: newValue })} />
+          <ColorPalette
+            value={props.attributes.backgroundColor}
+            onChange={(newValue) =>
+              setAttributes({ backgroundColor: newValue })
+            }
+          />
         </PanelBody>
 
         <PanelBody title={__("Container")} initialOpen={false}>
-          <TextControl label="Title" onChange={(newValue) => setAttributes({ title: newValue })} value={props.attributes.title} />
+          <TextControl
+            label="Title"
+            onChange={(newValue) => setAttributes({ title: newValue })}
+            value={props.attributes.title}
+          />
         </PanelBody>
       </InspectorControls>
 
