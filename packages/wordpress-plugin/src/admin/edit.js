@@ -11,11 +11,11 @@ import {
 } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
-import { prayerTable } from "./prayerTable";
+import { prayerTable } from "../frontend/prayerTable";
 import { prayerMethods } from "./prayerMethods";
 import { getSalatTimes } from "./service";
 
-function BackEndEdit(props) {
+function AdminBackEnd(props) {
   const blockProps = useBlockProps();
   const { setAttributes } = props;
 
@@ -118,4 +118,4 @@ function BackEndEdit(props) {
   );
 }
 
-export { BackEndEdit };
+export { AdminBackEnd };

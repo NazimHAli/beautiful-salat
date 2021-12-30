@@ -1,12 +1,12 @@
-import "./style.scss";
+import "./frontend/style.scss";
 
 import { registerBlockType } from "@wordpress/blocks";
 import { __ } from "@wordpress/i18n";
-import { BackEndEdit } from "./edit";
-import { prayerTable } from "./prayerTable";
+import { AdminBackEnd } from "./admin/edit";
+import { prayerTable } from "./frontend/prayerTable";
 
-registerBlockType("create-block/beautiful-salat", {
-  edit: BackEndEdit,
+registerBlockType("fit/beautiful-salat", {
+  edit: AdminBackEnd,
   save: (props) => {
     return <>{prayerTable(props.attributes)}</>;
   },
