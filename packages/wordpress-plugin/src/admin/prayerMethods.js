@@ -1,4 +1,4 @@
-let rawPrayerMethods = [
+const rawPrayerMethods = [
   {
     id: 3,
     name: "Muslim World League",
@@ -180,12 +180,8 @@ let rawPrayerMethods = [
   },
 ];
 
-let prayerMethods = rawPrayerMethods.map((method) => {
-  if (method.name) {
-    return { value: method.id, label: method.name };
-  }
+const prayerMethods = rawPrayerMethods.map((method) => {
+  return { value: method.id, label: method.name };
 });
-
-prayerMethods = prayerMethods.filter((m) => m?.value);
 
 export { prayerMethods };

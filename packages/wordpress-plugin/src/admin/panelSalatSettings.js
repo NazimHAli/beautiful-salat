@@ -1,7 +1,7 @@
 import { PanelBody, SelectControl, TextControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
-import { getSalatTimes } from "./service";
 import { prayerMethods } from "./prayerMethods";
+import { getSalatTimes } from "./service";
 
 function panelSalatSettings(props) {
   const { setAttributes } = props;
