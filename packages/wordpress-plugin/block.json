@@ -31,7 +31,7 @@
     "salatSettings": {
       "type": "object",
       "default": {
-        "method": "4",
+        "method": 4,
         "country": "SA",
         "city": "Mecca",
         "timings": {

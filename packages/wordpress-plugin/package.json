@@ -6,8 +6,8 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build:package": "wp-scripts build",
+    "dev": "wp-scripts start",
     "format": "wp-scripts format",
-    "start": "wp-scripts start",
     "packages-update": "wp-scripts packages-update"
   },
   "dependencies": {

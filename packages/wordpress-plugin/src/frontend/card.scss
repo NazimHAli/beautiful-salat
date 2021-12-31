@@ -1,4 +1,4 @@
-.table-container {
+.salat-table-container {
   --tw-bg-opacity: 1;
   --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.table {
+.salat-table {
   display: block;
   width: 100%;
   border: unset;
@@ -22,7 +22,7 @@
   }
 }
 
-.table-header {
+.salat-table-header {
   --tw-bg-opacity: 1;
   --tw-text-opacity: 1;
   background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
@@ -35,14 +35,14 @@
   width: 100%;
 }
 
-.table-body {
+.salat-table-body {
   --tw-text-opacity: 1;
   color: rgba(75, 85, 99, var(--tw-text-opacity));
   width: 100%;
   display: inline-table;
 }
 
-.table-body th {
+.salat-table-body th {
   text-align: left;
   width: 10rem;
 }

@@ -4,9 +4,9 @@ export function prayerTable(props) {
   return (
     <div
       style={{ maxWidth: props?.maxWidth ? props.maxWidth : null }}
-      className="table-container"
+      className="salat-table-container"
     >
-      <table className="table">
+      <table className="salat-table">
         {props.showHeader && (
           <thead
             style={{
@@ -15,7 +15,7 @@ export function prayerTable(props) {
                 : null,
               color: props?.titleTextColor ? props.titleTextColor : null,
             }}
-            className="table-header"
+            className="salat-table-header"
           >
             <tr>
               <th>{props?.title}</th>
@@ -23,7 +23,7 @@ export function prayerTable(props) {
           </thead>
         )}
 
-        <tbody className="table-body">
+        <tbody className="salat-table-body">
           <tr>
             <th>Fajr:</th>
             <td>{timings?.Fajr}</td>
