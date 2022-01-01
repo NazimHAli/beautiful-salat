@@ -23,15 +23,17 @@ export function prayerTable(props) {
         {props.showHeader && (
           <thead
             style={{
-              backgroundColor: props?.backgroundColor
-                ? props.backgroundColor
+              backgroundColor: props?.headerBackgroundColor
+                ? props.headerBackgroundColor
                 : undefined,
-              color: props?.titleTextColor ? props.titleTextColor : undefined,
+              color: props?.headerTitleColor
+                ? props.headerTitleColor
+                : undefined,
             }}
             className={props.showHeaderStyle ? "salat-table-header" : undefined}
           >
             <tr>
-              <th>{props?.title}</th>
+              <th>{props?.headerTitle}</th>
             </tr>
           </thead>
         )}

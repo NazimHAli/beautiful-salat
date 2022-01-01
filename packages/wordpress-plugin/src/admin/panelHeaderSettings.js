@@ -18,21 +18,23 @@ function panelHeaderSettings(props) {
       />
 
       <TextControl
-        label="Title"
-        onChange={(newValue) => setAttributes({ title: newValue })}
-        value={props.attributes.title}
+        label={__("Title")}
+        onChange={(newValue) => setAttributes({ headerTitle: newValue })}
+        value={props.attributes.headerTitle}
       />
 
-      <p>Title Text Color</p>
+      <p>{__("Title Color")}</p>
       <ColorPalette
-        value={props.attributes.titleTextColor}
-        onChange={(newValue) => setAttributes({ titleTextColor: newValue })}
+        value={props.attributes.headerTitleColor}
+        onChange={(newValue) => setAttributes({ headerTitleColor: newValue })}
       />
 
-      <p>Title Background Color</p>
+      <p>{__("Background Color")}</p>
       <ColorPalette
-        value={props.attributes.backgroundColor}
-        onChange={(newValue) => setAttributes({ backgroundColor: newValue })}
+        value={props.attributes.headerBackgroundColor}
+        onChange={(newValue) =>
+          setAttributes({ headerBackgroundColor: newValue })
+        }
       />
     </PanelBody>
   );

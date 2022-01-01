@@ -11,22 +11,19 @@
     "html": true
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Prayer Times"
-    },
-    "maxWidth": {
-      "type": "number"
-    },
-    "backgroundColor": {
-      "type": "string"
-    },
-    "titleTextColor": {
-      "type": "string"
-    },
     "showHeader": {
       "type": "boolean",
       "default": true
+    },
+    "headerTitle": {
+      "type": "string",
+      "default": "Prayer Times"
+    },
+    "headerTitleColor": {
+      "type": "string"
+    },
+    "headerBackgroundColor": {
+      "type": "string"
     },
     "salatSettings": {
       "type": "object",

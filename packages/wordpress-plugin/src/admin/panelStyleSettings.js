@@ -7,7 +7,8 @@ function panelStyleSettings(props) {
   return (
     <PanelBody title={__("Toggle Styling")} initialOpen={false}>
       <ToggleControl
-        label="All Styling"
+        label={__("All Styling")}
+        help={__("Disable to remove all CSS classes.")}
         checked={props.attributes.showAllStyling}
         onChange={(newValue) =>
           setAttributes({
@@ -19,17 +20,17 @@ function panelStyleSettings(props) {
         }
       />
       <ToggleControl
-        label="Header Style"
+        label={__("Header Style")}
         checked={props.attributes.showHeaderStyle}
         onChange={(newValue) => setAttributes({ showHeaderStyle: newValue })}
       />
       <ToggleControl
-        label="Box Shadow"
+        label={__("Box Shadow")}
         checked={props.attributes.showBoxShadow}
         onChange={(newValue) => setAttributes({ showBoxShadow: newValue })}
       />
       <ToggleControl
-        label="Container Style"
+        label={__("Container Style")}
         checked={props.attributes.showContainerStyle}
         onChange={(newValue) => setAttributes({ showContainerStyle: newValue })}
       />
