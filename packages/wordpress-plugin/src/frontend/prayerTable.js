@@ -7,9 +7,8 @@ export function prayerTable(props) {
     }
 
     if (props.showBoxShadow) {
-      props.showContainerStyle
-        ? (css += " salat-table-shadow")
-        : (css = "salat-table-shadow");
+      css += props.showContainerStyle ? " " : "";
+      css += "salat-table-shadow";
     }
 
     return css;
