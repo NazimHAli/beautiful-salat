@@ -11,5 +11,7 @@ Released the [WordPress plugin](https://wordpress.org/plugins/beautiful-salat/) 
 ```
 wp-env start
 yarn install
-yarn start
+yarn build
+  - This will build all 3 packages (other 2 are packages/js-lib, packages/components)
+yarn dev
 ```

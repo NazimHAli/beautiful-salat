@@ -17,5 +17,5 @@
     "target": "ESNext",
     "useDefineForClassFields": true
   },
-  "include": ["./index.ts"]
+  "include": ["./index.ts", "./packages/wordpress-plugin/src/**/*.{js,ts}"]
 }

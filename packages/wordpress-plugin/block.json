@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/block.json",
   "apiVersion": 2,
-  "name": "create-block/beautiful-salat",
+  "name": "fit/beautiful-salat",
   "version": "0.1.0",
   "title": "Beautiful Salat",
   "category": "widgets",
@@ -11,23 +11,46 @@
     "html": true
   },
   "attributes": {
-    "title": {
+    "showHeader": {
+      "type": "boolean",
+      "default": true
+    },
+    "headerTitle": {
       "type": "string",
       "default": "Prayer Times"
     },
-    "maxWidth": {
-      "type": "number"
-    },
-    "backgroundColor": {
+    "headerTitleColor": {
       "type": "string"
     },
-    "titleTextColor": {
+    "headerBackgroundColor": {
       "type": "string"
-    }
-  },
-  "example": {
-    "attributes": {
-      "title": "Prayer Times"
+    },
+    "salatSettings": {
+      "type": "object",
+      "default": {
+        "method": 4,
+        "country": "SA",
+        "city": "Mecca",
+        "timings": {
+          "Fajr": 0
+        }
+      }
+    },
+    "showAllStyling": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBoxShadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "showHeaderStyle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showContainerStyle": {
+      "type": "boolean",
+      "default": true
     }
   },
   "textdomain": "beautiful-salat",

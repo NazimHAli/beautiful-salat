@@ -6,8 +6,8 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build:package": "wp-scripts build",
+    "dev": "wp-scripts start",
     "format": "wp-scripts format",
-    "start": "wp-scripts start",
     "packages-update": "wp-scripts packages-update"
   },
   "dependencies": {
@@ -17,6 +17,11 @@
     "@wordpress/i18n": "^4.2.4"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^19.2.2"
+    "@types/eslint": "^8.2.1",
+    "@types/prettier": "^2.4.2",
+    "@wordpress/scripts": "^19.2.2",
+    "eslint": "^8.5.0",
+    "eslint-prettier-config": "^1.0.1",
+    "prettier": "^2.5.1"
   }
 }
