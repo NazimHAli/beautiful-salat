@@ -38,11 +38,22 @@
           "Fajr": 0
         }
       }
-    }
-  },
-  "example": {
-    "attributes": {
-      "title": "Prayer Times"
+    },
+    "showAllStyling": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBoxShadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "showHeaderStyle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showContainerStyle": {
+      "type": "boolean",
+      "default": true
     }
   },
   "textdomain": "beautiful-salat",

@@ -1,7 +1,7 @@
 import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
 import { useEffect } from "@wordpress/element";
 import { prayerTable } from "../frontend/prayerTable";
-import { panelContainerSettings } from "./panelContainerSettings";
+import { panelStyleSettings } from "./panelStyleSettings";
 import { panelHeaderSettings } from "./panelHeaderSettings";
 import { panelSalatSettings } from "./panelSalatSettings";
 import { getSalatTimes } from "./service";
@@ -35,7 +35,7 @@ function AdminBackEnd(props) {
       <InspectorControls>
         {panelSalatSettings(props)}
         {panelHeaderSettings(props)}
-        {panelContainerSettings(props)}
+        {panelStyleSettings(props)}
       </InspectorControls>
 
       {prayerTable(props.attributes)}

@@ -1,21 +1,35 @@
 export function prayerTable(props) {
   const timings = props.salatSettings.timings;
+  const rootDivCSS = () => {
+    let css = undefined;
+    if (props.showContainerStyle) {
+      css = "salat-table-container";
+    }
+
+    if (props.showBoxShadow) {
+      props.showContainerStyle
+        ? (css += " salat-table-shadow")
+        : (css = "salat-table-shadow");
+    }
+
+    return css;
+  };
 
   return (
     <div
-      style={{ maxWidth: props?.maxWidth ? props.maxWidth : null }}
-      className="salat-table-container"
+      style={{ maxWidth: props?.maxWidth ? props.maxWidth : undefined }}
+      className={rootDivCSS()}
     >
-      <table className="salat-table">
+      <table className={props.showContainerStyle ? "salat-table" : undefined}>
         {props.showHeader && (
           <thead
             style={{
               backgroundColor: props?.backgroundColor
                 ? props.backgroundColor
-                : null,
-              color: props?.titleTextColor ? props.titleTextColor : null,
+                : undefined,
+              color: props?.titleTextColor ? props.titleTextColor : undefined,
             }}
-            className="salat-table-header"
+            className={props.showHeaderStyle ? "salat-table-header" : undefined}
           >
             <tr>
               <th>{props?.title}</th>
@@ -23,7 +37,9 @@ export function prayerTable(props) {
           </thead>
         )}
 
-        <tbody className="salat-table-body">
+        <tbody
+          className={props.showContainerStyle ? "salat-table-body" : undefined}
+        >
           <tr>
             <th>Fajr:</th>
             <td>{timings?.Fajr}</td>
