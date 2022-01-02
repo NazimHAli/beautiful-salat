@@ -2,13 +2,8 @@ export function prayerTable(props) {
   const timings = props.salatSettings.timings;
   const rootDivCSS = () => {
     let css = undefined;
-    if (props.showContainerStyle) {
-      css = "salat-table-container";
-    }
-
     if (props.showBoxShadow) {
-      css += props.showContainerStyle ? " " : "";
-      css += "salat-table-shadow";
+      css = "salat-table-shadow";
     }
 
     return css;
@@ -23,12 +18,14 @@ export function prayerTable(props) {
         {props.showHeader && (
           <thead
             style={{
-              backgroundColor: props?.headerBackgroundColor
-                ? props.headerBackgroundColor
-                : undefined,
-              color: props?.headerTitleColor
-                ? props.headerTitleColor
-                : undefined,
+              backgroundColor:
+                props?.headerBackgroundColor && props.showAllStyling
+                  ? props.headerBackgroundColor
+                  : undefined,
+              color:
+                props?.headerTitleColor && props.showAllStyling
+                  ? props.headerTitleColor
+                  : undefined,
             }}
             className={props.showHeaderStyle ? "salat-table-header" : undefined}
           >

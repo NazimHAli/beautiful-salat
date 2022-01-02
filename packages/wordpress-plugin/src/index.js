@@ -1,10 +1,7 @@
-import "./frontend/style.scss";
-
 import { registerBlockType } from "@wordpress/blocks";
 import { AdminBackEnd } from "./admin/index";
-import { ClientSideUI } from "./frontend/index";
+import "./frontend/style.scss";
 
 registerBlockType("fit/beautiful-salat", {
   edit: AdminBackEnd,
-  save: ClientSideUI,
 });
