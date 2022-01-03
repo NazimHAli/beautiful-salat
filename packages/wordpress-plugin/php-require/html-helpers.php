@@ -26,14 +26,18 @@ function get_array_value( $key, $array ) {
  * @param object $block_attributes user settings from the editor.
  */
 function salat_html_table( $salat_times = array(), $block_attributes = object ) {
+	if ( empty( $salat_times ) ) {
+		return;
+	}
+
 	// Format prayer times to GMT hour + AM/PM.
 	// Example: 05:37 AM.
-	$fajr    = date_format( date_create( $salat_times->Fajr ), 'h:i A' );
-	$sunrise = date_format( date_create( $salat_times->Sunrise ), 'h:i A' );
-	$dhuhr   = date_format( date_create( $salat_times->Dhuhr ), 'h:i A' );
-	$asr     = date_format( date_create( $salat_times->Asr ), 'h:i A' );
-	$maghrib = date_format( date_create( $salat_times->Maghrib ), 'h:i A' );
-	$isha    = date_format( date_create( $salat_times->Isha ), 'h:i A' );
+	$fajr    = date_format( date_create( substr( $salat_times->Fajr, 0, 25 ) ), 'h:i A' );
+	$sunrise = date_format( date_create( substr( $salat_times->Sunrise, 0, 25 ) ), 'h:i A' );
+	$dhuhr   = date_format( date_create( substr( $salat_times->Dhuhr, 0, 25 ) ), 'h:i A' );
+	$asr     = date_format( date_create( substr( $salat_times->Asr, 0, 25 ) ), 'h:i A' );
+	$maghrib = date_format( date_create( substr( $salat_times->Maghrib, 0, 25 ) ), 'h:i A' );
+	$isha    = date_format( date_create( substr( $salat_times->Isha, 0, 25 ) ), 'h:i A' );
 
 	// CSS styling.
 	$show_all_styling     = $block_attributes['showAllStyling'];

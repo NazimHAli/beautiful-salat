@@ -35,9 +35,8 @@ require __DIR__ . '/php-require/salat-times.php';
 function prayer_timings_call_back( $block_attributes, $content ) {
 	update_salat_times( $block_attributes['salatSettings'] );
 	$salat_times = get_salat_timings();
-	do_action( 'qm/debug', $block_attributes );
 
-	return salat_html_table( $salat_times, $block_attributes );
+	return salat_html_table( $salat_times->timings, $block_attributes );
 }
 
 /**

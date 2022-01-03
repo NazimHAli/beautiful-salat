@@ -30,23 +30,22 @@ function panelSalatSettings(props) {
     });
   };
 
-  const onMethodChange = (newValue) => {
-    setAttributes({
-      salatSettings: { ...props.attributes.salatSettings, method: newValue },
-    });
-  };
-
   return (
     <PanelBody title={__("Salat Settings")} initialOpen={false}>
-      <SelectControl
-        label="Calculation Method"
+      <TextControl
+        disabled={true}
+        label="Selected Calculation Method"
         help="Based on country and city"
-        value={props.attributes.salatSettings.method}
-        options={prayerMethods}
-        onChange={onMethodChange}
+        onChange={onCountryChange}
+        value={
+          prayerMethods.filter(
+            (m) => m.value === props.attributes.salatSettings.method
+          )[0]["label"]
+        }
       />
       <TextControl
-        label="Country Code"
+        label="Country name or code"
+        help="Example: SA or Saudi Arabia"
         onChange={onCountryChange}
         value={props.attributes.salatSettings.country}
       />
