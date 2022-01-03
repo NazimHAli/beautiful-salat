@@ -44,6 +44,11 @@ export function prayerTable(props) {
           </tr>
 
           <tr>
+            <th>Sunrise:</th>
+            <td>{timings?.Sunrise}</td>
+          </tr>
+
+          <tr>
             <th>Dhuhr:</th>
             <td>{timings?.Dhuhr}</td>
           </tr>

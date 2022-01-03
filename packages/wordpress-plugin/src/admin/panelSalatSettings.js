@@ -1,21 +1,31 @@
-import { PanelBody, SelectControl, TextControl } from "@wordpress/components";
+import { useState } from "@wordpress/element";
+import { PanelBody, TextControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 import { prayerMethods } from "./prayerMethods";
 import { getSalatTimes } from "./service";
+import "./editor.scss";
 
 function panelSalatSettings(props) {
   const { setAttributes } = props;
+  const [disableButton, setDisableButton] = useState(true);
 
   const onCountryChange = (newValue) => {
-    getSalatTimes({
-      ...props.attributes.salatSettings,
-      country: newValue,
-    }).then((response) => {
+    setAttributes({
+      salatSettings: {
+        ...props.attributes.salatSettings,
+        country: newValue,
+      },
+    });
+    setDisableButton(false);
+  };
+
+  const handleOnSubmit = () => {
+    setDisableButton(true);
+    getSalatTimes(props.attributes.salatSettings).then((response) => {
       if (response) {
         setAttributes({
           salatSettings: {
             ...props.attributes.salatSettings,
-            country: newValue,
             method: response?.meta?.method?.id,
             timings: response?.timings,
           },
@@ -28,6 +38,7 @@ function panelSalatSettings(props) {
     setAttributes({
       salatSettings: { ...props.attributes.salatSettings, city: newValue },
     });
+    setDisableButton(false);
   };
 
   return (
@@ -54,6 +65,13 @@ function panelSalatSettings(props) {
         onChange={onCityChange}
         value={props.attributes.salatSettings.city}
       />
+      <button
+        className="beautiful-salat-submit-btn"
+        disabled={disableButton}
+        onClick={handleOnSubmit}
+      >
+        Save settings
+      </button>
     </PanelBody>
   );
 }

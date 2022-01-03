@@ -2,8 +2,8 @@
 Contributors: nazimali21
 Donate link: https://www.freeislamictemplates.com/
 Tags: salat, salah, prayers, islam, muslim, daily prayers, namaz, azan, masjid, widget, beautiful, modern, elegant
-Requires at least: 3.5
-Tested up to: 4.6.1
+Requires at least: 5.8
+Tested up to: 5.8.2
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

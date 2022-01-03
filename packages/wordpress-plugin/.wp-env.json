@@ -4,6 +4,7 @@
     "wp-content/plugins/fakerpress": "~/source/shared-wp-resources/plugins/fakerpress",
     "wp-content/plugins/query-monitor": "~/source/shared-wp-resources/plugins/query-monitor"
   },
+  "phpVersion": "7.3",
   "port": 1000,
   "testsPort": 1001,
   "config": {

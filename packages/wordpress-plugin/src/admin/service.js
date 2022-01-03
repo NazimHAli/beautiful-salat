@@ -17,7 +17,7 @@ function formatTimeToAMPM(timeString) {
 }
 
 async function getSalatTimes(args) {
-  const API = "https://api.aladhan.com/v1/calendarByCity";
+  const API = "https://api.aladhan.com/v1/timingsByCity";
   const API_EXAMPLE = `${API}?city=${args.city}&country=${args.country}`;
 
   try {

@@ -30,10 +30,14 @@ function should_request_new_data( $today_timings ) {
  */
 function get_salat_timings() {
 	$array_raw = get_option( 'beautiful_salat_timings', null );
-	$today     = array_filter( $array_raw, 'filter_todays_timings' );
-	$today     = array_pop( $today );
+	if ( ! empty( $array_raw ) ) {
+		$today = array_filter( $array_raw, 'filter_todays_timings' );
+		$today = array_pop( $today );
 
-	return $today;
+		return $today;
+	}
+
+	return array();
 }
 
 add_action(
@@ -52,7 +56,7 @@ add_action(
 );
 
 /**
- * Checks & updates prayer times from API.
+ * Checks & updates prayer times from API
  *
  * Data is stored using the Options API as a simple key/value pair
  *

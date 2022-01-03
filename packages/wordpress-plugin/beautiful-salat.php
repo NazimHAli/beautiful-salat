@@ -3,7 +3,7 @@
  * Plugin Name:       Beautiful Salat
  * Description:       Prayer times with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.
  * Requires at least: 5.8
- * Requires PHP:      7.0
+ * Requires PHP:      7.3
  * Version:           2.0.0
  * Author:            Nazim Ali
  * License:           GPL-2.0-or-later
@@ -22,6 +22,15 @@ require __DIR__ . '/php-require/html-helpers.php';
  * Salat times methods to get, update, and set data
  */
 require __DIR__ . '/php-require/salat-times.php';
+
+/**
+ * Add editor stylesheet
+ */
+function enqueue_custom_editor_styles() {
+	wp_enqueue_style( 'beautiful-salat-panels', plugin_dir_url( __FILE__ ) . '/build/index.css', array(), true );
+
+}
+add_action( 'admin_enqueue_scripts', 'enqueue_custom_editor_styles' );
 
 /**
  * Callback required for dynamic blocks

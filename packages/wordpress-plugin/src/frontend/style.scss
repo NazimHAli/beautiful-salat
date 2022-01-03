@@ -1,8 +1,54 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.salat-table {
+  display: block;
+  width: 100%;
+  border: unset;
 
-@import "./card.scss";
+  table,
+  th,
+  td {
+    border: unset;
+    box-sizing: unset;
+    padding: unset;
+  }
+
+  &-header {
+    background-color: rgba(96, 165, 250, 1);
+    color: #fff;
+    display: inline-block;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    position: relative;
+    width: 100%;
+  }
+
+  &-body {
+    color: rgba(75, 85, 99, 1);
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+
+    th {
+      text-align: left;
+      width: 10rem;
+    }
+  }
+
+  &-container {
+    background-color: #fff;
+    margin: 1rem;
+  }
+
+  &-shadow {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.35),
+      0 0 50px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 1% 1% 1% 1% / 1% 1% 1% 1%;
+  }
+
+  &-shadow-slim {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
