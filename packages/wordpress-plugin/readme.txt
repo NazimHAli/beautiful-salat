@@ -35,14 +35,14 @@ Contributions welcome: [GitHub beautiful-salat](https://github.com/NazimHAli/bea
 - Version 2.0.0 will use Gutenberg
 
 == Screenshots ==
-- screen1-v2.png
-- screen7-v2.png
-- screen8-v2.png
-- screen9-v2.png
-- screen3-v2.png
-- screen4-v2.png
-- screen5-v2.png
-- screen6-v2.png
+- screenshot-1.png
+- screenshot-6.png
+- screenshot-7.png
+- screenshot-8.png
+- screenshot-2.png
+- screenshot-3.png
+- screenshot-4.png
+- screenshot-5.png
 
 == Changelog ==
 
