@@ -1,9 +1,13 @@
 import {
   BlockControls,
   InspectorControls,
-  useBlockProps
+  useBlockProps,
 } from "@wordpress/block-editor";
-import { ToolbarGroup, ToolbarItem, __experimentalUnitControl as UnitControl } from "@wordpress/components";
+import {
+  ToolbarGroup,
+  ToolbarItem,
+  __experimentalUnitControl as UnitControl,
+} from "@wordpress/components";
 import { useEffect } from "@wordpress/element";
 import { prayerTable } from "../frontend/prayerTable";
 import { panelHeaderSettings } from "./panelHeaderSettings";
