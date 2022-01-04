@@ -56,6 +56,7 @@ function salat_html_table( $salat_times = array(), $block_attributes = object ) 
 	$head_inline_bg_color = get_array_value( 'headerBackgroundColor', $block_attributes ) ? "background-color: {$block_attributes['headerBackgroundColor']};" : null;
 	$head_inline_color    = get_array_value( 'headerTitleColor', $block_attributes ) ? " color: {$block_attributes['headerTitleColor']};" : null;
 	$head_inline_style    = ( $head_inline_bg_color || $head_inline_color ) && $show_all_styling ? "style='{$head_inline_bg_color}{$head_inline_color}'" : null;
+	$container_max_width  = $block_attributes['maxWidth'] ? "style='max-width: {$block_attributes['maxWidth']};'" : null;
 
 	if ( $block_attributes['showHeader'] ) {
 		$head = <<<HTML
@@ -68,7 +69,7 @@ function salat_html_table( $salat_times = array(), $block_attributes = object ) 
 	}
 
 	return <<<HTML
-        <div $container_css_class>
+        <div $container_css_class $container_max_width>
             <table class="salat-table">
                 $head
                 <tbody $body_css_class>
