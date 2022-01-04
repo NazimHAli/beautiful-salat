@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Beautiful Salat
- * Description:       Prayer times with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.
+ * Description:       Simple, beautiful, lightweight prayer times plugin using Gutenberg blocks for easy editing.
  * Requires at least: 5.8
  * Requires PHP:      7.3
  * Version:           2.0.0

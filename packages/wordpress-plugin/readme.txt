@@ -12,15 +12,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Salam Alaykoum,
 
-This is a Salat plugin from [https://www.freeislamictemplates.com](https://www.freeislamictemplates.com/):
-
-= Update Dec. 29, 2021 =
-- Working on version 2.0.0
-- Based on Gutenberg blocks
-- Contributions welcome: [GitHub beautiful-salat](https://github.com/NazimHAli/beautiful-salat)
+This is a Salat plugin from [https://www.freeislamictemplates.com](https://www.freeislamictemplates.com/)
+Contributions welcome: [GitHub beautiful-salat](https://github.com/NazimHAli/beautiful-salat)
 
 = Features =
 
+- Based on Gutenberg blocks
+- Prayer API [https://aladhan.com](https://aladhan.com)
 - Prayer times widget for your website
 - Over 20,000 cities
 - Automatically updates
