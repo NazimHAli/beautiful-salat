@@ -1,9 +1,14 @@
-import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import {
+  BlockControls,
+  InspectorControls,
+  useBlockProps
+} from "@wordpress/block-editor";
+import { ToolbarGroup, ToolbarItem, __experimentalUnitControl as UnitControl } from "@wordpress/components";
 import { useEffect } from "@wordpress/element";
 import { prayerTable } from "../frontend/prayerTable";
-import { panelStyleSettings } from "./panelStyleSettings";
 import { panelHeaderSettings } from "./panelHeaderSettings";
 import { panelSalatSettings } from "./panelSalatSettings";
+import { panelStyleSettings } from "./panelStyleSettings";
 import { getSalatTimes } from "./service";
 
 function setInitialPrayerTimes(props, setAttributes) {
@@ -32,6 +37,21 @@ function AdminBackEnd(props) {
 
   return (
     <div {...blockProps}>
+      {
+        <BlockControls>
+          <ToolbarGroup>
+            <ToolbarItem
+              as={UnitControl}
+              onChange={(newValue) => setAttributes({ maxWidth: newValue })}
+              value={props.attributes.maxWidth}
+              size="medium"
+              label="Set max width"
+              min={18}
+            />
+          </ToolbarGroup>
+        </BlockControls>
+      }
+
       <InspectorControls>
         {panelSalatSettings(props)}
         {panelHeaderSettings(props)}

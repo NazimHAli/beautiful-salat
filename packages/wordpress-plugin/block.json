@@ -50,6 +50,10 @@
     "showContainerStyle": {
       "type": "boolean",
       "default": true
+    },
+    "maxWidth": {
+      "type": "string",
+      "default": "20rem"
     }
   },
   "textdomain": "beautiful-salat",
