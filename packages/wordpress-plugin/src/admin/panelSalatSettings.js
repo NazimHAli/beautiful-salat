@@ -1,21 +1,31 @@
-import { PanelBody, SelectControl, TextControl } from "@wordpress/components";
+import { useState } from "@wordpress/element";
+import { PanelBody, TextControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 import { prayerMethods } from "./prayerMethods";
 import { getSalatTimes } from "./service";
+import "./editor.scss";
 
 function panelSalatSettings(props) {
   const { setAttributes } = props;
+  const [disableButton, setDisableButton] = useState(true);
 
   const onCountryChange = (newValue) => {
-    getSalatTimes({
-      ...props.attributes.salatSettings,
-      country: newValue,
-    }).then((response) => {
+    setAttributes({
+      salatSettings: {
+        ...props.attributes.salatSettings,
+        country: newValue,
+      },
+    });
+    setDisableButton(false);
+  };
+
+  const handleOnSubmit = () => {
+    setDisableButton(true);
+    getSalatTimes(props.attributes.salatSettings).then((response) => {
       if (response) {
         setAttributes({
           salatSettings: {
             ...props.attributes.salatSettings,
-            country: newValue,
             method: response?.meta?.method?.id,
             timings: response?.timings,
           },
@@ -28,25 +38,25 @@ function panelSalatSettings(props) {
     setAttributes({
       salatSettings: { ...props.attributes.salatSettings, city: newValue },
     });
-  };
-
-  const onMethodChange = (newValue) => {
-    setAttributes({
-      salatSettings: { ...props.attributes.salatSettings, method: newValue },
-    });
+    setDisableButton(false);
   };
 
   return (
     <PanelBody title={__("Salat Settings")} initialOpen={false}>
-      <SelectControl
-        label="Calculation Method"
+      <TextControl
+        disabled={true}
+        label="Selected Calculation Method"
         help="Based on country and city"
-        value={props.attributes.salatSettings.method}
-        options={prayerMethods}
-        onChange={onMethodChange}
+        onChange={onCountryChange}
+        value={
+          prayerMethods.filter(
+            (m) => m.value === props.attributes.salatSettings.method
+          )[0]["label"]
+        }
       />
       <TextControl
-        label="Country Code"
+        label="Country name or code"
+        help="Example: SA or Saudi Arabia"
         onChange={onCountryChange}
         value={props.attributes.salatSettings.country}
       />
@@ -55,6 +65,13 @@ function panelSalatSettings(props) {
         onChange={onCityChange}
         value={props.attributes.salatSettings.city}
       />
+      <button
+        className="beautiful-salat-submit-btn"
+        disabled={disableButton}
+        onClick={handleOnSubmit}
+      >
+        Save settings
+      </button>
     </PanelBody>
   );
 }

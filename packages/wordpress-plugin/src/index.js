@@ -1,13 +1,9 @@
-import "./frontend/style.scss";
-
 import { registerBlockType } from "@wordpress/blocks";
-import { __ } from "@wordpress/i18n";
 import { AdminBackEnd } from "./admin/index";
-import { prayerTable } from "./frontend/prayerTable";
+import "./frontend/style.scss";
+import SalatMatIcon from "./admin/salatMatIcon";
 
 registerBlockType("fit/beautiful-salat", {
+  icon: <SalatMatIcon />,
   edit: AdminBackEnd,
-  save: (props) => {
-    return <>{prayerTable(props.attributes)}</>;
-  },
 });
