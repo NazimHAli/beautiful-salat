@@ -20,7 +20,7 @@
     "build:package": "vite build --emptyOutDir",
     "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
     "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
-    "dev": "vite --host 10.0.0.211 --port 3001",
+    "dev": "vite",
     "test": "yarn run test:tsc",
     "test:jest": "yarn run jest",
     "test:tsc": "tsc --noEmit",
