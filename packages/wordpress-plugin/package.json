@@ -18,11 +18,11 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.56.10",
-    "@types/prettier": "^2.7.3",
+    "@types/prettier": "^3.0.0",
     "@wordpress/scripts": "^28.2.0",
     "eslint": "^8.57.0",
     "eslint-prettier-config": "^1.0.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.3.2",
     "reakit-utils": "^0.15.2"
   }
 }
