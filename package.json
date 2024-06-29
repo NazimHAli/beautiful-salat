@@ -29,7 +29,7 @@
     "lintall:check": "prettier --check ./packages",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
-    "testall": "yarn workspaces foreach run test",
+    "testall": "yarn workspaces foreach -A run test",
     "yalcp": "yalc publish ./packages/js-lib"
   },
   "commitlint": {
@@ -76,7 +76,7 @@
     "vite": "^2.7.9",
     "vite-plugin-dts": "^0.9.6"
   },
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "yarn@4.3.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NazimHAli/beautiful-salat.git"
@@ -87,7 +87,7 @@
     "url": "https://github.com/NazimHAli"
   },
   "engines": {
-    "node": ">=14.0"
+    "node": ">=20.0"
   },
   "release": {
     "branches": [

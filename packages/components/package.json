@@ -21,8 +21,8 @@
     "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
     "sveltecheck": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "vite --host 10.0.0.211 --port 3001",
-    "test": "yarn test:tsc",
-    "test:jest": "jest",
+    "test": "yarn run test:tsc",
+    "test:jest": "yarn run jest",
     "test:tsc": "tsc --noEmit",
     "serve": "vite preview --port 8080"
   },
@@ -42,6 +42,7 @@
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "postcss-sass": "^0.5.0",
+    "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.1",
     "sass": "^1.45.1",
     "stylelint": "^14.2.0",
@@ -50,6 +51,7 @@
     "svelte-preprocess": "^4.10.1",
     "tailwindcss": "^3.0.8",
     "tslib": "^2.3.1",
+    "typescript": "^4.5.2",
     "vite": "^2.7.9",
     "vite-plugin-dts": "^0.9.6"
   },
