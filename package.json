@@ -21,7 +21,7 @@
   "scripts": {
     "build": "yarn build:packages && vite build --emptyOutDir && yarn build:minify",
     "build:minify": "esbuild ./build/index.es.js --bundle --splitting --format=esm --minify --allow-overwrite --outdir=./build",
-    "build:packages": "yarn workspaces foreach -Rpt --from '{packages/js-lib,packages/components,packages/wordpress-plugin}' run build:package ",
+    "build:packages": "yarn workspaces foreach -Rpt --from '{packages/js-lib,packages/components,packages/wordpress-plugin}' run build:package",
     "cleanall": "rm -rf build && rm -rf node_modules && rm -rf packages/**/(node_modules|build)",
     "cm": "cz",
     "dev": "yarn workspace @beautiful-salat/components dev",
