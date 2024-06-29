@@ -18,10 +18,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Node.js 14
+      - name: node 20
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 20
           cache: "yarn"
           cache-dependency-path: "**/yarn.lock"
 
