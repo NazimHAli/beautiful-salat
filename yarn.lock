@@ -6847,7 +6847,8 @@ __metadata:
     eslint-plugin-prettier: "npm:^4.0.0"
     eslint-plugin-simple-import-sort: "npm:^7.0.0"
     husky: "npm:^7.0.4"
-    jest: "npm:^27.4.5"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
     lint-staged: "npm:^12.1.4"
     prettier: "npm:^2.5.1"
     semantic-release: "npm:^18.0.1"
@@ -13592,7 +13593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-environment-jsdom@npm:^29.6.2":
+"jest-environment-jsdom@npm:^29.6.2, jest-environment-jsdom@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest-environment-jsdom@npm:29.7.0"
   dependencies:
@@ -14230,7 +14231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^29.6.2":
+"jest@npm:^29.6.2, jest@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest@npm:29.7.0"
   dependencies:

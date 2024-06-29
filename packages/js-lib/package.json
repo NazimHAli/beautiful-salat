@@ -20,7 +20,7 @@
     "test:tsc": "tsc --noEmit"
   },
   "engines": {
-    "node": ">=14.0"
+    "node": ">=20.0"
   },
   "license": "MIT",
   "devDependencies": {

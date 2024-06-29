@@ -59,7 +59,7 @@
     "jest": "*"
   },
   "engines": {
-    "node": ">=14.0"
+    "node": ">=20.0"
   },
   "dependencies": {
     "@beautiful-salat/js-lib": "workspace:^"
