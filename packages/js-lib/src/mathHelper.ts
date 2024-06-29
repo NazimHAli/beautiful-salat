@@ -1,42 +1,42 @@
 export const mathHelpers = {
-  dtr(d: number) {
-    return (d * Math.PI) / 180.0;
+  convertDegreesToRadians(degrees: number): number {
+    return (degrees * Math.PI) / 180.0;
   },
-  rtd(r: number) {
-    return (r * 180.0) / Math.PI;
+  convertRadiansToDegrees(radians: number): number {
+    return (radians * 180.0) / Math.PI;
   },
-  sin(d: number) {
-    return Math.sin(this.dtr(d));
+  sine(x: number): number {
+    return Math.sin(this.convertDegreesToRadians(x));
   },
-  cos(d: number) {
-    return Math.cos(this.dtr(d));
+  cosine(x: number): number {
+    return Math.cos(this.convertDegreesToRadians(x));
   },
-  tan(d: number) {
-    return Math.tan(this.dtr(d));
+  tangent(x: number): number {
+    return Math.tan(this.convertDegreesToRadians(x));
   },
-  arcsin(d: number) {
-    return this.rtd(Math.asin(d));
+  arcsine(x: number): number {
+    return this.convertRadiansToDegrees(Math.asin(x));
   },
-  arccos(d: number) {
-    return this.rtd(Math.acos(d));
+  arccosine(x: number): number {
+    return this.convertRadiansToDegrees(Math.acos(x));
   },
-  arctan(d: number) {
-    return this.rtd(Math.atan(d));
+  arctangent(x: number): number {
+    return this.convertRadiansToDegrees(Math.atan(x));
   },
-  arccot(x: number) {
-    return this.rtd(Math.atan(1 / x));
+  arccotangent(x: number): number {
+    return this.convertRadiansToDegrees(Math.atan(1 / x));
   },
-  arctan2(y: number, x: number) {
-    return this.rtd(Math.atan2(y, x));
+  arctangent2(y: number, x: number): number {
+    return this.convertRadiansToDegrees(Math.atan2(y, x));
   },
-  fixAngle(a: number) {
-    return this.fix(a, 360);
+  fixAngle(angle: number): number {
+    return this.fix(angle, 360);
   },
-  fixHour(a: number) {
-    return this.fix(a, 24);
+  fixHour(hour: number): number {
+    return this.fix(hour, 24);
   },
-  fix(a: number, b: number) {
-    a = a - b * Math.floor(a / b);
-    return a < 0 ? a + b : a;
+  fix(numberToFix: number, base: number): number {
+    const remainder = numberToFix % base;
+    return remainder < 0 ? remainder + base : remainder;
   },
 };

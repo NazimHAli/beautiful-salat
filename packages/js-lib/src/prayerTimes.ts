@@ -272,9 +272,9 @@ class PrayerTimes {
     let noon = this.midDay(time);
     let t =
       (1 / 15) *
-      mathHelpers.arccos(
-        (-mathHelpers.sin(angle) - mathHelpers.sin(decl) * mathHelpers.sin(this.latitude)) /
-          (mathHelpers.cos(decl) * mathHelpers.cos(this.latitude))
+      mathHelpers.arccosine(
+        (-mathHelpers.sine(angle) - mathHelpers.sine(decl) * mathHelpers.sine(this.latitude)) /
+          (mathHelpers.cosine(decl) * mathHelpers.cosine(this.latitude))
       );
 
     return noon + (direction == "ccw" ? -t : t);
@@ -283,7 +283,7 @@ class PrayerTimes {
   // compute asr time
   asrTime(factor: any, time: any) {
     let decl: any = this.sunPosition(this.julianDate + time).declination;
-    let angle: any = -mathHelpers.arccot(factor + mathHelpers.tan(Math.abs(this.latitude - decl)));
+    let angle: any = -mathHelpers.arccotangent(factor + mathHelpers.tangent(Math.abs(this.latitude - decl)));
     return this.sunAngleTime(angle, time);
   }
 
@@ -292,13 +292,13 @@ class PrayerTimes {
     let D = julianDate - 2451545.0;
     let g = mathHelpers.fixAngle(357.529 + 0.98560028 * D);
     let q = mathHelpers.fixAngle(280.459 + 0.98564736 * D);
-    let L = mathHelpers.fixAngle(q + 1.915 * mathHelpers.sin(g) + 0.02 * mathHelpers.sin(2 * g));
+    let L = mathHelpers.fixAngle(q + 1.915 * mathHelpers.sine(g) + 0.02 * mathHelpers.sine(2 * g));
 
     let e = 23.439 - 0.00000036 * D;
 
-    let RA = mathHelpers.arctan2(mathHelpers.cos(e) * mathHelpers.sin(L), mathHelpers.cos(L)) / 15;
+    let RA = mathHelpers.arctangent2(mathHelpers.cosine(e) * mathHelpers.sine(L), mathHelpers.cosine(L)) / 15;
     let equationOfTime = q / 15 - mathHelpers.fixHour(RA);
-    let decl = mathHelpers.arcsin(mathHelpers.sin(e) * mathHelpers.sin(L));
+    let decl = mathHelpers.arcsine(mathHelpers.sine(e) * mathHelpers.sine(L));
 
     return { declination: decl, equation: equationOfTime };
   }
