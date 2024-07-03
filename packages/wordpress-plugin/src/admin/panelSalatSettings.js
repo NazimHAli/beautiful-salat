@@ -48,11 +48,7 @@ function panelSalatSettings(props) {
         label="Selected Calculation Method"
         help="Based on country and city"
         onChange={onCountryChange}
-        value={
-          prayerMethods.filter(
-            (m) => m.value === props.attributes.salatSettings.method
-          )[0]["label"]
-        }
+        value={prayerMethods.filter((m) => m.value === props.attributes.salatSettings.method)[0]["label"]}
       />
       <TextControl
         label="Country name or code"
@@ -60,16 +56,8 @@ function panelSalatSettings(props) {
         onChange={onCountryChange}
         value={props.attributes.salatSettings.country}
       />
-      <TextControl
-        label="City"
-        onChange={onCityChange}
-        value={props.attributes.salatSettings.city}
-      />
-      <button
-        className="beautiful-salat-submit-btn"
-        disabled={disableButton}
-        onClick={handleOnSubmit}
-      >
+      <TextControl label="City" onChange={onCityChange} value={props.attributes.salatSettings.city} />
+      <button className="beautiful-salat-submit-btn" disabled={disableButton} onClick={handleOnSubmit}>
         Save settings
       </button>
     </PanelBody>
