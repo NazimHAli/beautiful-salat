@@ -29,7 +29,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
-    "@testing-library/dom": "^10.2.0",
+    "@testing-library/dom": "^10.3.0",
     "@tsconfig/svelte": "^5.0.4",
     "@types/cssnano": "^5.1.0",
     "@types/postcss-import": "^14.0.3",
@@ -37,7 +37,7 @@
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.3",
-    "esbuild": "^0.21.5",
+    "esbuild": "^0.23.0",
     "postcss": "^8.4.39",
     "postcss-import": "^16.1.0",
     "postcss-nested": "^6.0.1",
@@ -51,8 +51,8 @@
     "svelte-preprocess": "^6.0.1",
     "tailwindcss": "^3.4.4",
     "tslib": "^2.6.3",
-    "typescript": "^5.5.2",
-    "vite": "^5.3.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {

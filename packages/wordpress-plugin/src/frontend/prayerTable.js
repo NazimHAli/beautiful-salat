@@ -10,22 +10,13 @@ export function prayerTable(props) {
   };
 
   return (
-    <div
-      style={{ maxWidth: props?.maxWidth ? props.maxWidth : undefined }}
-      className={rootDivCSS()}
-    >
+    <div style={{ maxWidth: props?.maxWidth ? props.maxWidth : undefined }} className={rootDivCSS()}>
       <table className={props.showContainerStyle ? "salat-table" : undefined}>
         {props.showHeader && (
           <thead
             style={{
-              backgroundColor:
-                props?.headerBackgroundColor && props.showAllStyling
-                  ? props.headerBackgroundColor
-                  : undefined,
-              color:
-                props?.headerTitleColor && props.showAllStyling
-                  ? props.headerTitleColor
-                  : undefined,
+              backgroundColor: props?.headerBackgroundColor && props.showAllStyling ? props.headerBackgroundColor : undefined,
+              color: props?.headerTitleColor && props.showAllStyling ? props.headerTitleColor : undefined,
             }}
             className={props.showHeaderStyle ? "salat-table-header" : undefined}
           >
@@ -35,9 +26,7 @@ export function prayerTable(props) {
           </thead>
         )}
 
-        <tbody
-          className={props.showContainerStyle ? "salat-table-body" : undefined}
-        >
+        <tbody className={props.showContainerStyle ? "salat-table-body" : undefined}>
           <tr>
             <th>Fajr:</th>
             <td>{timings?.Fajr}</td>

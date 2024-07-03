@@ -1,17 +1,11 @@
 {
   "plugins": ["."],
   "mappings": {
-    "wp-content/plugins/fakerpress": "~/source/shared-wp-resources/plugins/fakerpress",
-    "wp-content/plugins/query-monitor": "~/source/shared-wp-resources/plugins/query-monitor"
+    "wp-content/plugins/fakerpress": "~/source/shared-wp-resources/plugins/fakerpress"
   },
-  "phpVersion": "7.3",
   "port": 1000,
   "testsPort": 1001,
   "config": {
-    "QM_DARK_MODE": true,
-    "QM_HIDE_CORE_ACTIONS": true,
-    "SCRIPT_DEBUG": true,
-    "WP_DEBUG": true,
     "WP_DEBUG_DISPLAY": true
   }
 }

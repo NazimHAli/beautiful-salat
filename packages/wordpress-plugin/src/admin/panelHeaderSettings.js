@@ -11,11 +11,7 @@ function panelHeaderSettings(props) {
 
   return (
     <PanelBody title={__("Header")} initialOpen={false}>
-      <ToggleControl
-        label="Toggle Header"
-        checked={props.attributes.showHeader}
-        onChange={onChangeShowHeader}
-      />
+      <ToggleControl label="Toggle Header" checked={props.attributes.showHeader} onChange={onChangeShowHeader} />
 
       <TextControl
         label={__("Title")}
@@ -24,17 +20,12 @@ function panelHeaderSettings(props) {
       />
 
       <p>{__("Title Color")}</p>
-      <ColorPalette
-        value={props.attributes.headerTitleColor}
-        onChange={(newValue) => setAttributes({ headerTitleColor: newValue })}
-      />
+      <ColorPalette value={props.attributes.headerTitleColor} onChange={(newValue) => setAttributes({ headerTitleColor: newValue })} />
 
       <p>{__("Background Color")}</p>
       <ColorPalette
         value={props.attributes.headerBackgroundColor}
-        onChange={(newValue) =>
-          setAttributes({ headerBackgroundColor: newValue })
-        }
+        onChange={(newValue) => setAttributes({ headerBackgroundColor: newValue })}
       />
     </PanelBody>
   );

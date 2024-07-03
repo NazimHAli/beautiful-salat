@@ -5,59 +5,48 @@
   "version": "0.1.0",
   "title": "Beautiful Salat",
   "category": "widgets",
-  "description": "Simple, beautiful, lightweight prayer times plugin using Gutenberg blocks for easy editing.",
+  "icon": "smiley",
+  "description": "Prayer times with unlimited color combinations, offering daily, weekly, monthly, and yearly tables.",
   "supports": {
     "html": true
   },
   "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Prayer Times"
+    },
+    "maxWidth": {
+      "type": "number"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "titleTextColor": {
+      "type": "string"
+    },
     "showHeader": {
       "type": "boolean",
       "default": true
     },
-    "headerTitle": {
-      "type": "string",
-      "default": "Prayer Times"
-    },
-    "headerTitleColor": {
-      "type": "string"
-    },
-    "headerBackgroundColor": {
-      "type": "string"
-    },
     "salatSettings": {
       "type": "object",
       "default": {
-        "method": 4,
-        "country": "SA",
-        "city": "Mecca",
+        "method": "MWL",
+        "country": "US",
+        "city": "Los Angeles",
         "timings": {
           "Fajr": 0
         }
       }
-    },
-    "showAllStyling": {
-      "type": "boolean",
-      "default": true
-    },
-    "showBoxShadow": {
-      "type": "boolean",
-      "default": true
-    },
-    "showHeaderStyle": {
-      "type": "boolean",
-      "default": true
-    },
-    "showContainerStyle": {
-      "type": "boolean",
-      "default": true
-    },
-    "maxWidth": {
-      "type": "string",
-      "default": "20rem"
+    }
+  },
+  "example": {
+    "attributes": {
+      "title": "Prayer Times"
     }
   },
   "textdomain": "beautiful-salat",
-  "editorScript": "file:./build/index.js",
-  "editorStyle": "file:./build/style-index.css",
-  "style": "file:./build/style-index.css"
+  "editorScript": "file:build/index.js",
+  "editorStyle": "file:build/style-index.css",
+  "style": "file:build/style-index.css"
 }
