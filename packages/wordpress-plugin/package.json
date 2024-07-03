@@ -11,17 +11,18 @@
     "packages-update": "wp-scripts packages-update"
   },
   "dependencies": {
-    "@wordpress/block-editor": "^8.0.12",
-    "@wordpress/blocks": "^11.1.5",
-    "@wordpress/components": "^19.1.6",
-    "@wordpress/i18n": "^4.2.4"
+    "@wordpress/block-editor": "^13.2.0",
+    "@wordpress/blocks": "^13.2.0",
+    "@wordpress/components": "^28.2.0",
+    "@wordpress/i18n": "^5.2.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.2.1",
-    "@types/prettier": "^2.4.2",
-    "@wordpress/scripts": "^19.2.2",
-    "eslint": "^8.5.0",
+    "@types/eslint": "^8.56.10",
+    "@types/prettier": "^3.0.0",
+    "@wordpress/scripts": "^28.2.0",
+    "eslint": "^9.6.0",
     "eslint-prettier-config": "^1.0.1",
-    "prettier": "^2.5.1"
+    "prettier": "^3.3.2",
+    "reakit-utils": "^0.15.2"
   }
 }
