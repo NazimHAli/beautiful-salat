@@ -14,14 +14,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Node.js 14
-        uses: actions/setup-node@v2
+      - name: node 20
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
           cache: "yarn"
           cache-dependency-path: "**/yarn.lock"
 
@@ -37,5 +37,5 @@ jobs:
       - name: Release
         run: yarn semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
